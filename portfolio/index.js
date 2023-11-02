@@ -27,9 +27,11 @@ function paginationMoveToIndex(index) {
     index = 0;
     imageNavButtonPrev.style.opacity = 0;
     imageNavButtonPrev.style.cursor = 'auto';
+    imageNavButtonPrev.tabIndex = "-1";
   } else {
     imageNavButtonPrev.style.opacity = 1;
     imageNavButtonPrev.style.cursor = 'pointer';
+    imageNavButtonPrev.tabIndex = "0";
   }
   
   let lastChildIndex = missionImageSlider.childElementCount - 1;
@@ -37,9 +39,11 @@ function paginationMoveToIndex(index) {
     index = lastChildIndex;
     imageNavButtonNext.style.opacity = 0;
     imageNavButtonNext.style.cursor = 'auto';
+    imageNavButtonNext.tabIndex = "-1";
   } else {
     imageNavButtonNext.style.opacity = 1;
     imageNavButtonNext.style.cursor = 'pointer';
+    imageNavButtonNext.tabIndex = "0";
   }
 
   paginationDots[index].checked = true; // Rest are unchecked automatically

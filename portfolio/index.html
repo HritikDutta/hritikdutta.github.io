@@ -102,23 +102,29 @@
           <div class="window_body">
             <div class="window_content">
               <div class="options_list">
-                <input type="radio" autocomplete="off" class="skin_radio_button" id="skin_0_radio" name="character_skin" value="skin_0" onclick="handleRadioClick(allSkinOptions)" checked>
-                <label for="skin_0_radio" class="option_button">
-                  <span>Standard</span>
-                  <img class="option_select_arrow" src="img/icons/arrow-small-back.svg" alt="">
-                </label>
+                <div class="option">
+                  <input type="radio" autocomplete="off" class="skin_radio_button" id="skin_0_radio" name="character_skin" value="skin_0" onclick="handleRadioClick(allSkinOptions)" checked>
+                  <label for="skin_0_radio" class="option_button">
+                    <span>Standard</span>
+                    <img class="option_select_arrow" src="img/icons/arrow-small-back.svg" alt="">
+                  </label>
+                </div>
                 
-                <input type="radio" autocomplete="off" class="skin_radio_button" id="skin_1_radio" name="character_skin" value="skin_1" onclick="handleRadioClick(allSkinOptions)">
-                <label for="skin_1_radio" class="option_button">
-                  <span>2-Bit</span>
-                  <img class="option_select_arrow" src="img/icons/arrow-small-back.svg" alt="">
-                </label>
+                <div class="option">
+                  <input type="radio" autocomplete="off" class="skin_radio_button" id="skin_1_radio" name="character_skin" value="skin_1" onclick="handleRadioClick(allSkinOptions)">
+                  <label for="skin_1_radio" class="option_button">
+                    <span>2-Bit</span>
+                    <img class="option_select_arrow" src="img/icons/arrow-small-back.svg" alt="">
+                  </label>
+                </div>
                 
-                <input type="radio" autocomplete="off" class="skin_radio_button" id="skin_2_radio" name="character_skin" value="skin_2" onclick="handleRadioClick(allSkinOptions)">
-                <label for="skin_2_radio" class="option_button">
-                  <span>Realistic</span>
-                  <img src="img/icons/locked.svg" alt="">
-                </label>
+                <div class="option">
+                  <input type="radio" autocomplete="off" class="skin_radio_button" id="skin_2_radio" name="character_skin" value="skin_2" onclick="handleRadioClick(allSkinOptions)">
+                  <label for="skin_2_radio" class="option_button">
+                    <span>Realistic</span>
+                    <img src="img/icons/locked.svg" alt="">
+                  </label>
+                </div>
               </div>
               <div class="vertical_line"></div>
               
@@ -152,55 +158,71 @@
             <div class="options_list">
               <h2 class="mission_header with_stroke" value="Main Missions">Main Missions</h2>
               
-              <input type="radio" autocomplete="off" class="mission_radio_button" id="mission_7_radio" name="selected_mission" onclick="">
-              <label for="mission_7_radio" class="option_button">
-                <span>Mayanagari</span>
-                <img class="option_select_arrow" src="img/icons/arrow-small-back.svg" alt="">
-              </label>
+              <div class="option">
+                <input type="radio" autocomplete="off" class="mission_radio_button" id="mission_7_radio" name="selected_mission" onclick="">
+                <label for="mission_7_radio" class="option_button">
+                  <span>Mayanagari</span>
+                  <img class="option_select_arrow" src="img/icons/arrow-small-back.svg" alt="">
+                </label>
+              </div>
               
-              <input type="radio" autocomplete="off" class="mission_radio_button" id="mission_6_radio" name="selected_mission" onclick="">
-              <label for="mission_6_radio" class="option_button">
-                <span>Bump Pong</span>
-                <img class="option_select_arrow" src="img/icons/arrow-small-back.svg" alt="">
-              </label>
+              <div class="option">
+                <input type="radio" autocomplete="off" class="mission_radio_button" id="mission_6_radio" name="selected_mission" onclick="">
+                <label for="mission_6_radio" class="option_button">
+                  <span>Bump Pong</span>
+                  <img class="option_select_arrow" src="img/icons/arrow-small-back.svg" alt="">
+                </label>
+              </div>
               
               <h2 class="mission_header with_stroke" value="Side Missions">Side Missions</h2>
               
-              <input type="radio" autocomplete="off" class="mission_radio_button" id="mission_5_radio" name="selected_mission" onclick="">
-              <label for="mission_5_radio" class="option_button">
-                <span>Invaders from Outer Space!</span>
-                <img src="img/icons/locked.svg" alt="">
-              </label>
+              <div class="option">
+                <input type="radio" autocomplete="off" class="mission_radio_button" id="mission_5_radio" name="selected_mission" onclick="">
+                <label for="mission_5_radio" class="option_button">
+                  <span>Invaders from Outer Space!</span>
+                  <img src="img/icons/locked.svg" alt="">
+                </label>
+              </div>
               
-              <input type="radio" autocomplete="off" class="mission_radio_button" id="mission_4_radio" name="selected_mission" onclick="">
-              <label for="mission_4_radio" class="option_button">
-                <span>The Waiting Game</span>
-                <img class="option_select_arrow" src="img/icons/arrow-small-back.svg" alt="">
-              </label>
+              <div class="option">
+                <input type="radio" autocomplete="off" class="mission_radio_button" id="mission_4_radio" name="selected_mission" onclick="">
+                <label for="mission_4_radio" class="option_button">
+                  <span>The Waiting Game</span>
+                  <img class="option_select_arrow" src="img/icons/arrow-small-back.svg" alt="">
+                </label>
+              </div>
               
-              <input type="radio" autocomplete="off" class="mission_radio_button" id="mission_3_radio" name="selected_mission" onclick="">
-              <label for="mission_3_radio" class="option_button">
-                <span>Shameless Wordle Clone</span>
-                <img class="option_select_arrow" src="img/icons/arrow-small-back.svg" alt="">
-              </label>
+              <div class="option">
+                <input type="radio" autocomplete="off" class="mission_radio_button" id="mission_3_radio" name="selected_mission" onclick="">
+                <label for="mission_3_radio" class="option_button">
+                  <span>Shameless Wordle Clone</span>
+                  <img class="option_select_arrow" src="img/icons/arrow-small-back.svg" alt="">
+                </label>
+              </div>
               
-              <input type="radio" autocomplete="off" class="mission_radio_button" id="mission_2_radio" name="selected_mission" onclick="">
-              <label for="mission_2_radio" class="option_button">
-                <span>Saving Princess Sita</span>
-                <img class="option_select_arrow" src="img/icons/arrow-small-back.svg" alt="">
-              </label>
+              <div class="option">
+                <input type="radio" autocomplete="off" class="mission_radio_button" id="mission_2_radio" name="selected_mission" onclick="">
+                <label for="mission_2_radio" class="option_button">
+                  <span>Saving Princess Sita</span>
+                  <img class="option_select_arrow" src="img/icons/arrow-small-back.svg" alt="">
+                </label>
+              </div>
               
-              <input type="radio" autocomplete="off" class="mission_radio_button" id="mission_1_radio" name="selected_mission" onclick="">
-              <label for="mission_1_radio" class="option_button">
-                <span>Solar System Demo</span>
-                <img class="option_select_arrow" src="img/icons/arrow-small-back.svg" alt="">
-              </label>
+              <div class="option">
+                <input type="radio" autocomplete="off" class="mission_radio_button" id="mission_1_radio" name="selected_mission" onclick="">
+                <label for="mission_1_radio" class="option_button">
+                  <span>Solar System Demo</span>
+                  <img class="option_select_arrow" src="img/icons/arrow-small-back.svg" alt="">
+                </label>
+              </div>
               
-              <input type="radio" autocomplete="off" class="mission_radio_button" id="mission_0_radio" name="selected_mission" onclick="" checked>
-              <label for="mission_0_radio" class="option_button">
-                <span>Hurry! Flurry</span>
-                <img class="option_select_arrow" src="img/icons/arrow-small-back.svg" alt="">
-              </label>
+              <div class="option">
+                <input type="radio" autocomplete="off" class="mission_radio_button" id="mission_0_radio" name="selected_mission" onclick="" checked>
+                <label for="mission_0_radio" class="option_button">
+                  <span>Hurry! Flurry</span>
+                  <img class="option_select_arrow" src="img/icons/arrow-small-back.svg" alt="">
+                </label>
+              </div>
             </div>
             <div class="vertical_line"></div>
             <div id="mission_info_container">
@@ -326,6 +348,24 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="portfolio_description">
+          Hritik Dutta<br>
+          Game Developer Portfolio
+        </div>
+
+        <a href="res/Hritik the Game Developer.pdf" target="_blank">Download Game Developer Resume</a>
+
+        <div class="links">
+          <a href="mailto:dutta.hritik@gmail.com" target="_blank"><img src="img/icons/links/Gmail.svg" alt=""></a>
+          <a href="https://www.linkedin.com/in/hritik-dutta-a2b498154/" target="_blank"><img src="img/icons/links/LinkedIn.svg" alt=""></a>
+          <a href="https://github.com/HritikDutta" target="_blank"><img src="img/icons/links/GitHub.svg" alt=""></a>
+          <a href="https://hritikdutta.itch.io/" target="_blank"><img src="img/icons/links/itch.io.svg" alt=""></a>
+          <a href="https://www.instagram.com/isnt.a.gram/" target="_blank"><img src="img/icons/links/Instagram.svg" alt=""></a>
+          <a href="https://medium.com/@threewaydude" target="_blank"><img src="img/icons/links/Medium.svg" alt=""></a>
         </div>
       </div>
     </div>
