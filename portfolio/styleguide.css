@@ -1,0 +1,23 @@
+:root {
+    --white: rgba(233, 233, 233, 1);
+    --dark: rgba(52, 52, 52, 1);
+    --window-background: rgba(52, 52, 52, 0.5);
+
+    --game-developer-light: rgba(0, 230, 54, 1);
+    --game-developer-dark: rgba(0, 135, 81, 1);
+    --film-maker-light: rgba(255, 0, 77, 1);
+    --film-maker-dark: rgba(126, 37, 83, 1);
+    --programmer-light: rgba(255, 163, 0, 1);
+    --programmer-dark: rgba(171, 82, 54, 1);
+    --photographer-light: rgba(41, 173, 255, 1);
+    --photographer-dark: rgba(29, 43, 83, 1);
+
+    --game-developer-light-half-opacity: rgba(0, 230, 54, 0.5);
+    --game-developer-dark-half-opacity: rgba(0, 135, 81, 0.5);
+    --film-maker-light-half-opacity: rgba(255, 0, 77, 0.5);
+    --film-maker-dark-half-opacity: rgba(126, 37, 83, 0.5);
+    --programmer-light-half-opacity: rgba(255, 163, 0, 0.5);
+    --programmer-dark-half-opacity: rgba(171, 82, 54, 0.5);
+    --photographer-light-half-opacity: rgba(41, 173, 255, 0.5);
+    --photographer-dark-half-opacity: rgba(29, 43, 83, 0.5);
+}
