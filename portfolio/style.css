@@ -552,7 +552,7 @@ main {
   appearance: none;
 
   width: min(2svw, 1em);
-  aspect-ratio: 1;
+  height: min(2svw, 1em);
 
   border-radius: 50%;
 
