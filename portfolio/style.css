@@ -798,13 +798,4 @@ main {
   .other_info {
     flex-direction: column;
   }
-
-  .footer {
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  .portfolio_description {
-    text-align: center;
-  }
 }
