@@ -736,7 +736,7 @@ main {
   align-items: center;
   justify-content: space-between;
 
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .footer a {
@@ -883,9 +883,11 @@ main {
   .glow_button {
     padding: 0.5rem 0.6rem;
   }
+}
 
+@media screen and (max-width: 700px) {
   .footer {
-    flex-direction: column;
+    flex-direction: column-reverse;
     margin-bottom: 2rem;
   }
 
