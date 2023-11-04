@@ -59,10 +59,10 @@ function onLoad() {
 
       linkedOptions.classList.toggle('hidden');
 
-      if (linkedOptions.style.display == 'none') {
-        this.innerHTML = 'Hide';
-      } else {
+      if (linkedOptions.classList.contains('hidden')) {
         this.innerHTML = 'Select';
+      } else {
+        this.innerHTML = 'Hide';
       }
     });
   }
