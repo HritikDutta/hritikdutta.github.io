@@ -305,6 +305,8 @@ main {
 #about {
   display: flex;
   justify-content: space-between;
+
+  width: 100%;
 }
 
 .options_list {
