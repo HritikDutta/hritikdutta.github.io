@@ -260,12 +260,15 @@ main {
 
 .skill_points_table {
   border-collapse: collapse;
-  width: fit-content;
+}
+
+.skill_points_table td:last-child {
+  width: min(14rem, 40svw);
 }
 
 .skill_content {
   display: flex;
-  padding: 5px 8px;
+  padding: 0.4rem 0.4rem;
 }
 
 .skill_icon {
@@ -278,7 +281,7 @@ main {
   --_width: 0;
   --_transitionDelay: 0;
 
-  width: min(14rem, 30svw);
+  width: 100%;
   height: 0.6rem;
 
   border: 2px solid var(--accent-dark);
@@ -802,12 +805,6 @@ main {
     margin: 1rem 1.2rem;
   }
 
-  #about {
-    flex-direction: column;
-    gap: 3rem;
-    align-items: center;
-  }
-
   .window_header {
     width: 100%;
   }
@@ -820,6 +817,26 @@ main {
     flex-direction: column-reverse;
     gap: 1rem;
     max-width: 80svw;
+  }
+
+  #about {
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+
+    width: fit-content;
+  }
+
+  #about .window {
+    width: 100%;
+  }
+
+  #about .window_body {
+    width: calc(100% - 2rem - 8px);
+  }
+
+  #about .window_content {
+    width: 100%;
   }
 
   .options_list {
