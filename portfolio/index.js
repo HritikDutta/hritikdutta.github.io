@@ -1,4 +1,6 @@
-const allSkinOptions = document.getElementsByClassName('skin_radio_button');
+const selectedOptions = {};
+selectedOptions['selected_skin'] = document.getElementById('skin_0');
+selectedOptions['selected_mission'] = document.getElementById('mission_0');
 
 let selectedMission, missionImageSlider;
 let imageNavButtonPrev, imageNavButtonNext;
@@ -6,21 +8,6 @@ let paginationDots;
 let selectedImageIndex = 0;
 
 const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
-
-function handleRadioClick(optionList) {
-  for (let i = 0; i < optionList.length; i++) {
-    const skinVisualID = optionList[i].value;
-    const element = document.getElementById(skinVisualID);
-
-    if (optionList[i].checked) {
-      element.style.transform = "translateX(0px)";
-      element.style.opacity = 1;
-    } else {
-      element.style.transform = "translateX(30px)";
-      element.style.opacity = 0;
-    }
-  }
-}
 
 function paginationMoveToIndex(index) {
   if (index <= 0) {
@@ -63,8 +50,63 @@ function onLoad() {
   paginationDots = Array.from(selectedMission.querySelectorAll('.pagination_dot_radio'));
   selectedImageIndex = 0;
 
-  handleRadioClick(allSkinOptions);
   paginationMoveToIndex(selectedImageIndex);
+
+  const optionToggles = document.getElementsByClassName('options_list_toggle');
+  for (let i = 0; i < optionToggles.length; i++) {
+    optionToggles[i].addEventListener('click', function () {
+      linkedOptions = document.getElementById(this.value);
+
+      linkedOptions.classList.toggle('hidden');
+
+      if (linkedOptions.style.display == 'none') {
+        this.innerHTML = 'Hide';
+      } else {
+        this.innerHTML = 'Select';
+      }
+    });
+  }
+
+  const allOptions = document.getElementsByClassName('option_radio_button');
+  for (let i = 0; i < allOptions.length; i++) {
+    const linkedPanel = document.getElementById(allOptions[i].value);
+    const linkedPanelContainer = linkedPanel.querySelector('.option_info_container');
+
+    if (allOptions[i].checked) {
+      linkedPanel.style.transform = "translate(0px)";
+      linkedPanel.style.opacity = 1;
+      linkedPanelContainer.style.position = 'relative';
+    } else {
+      linkedPanel.style.transform = "translateX(1000px)";
+      linkedPanel.style.opacity = 0;
+      linkedPanelContainer.style.position = 'absolute';
+    }
+
+    allOptions[i].addEventListener('change', function() {
+      const key = this.name;
+      let currentOption = selectedOptions[key];
+
+      let currentOptionInfoContainer = currentOption.querySelector('.option_info_container');
+
+      // Hide previous info
+      currentOption.style.transform = "translateX(1000px)";
+      currentOption.style.opacity = 0;
+      currentOptionInfoContainer.style.position = 'absolute';
+
+      // Show new info
+      currentOption = document.getElementById(this.value);
+      currentOption.style.transform = "translate(0px)";
+      currentOption.style.opacity = 1;
+
+      currentOptionInfoContainer = currentOption.querySelector('.option_info_container');
+      currentOptionInfoContainer.style.position = 'relative';
+
+      const parentToggleID = this.getAttribute('data-parent-toggle');
+      document.getElementById(parentToggleID).click();
+
+      selectedOptions[key] = currentOption;
+    });
+  }
   
   { // Animate portrait
     const title = document.getElementById('character_title');
