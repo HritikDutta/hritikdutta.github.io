@@ -11,7 +11,7 @@
 }
 
 html {
-  font-size: clamp(16px, 1vw, 24px);
+  font-size: clamp(14px, 1vw, 24px);
 }
 
 body {
@@ -21,7 +21,7 @@ body {
 }
 
 h1 {
-  font-size: clamp(42px, 2.618vw, 64px); 
+  font-size: clamp(32px, 2.618vw, 64px); 
   font-style: italic;
   font-weight: 900;
   text-transform: uppercase;
@@ -29,7 +29,7 @@ h1 {
 }
 
 h2 {
-  font-size: clamp(26px, 1.618vw, 40px); 
+  font-size: clamp(20px, 1.618vw, 40px); 
   text-transform: uppercase;
   font-weight: 700;
   font-style: italic;
@@ -70,6 +70,7 @@ main {
 
   display: inline-flex;
   flex-direction: column;
+  align-items: center;
   gap: 3rem;
 }
 
@@ -232,8 +233,9 @@ main {
   justify-content: center;
   position: relative;
 
-  box-shadow: 4px 4px 0px var(--accent-light);
   z-index: -1;
+
+  animation: window-shadow-animation 5s alternate infinite;
 }
 
 .window_header * {
@@ -243,10 +245,17 @@ main {
 .window_body {
   background-color: var(--window-background);
   border: 4px solid var(--accent-dark);
-  box-shadow: 4px 4px var(--accent-light);
 
   width: fit-content;
   padding: 1.5rem 2rem;
+
+  animation: window-shadow-animation 5s alternate infinite;
+}
+
+.window_content {
+  display: flex;
+  gap: 2.5rem;
+  height: fit-content;
 }
 
 .skill_points_table {
@@ -269,7 +278,7 @@ main {
   --_width: 0;
   --_transitionDelay: 0;
 
-  width: 14rem;
+  width: min(14rem, 30svw);
   height: 0.6rem;
 
   border: 2px solid var(--accent-dark);
@@ -395,12 +404,6 @@ main {
   text-decoration: underline;
 }
 
-.window_content {
-  display: flex;
-  gap: 2.5rem;
-  height: fit-content;
-}
-
 #skin_visual_container {
   display: grid;
 }
@@ -438,6 +441,8 @@ main {
 
 #mission_info_container {
   width: 40rem;
+  max-width: 100%;
+
   margin: auto;
 }
 
@@ -506,8 +511,10 @@ main {
   flex-shrink: 0;
 }
 
-.image_slider img {
+.image_container img {
   height: 100%;
+  width: 100%;
+  object-fit: contain;
 }
 
 .image_lower_container {
@@ -518,7 +525,7 @@ main {
 
   width: calc(100% - 2 * var(--_padding_x));
 
-  padding: 10px var(--_padding_x);
+  padding: 0.4rem var(--_padding_x);
   
   display: flex;
   align-items: center;
@@ -526,9 +533,7 @@ main {
 
   background-color: var(--accent-dark-half-opacity);
   backdrop-filter: blur(8px);
-}
 
-.image_lower_text {
   font-size: min(0.7rem, 16px);
   text-transform: uppercase;
 }
@@ -536,7 +541,7 @@ main {
 .pagination_dots {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 0.2rem;
 }
 
 .pagination_dot_radio {
@@ -544,12 +549,13 @@ main {
 
   appearance: none;
 
-  width: 1em;
-  height: 1em;
+  width: min(2svw, 1em);
+  aspect-ratio: 1;
+
   border-radius: 50%;
 
   background-color: var(--accent-dark);
-  border: 2px solid #000;
+  border: 0.1rem solid #000;
 
   position: relative;
 }
@@ -573,7 +579,7 @@ main {
 
 .pagination_dot_radio:hover {
   cursor: pointer;
-  border: 2px solid var(--accent-light-half-opacity);
+  border-color: var(--accent-light-half-opacity);
 }
 
 .pagination_dot_radio:checked::after {
@@ -583,10 +589,10 @@ main {
 .image_nav_buttons {
   position: absolute;
   top: 0;
-  left: 1rem;
+  left: calc(0.25 * var(--_content_padding_x));
 
   display: flex;
-  width: calc(100% - 2rem);
+  width: calc(100% - 0.5 * var(--_content_padding_x));
   height: 100%;
 
   justify-content: space-between;
@@ -612,6 +618,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 1em;
 }
 
@@ -669,7 +676,7 @@ main {
 
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 0.4rem;
 
   border: none;
 
@@ -699,11 +706,14 @@ main {
 }
 
 .footer {
+  width: 100%;
   color: var(--light-grey);
 
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  gap: 1rem;
 }
 
 .footer a {
@@ -765,9 +775,29 @@ main {
   }
 }
 
+@keyframes window-shadow-animation {
+  0% {
+    box-shadow: 4px 4px 0px var(--accent-light),
+                8px 8px 8px rgba(0,0,0,0.25);
+  }
+
+  100% {
+    box-shadow: 4px 4px 0px var(--accent-light),
+                10px 10px 16px rgba(0,0,0,0.25);
+  }
+}
+
 @media screen and (max-width: 1180px) {
+  .content {
+    margin: 0;
+  }
+
   .vertical_line {
     display: none;
+  }
+
+  .back_button {
+    margin: 1rem 1.2rem;
   }
 
   #about {
@@ -776,26 +806,61 @@ main {
     align-items: center;
   }
 
+  .window_header {
+    width: 100%;
+  }
+
+  .window_body {
+    padding: 0.75rem 1rem;
+  }
+  
   .window_content {
     flex-direction: column-reverse;
     gap: 1rem;
+    max-width: 80svw;
   }
 
   .options_list {
     flex-direction: row;
     justify-content: space-around;
+    flex-wrap: wrap;
+
     max-width: none;
   }
 
-  #mission_info_container {
-    width: max(70svw, fit-content);
+  .mission_images {
+    --_content_padding_x: 0;
+    min-width: 100%;
+    height: auto;
+  }
+  
+  .image_lower_container {
+    --_padding_x: 0.5em;
   }
 
-  .mission_images {
-    height: 18rem;
+  .image_nav_buttons {
+    width: 100%;
+  }
+
+  .image_nav_buttons button {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 
   .other_info {
     flex-direction: column;
+  }
+
+  .glow_button {
+    padding: 0.5rem 0.6rem;
+  }
+
+  .footer {
+    flex-direction: column;
+    margin-bottom: 5rem;
+  }
+
+  .portfolio_description {
+    text-align: center;
   }
 }
