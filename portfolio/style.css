@@ -2,50 +2,34 @@
   font-family: 'Jost', sans-serif;
 }
 
-@property --gradient-angle {
-  syntax: "<angle>";
-  initial-value: 45deg;
-  inherits: false;
-}
-
-@property --gradient-dark-offset {
-  syntax: "<percentage>";
-  initial-value: 78%;
-  inherits: false;
-}
-
-@property --gradient-light-offset {
-  syntax: "<percentage>";
-  initial-value: 100%;
-  inherits: false;
-}
-
 :root {
-  --accent-light: var(--game-developer-light, #000);
-  --accent-dark: var(--game-developer-dark, #000);
+  --accent-light: var(--game-developer-light);
+  --accent-dark: var(--game-developer-dark);
 
-  --accent-light-half-opacity: var(--game-developer-light-half-opacity, #000);
-  --accent-dark-half-opacity: var(--game-developer-dark-half-opacity, #000);
+  --accent-light-half-opacity: var(--game-developer-light-half-opacity);
+  --accent-dark-half-opacity: var(--game-developer-dark-half-opacity);
+}
+
+html {
+  font-size: clamp(16px, 1vw, 24px);
 }
 
 body {
   background-color: #000;
   color: var(--white);
-  font-size: 24px;
   margin: 0;
 }
 
 h1 {
-  font-size: 64px;
+  font-size: clamp(42px, 2.618vw, 64px); 
   font-style: italic;
   font-weight: 900;
   text-transform: uppercase;
-
   margin: 0;
 }
 
 h2 {
-  font-size: 40px;
+  font-size: clamp(26px, 1.618vw, 40px); 
   text-transform: uppercase;
   font-weight: 700;
   font-style: italic;
@@ -67,7 +51,7 @@ img {
 }
 
 .with_stroke::after {
-  -webkit-text-stroke: 12px #000;
+  -webkit-text-stroke: 0.5rem #000;
   content: attr(value);
   position: absolute;
   top: 0;
@@ -86,13 +70,33 @@ main {
 
   display: inline-flex;
   flex-direction: column;
-  gap: 75px;
+  gap: 3rem;
+}
+
+@property --gradient-angle {
+  syntax: '<angle>';
+  initial-value: 45deg;
+  inherits: false;
+}
+
+@property --gradient-dark-offset {
+  syntax: '<percentage>';
+  initial-value: 78%;
+  inherits: false;
+}
+
+@property --gradient-light-offset {
+  syntax: '<percentage>';
+  initial-value: 100%;
+  inherits: false;
 }
 
 .gradient_background {
   width: 100%;
-  height: 100svh;
+  height: 100%;
   position: absolute;
+  top: 0;
+  left: 0;
 
   background: linear-gradient(var(--gradient-angle), rgba(0,0,0,1) 41%, var(--accent-dark) var(--gradient-dark-offset), var(--accent-light) var(--gradient-light-offset));
   z-index: -100;
@@ -111,7 +115,7 @@ main {
 }
 
 .gradient_background::after {
-  content: "";
+  content: '';
   width: 100%;
   height: 100svh;
   position: absolute;
@@ -121,21 +125,28 @@ main {
 }
 
 .xbox_button {
-  width: 36px;
-  height: 36px;
-  
+  width: 1.5rem;
+  height: 1.5rem;
+
+  background-color: var(--dark);
   border-radius: 50vw;
-  border: 2px solid #000;
+  border: 0.1rem solid #000;
+
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
   
   font-weight: 700;
-  background-color: var(--dark);
 
   text-align: center;
+  align-content: center;
   text-decoration: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #xbox_button_b {
-  color: var(--film-maker-light);
+  color: var(--game-developer-light);
 }
 
 #xbox_button_a {
@@ -153,7 +164,7 @@ main {
 
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 0.6rem;
 }
 
 .back_button:hover span {
@@ -168,21 +179,35 @@ main {
 .avatar_big {
   position: relative;
   width: 100%;
-  height: 280px;
+  height: clamp(150px, 10vw, 280px);
 }
 
-.avatar_big img {
+#character_portrait {
   position: absolute;
   z-index: -2;
   bottom: 0;
   right: 0;
+
+  height: 100%;
+
+  transform: translateX(-300px);
+  opacity: 0;
+
+  transition: transform 200ms ease-out,
+              opacity 150ms ease-out;
 }
 
-.avatar_big h1 {
+#character_title {
   position: absolute;
   bottom: 0;
   right: 10%;
   color: var(--accent-light);
+  
+  transform: translateX(-300px);
+  opacity: 0;
+
+  transition: transform 200ms ease-out,
+              opacity 150ms ease-out;
 }
 
 .window {
@@ -201,23 +226,14 @@ main {
 
 .window_header {
   background-color: var(--accent-dark);
-  width: 400px;
+  width: clamp(280px, 15vw, 400px);
 
   display: flex;
   justify-content: center;
   position: relative;
-}
-.window_header::after {
-  content: "";
-  width: 400px;
-  height: 100%;
 
-  position: absolute;
-  top: 4px;
-  right: -4px;
+  box-shadow: 4px 4px 0px var(--accent-light);
   z-index: -1;
-  
-  background-color: var(--accent-light);
 }
 
 .window_header * {
@@ -230,7 +246,7 @@ main {
   box-shadow: 4px 4px var(--accent-light);
 
   width: fit-content;
-  padding: 24px 36px;
+  padding: 1.5rem 2rem;
 }
 
 .skill_points_table {
@@ -253,8 +269,8 @@ main {
   --_width: 0;
   --_transitionDelay: 0;
 
-  width: 340px;
-  height: 16px;
+  width: 14rem;
+  height: 0.6rem;
 
   border: 2px solid var(--accent-dark);
   box-shadow: 4px 4px 4px rgba(0,0,0,0.25);
@@ -266,7 +282,7 @@ main {
 .skill_point_bar::after {
   position: absolute;
 
-  content: "";
+  content: '';
   height: 100%;
   width: var(--_width);
 
@@ -292,13 +308,13 @@ main {
   position: relative;
 }
 
-.option input[type="radio"] {
+.option input[type='radio'] {
   position: absolute;
   opacity: 0;
   z-index: -99;
 }
 
-.options_list input[type="radio"]:focus+.option_button {
+.options_list input[type='radio']:focus+.option_button {
   transform: translate(-2px, -2px);
   box-shadow: 8px 8px 0px var(--accent-light);
 
@@ -308,16 +324,16 @@ main {
   text-decoration: underline;
 }
 
-.options_list input[type="radio"]:checked+.option_button {
+.options_list input[type='radio']:checked+.option_button {
   background-color: var(--accent-dark);
 }
 
-.options_list input[type="radio"]:checked+.option_button img {
+.options_list input[type='radio']:checked+.option_button img {
   opacity: 1;
 }
 
 .option_button {
-  padding: 15px 25px;
+  padding: 0.6rem 1rem;
   max-width: 100%;
 
   border: 4px solid var(--accent-dark);
@@ -337,6 +353,10 @@ main {
   opacity: 0;
 }
 
+.option_button img {
+  height: 1rem;
+}
+
 .option_button span {
   flex-grow: 1;
   white-space: nowrap;
@@ -353,8 +373,6 @@ main {
 
   transition: transform 150ms ease-out,
               box-shadow 100ms ease-out;
-
-  text-decoration: underline;
 }
 
 .option_button:active {
@@ -371,7 +389,7 @@ main {
 
 .window_content {
   display: flex;
-  gap: 42px;
+  gap: 2.5rem;
   height: fit-content;
 }
 
@@ -382,9 +400,14 @@ main {
 .skin_visual {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 0.8rem;
   align-items: center;
-  
+
+  margin: auto 0;
+
+  width: fit-content;
+  height: fit-content;
+
   grid-column-start: 1;
   grid-row-start: 1;
 
@@ -392,12 +415,17 @@ main {
               opacity   150ms ease-out;
 }
 
+.skin_visual img {
+  --_size-scale: min(11rem, 90%);
+  width:  var(--_size-scale);
+}
+
 #mission_select {
   align-items: end;
 }
 
 #mission_select .options_list {
-  width: 450px;
+  width: 18rem;
 }
 
 .mission_header {
@@ -405,13 +433,13 @@ main {
 }
 
 #mission_info_container {
-  width: 900px;
+  width: 40rem;
 }
 
 .mission_info {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 1.6rem;
 }
 
 .mission_info h2 {
@@ -429,15 +457,15 @@ main {
 
 .vertical_line {
   border: 1px solid var(--accent-dark);
-  margin-top: -24px;
-  margin-bottom: -24px;
+  margin-top: -1.5rem;
+  margin-bottom: -1.5rem;
 }
 
 .mission_images {
-  height: 400px;
+  height: 18rem;
   position: relative;
 
-  padding: 0 64px;
+  padding: 0 3rem;
 }
 
 .mission_images_content {
@@ -475,7 +503,7 @@ main {
 }
 
 .image_lower_container {
-  --_padding_x: 24px;
+  --_padding_x: 1rem;
 
   position: absolute;
   bottom: 0;
@@ -493,7 +521,7 @@ main {
 }
 
 .image_lower_text {
-  font-size: 16px;
+  font-size: min(0.7rem, 16px);
   text-transform: uppercase;
 }
 
@@ -558,8 +586,13 @@ main {
 }
 
 .image_nav_buttons button {
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+#image_nav_button_prev img,
+#image_nav_button_next img {
+  width: 2rem
 }
 
 #image_nav_button_prev img {
@@ -567,7 +600,7 @@ main {
 }
 
 .mission_tags {
-  font-size: 16px;
+  font-size: min(0.7rem, 16px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -583,7 +616,7 @@ main {
 
 .other_info {
   display: flex;
-  gap: 32px;
+  gap: 1.5rem;
   height:fit-content;
 }
 
@@ -604,13 +637,12 @@ main {
 }
 
 .challenge_checkbox {
-  width : 28px;
-  height: 24px;
-  margin-top: 8px;
+  height: 1rem;
+  margin-top: 0.333rem;
 }
 
 .rewards {
-  min-width: 250px;
+  min-width: 12rem;
 }
 
 .play_section {
@@ -620,7 +652,7 @@ main {
 
 .glow_button {
   width: fit-content;
-  padding: 15px 25px;
+  padding: 1rem 1.2rem;
   z-index: 5;
 
   text-transform: uppercase;
@@ -679,9 +711,13 @@ main {
 .links {
   display: flex;
   align-items: center;
-  gap: 23px;
+  gap: 1rem;
 
   font-size: 1px;
+}
+
+.links img {
+  height: 0.8rem;
 }
 
 .links a:hover {

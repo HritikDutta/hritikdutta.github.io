@@ -53,7 +53,6 @@ function paginationMoveToIndex(index) {
 }
 
 function onLoad() {
-
   // All of this needs to be done when a new mission is selected
   selectedMission = document.getElementById('mission_0');
   missionImageSlider = selectedMission.querySelector('.image_slider');
@@ -66,6 +65,18 @@ function onLoad() {
 
   handleRadioClick(allSkinOptions);
   paginationMoveToIndex(selectedImageIndex);
+  
+  { // Animate portrait
+    const title = document.getElementById('character_title');
+    const portrait = document.getElementById('character_portrait');
+
+    title.style.transform = "translateX(0)";
+    title.style.opacity = 1;
+    title.style.transitionDelay = "0.2s";
+
+    portrait.style.transform = "translateX(0)";
+    portrait.style.opacity = 1;
+  }
 
   { // Animate Windows
     const allWindows = document.getElementsByClassName('window');
@@ -73,7 +84,7 @@ function onLoad() {
     const baseDelay = 0;
 
     for (let i = 0; i < allWindows.length; i++) {
-      allWindows[i].style.transform = "translateY(0px)";
+      allWindows[i].style.transform = "translateY(0)";
       allWindows[i].style.opacity = 1;
       allWindows[i].style.transitionDelay = (i * delayMultiplier + baseDelay).toString() + "s";
     }
