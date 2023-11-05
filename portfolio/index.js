@@ -65,7 +65,6 @@ function paginationUpdateUI(index) {
 }
 
 function paginationMoveToIndex(index) {
-  paginationUpdateUI(index);
   missionImageSliderMask.scrollTo(index * missionImageSliderMask.clientWidth, 0);
 }
 
