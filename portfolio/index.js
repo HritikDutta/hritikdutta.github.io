@@ -10,7 +10,7 @@ let selectedImageIndex = 0;
 const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
 
 function paginationAdjustAtScrollEnd() {
-  let index = missionImageSliderMask.scrollLeft / missionImageSliderMask.clientWidth;
+  let index = Math.floor(missionImageSliderMask.scrollLeft / missionImageSliderMask.clientWidth);
   paginationUpdateUI(index);
 }
 
