@@ -100,10 +100,12 @@ function onLoad() {
       linkedPanel.style.transform = "translate(0px)";
       linkedPanel.style.opacity = 1;
       linkedPanelContainer.style.position = 'relative';
+      linkedPanel.tabIndex = "0";
     } else {
       linkedPanel.style.transform = "translateX(1000px)";
       linkedPanel.style.opacity = 0;
       linkedPanelContainer.style.position = 'absolute';
+      linkedPanel.tabIndex = "-1";
     }
 
     allOptions[i].addEventListener('click', function() {
@@ -119,11 +121,13 @@ function onLoad() {
       currentOption.style.transform = "translateX(1000px)";
       currentOption.style.opacity = 0;
       currentOptionInfoContainer.style.position = 'absolute';
+      currentOption.tabIndex = "-1";
 
       // Show new info
       currentOption = document.getElementById(this.value);
       currentOption.style.transform = "translate(0px)";
       currentOption.style.opacity = 1;
+      currentOption.tabIndex = "0";
 
       currentOptionInfoContainer = currentOption.querySelector('.option_info_container');
       currentOptionInfoContainer.style.position = 'relative';

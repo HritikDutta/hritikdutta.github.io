@@ -434,6 +434,10 @@ main {
               position  250ms linear;
 }
 
+.option_info[tabindex='-1'] * {
+  visibility: hidden;
+}
+
 .skin_visual .option_info_container {
   display: flex;
   flex-direction: column;
@@ -613,7 +617,6 @@ main {
   z-index: 1;
 
   transform: scale(0);
-  transition: 75ms ease-out;
 }
 
 .pagination_dot_radio:hover {
@@ -623,6 +626,7 @@ main {
 
 .pagination_dot_radio:checked::after {
   transform: scale(100%);
+  transition: 300ms cubic-bezier(0.5, 0.69, 0.75, 2.5);
 }
 
 .image_nav_buttons {
