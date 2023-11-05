@@ -1,5 +1,8 @@
-* {
+*,
+*::before,
+*::after {
   font-family: 'Jost', sans-serif;
+  box-sizing: border-box;
 }
 
 :root {
@@ -235,8 +238,7 @@ main {
 
   z-index: -1;
 
-  box-shadow: 4px 4px 0px var(--accent-light),
-              8px 8px 8px rgba(0,0,0,0.25);
+  box-shadow: 4px 4px 0px var(--accent-light);
 }
 
 .window_header * {
@@ -250,10 +252,7 @@ main {
   width: fit-content;
   padding: 1.5rem 2rem;
 
-  animation: window-shadow-animation 5s alternate infinite;
-  
-  box-shadow: 4px 4px 0px var(--accent-light),
-              8px 8px 8px rgba(0,0,0,0.25);
+  box-shadow: 4px 4px 0px var(--accent-light);
 
   overflow: hidden;
 }
@@ -268,7 +267,7 @@ main {
 }
 
 .skill_points_table td:last-child {
-  width: min(14rem, 40svw);
+  width: clamp(8rem, 40svw, 14rem);
 }
 
 .skill_content {
@@ -287,7 +286,7 @@ main {
   --_transitionDelay: 0;
 
   width: 100%;
-  height: 0.6rem;
+  height: 0.8rem;
 
   border: 2px solid var(--accent-dark);
   box-shadow: 4px 4px 4px rgba(0,0,0,0.25);
@@ -503,15 +502,27 @@ main {
 }
 
 .mission_images_content {
-  overflow: hidden;
-  position: relative;
-
   width: 100%;
   height: 100%;
   margin: 0 var(--content_padding_x);
 
   background-color: #000;
   border: 2px solid var(--accent-light);
+
+  position: relative;
+}
+
+.images_mask {
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  overscroll-behavior-inline: contain;
+  scroll-snap-type: inline mandatory;
+  
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  
+  width: 100%;
+  height: 100%;
 }
 
 .image_slider {
@@ -525,7 +536,8 @@ main {
 
 .image_container {
   width: 100%;
-  height: 100%;
+
+  scroll-snap-align: start;
 
   display: flex;
   justify-content: center;
@@ -544,7 +556,7 @@ main {
   position: absolute;
   bottom: 0;
 
-  width: calc(100% - 2 * var(--_padding_x));
+  width: 100%;
 
   padding: 0.4rem var(--_padding_x);
   
@@ -699,6 +711,7 @@ main {
 
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.4rem;
 
   border: none;
@@ -838,7 +851,7 @@ main {
   }
 
   #about .window_body {
-    width: calc(100% - 2rem - 8px);
+    width: 100%;
   }
 
   #about .window_content {
@@ -849,7 +862,7 @@ main {
     max-width: none;
   }
 
-  .hidden {
+  .mobile_hidden {
     display: none;
   }
 
@@ -893,5 +906,13 @@ main {
 
   .portfolio_description {
     text-align: center;
+  }
+
+  .play_section {
+    justify-content: center;
+  }
+
+  .play_section > .glow_button {
+    width: 100%;
   }
 }

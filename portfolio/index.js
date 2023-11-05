@@ -1,15 +1,42 @@
 const selectedOptions = {};
-selectedOptions['selected_skin'] = document.getElementById('skin_0');
-selectedOptions['selected_mission'] = document.getElementById('mission_0');
+selectedOptions['selected_skin'] = { currentSelection: document.getElementById('skin_0'), toggleButton: document.getElementById('skin_toggle') };
+selectedOptions['selected_mission'] = { currentSelection: document.getElementById('mission_0'), toggleButton: document.getElementById('mission_toggle') };
 
-let selectedMission, missionImageSlider;
+let selectedMission, missionImageSlider, missionImageSliderMask;
 let imageNavButtonPrev, imageNavButtonNext;
 let paginationDots;
 let selectedImageIndex = 0;
 
 const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
 
-function paginationMoveToIndex(index) {
+function paginationAdjustAtScrollEnd() {
+  let index = missionImageSliderMask.scrollLeft / missionImageSliderMask.clientWidth;
+  paginationUpdateUI(index);
+}
+
+function selectMission(id) {
+  // Un-register from scroll event
+  if (missionImageSliderMask) {
+    missionImageSliderMask.removeEventListener('scrollend', paginationAdjustAtScrollEnd);
+  }
+
+  selectedMission = document.getElementById(id);
+  missionImageSlider = selectedMission.querySelector('.image_slider');
+  missionImageSliderMask = selectedMission.querySelector('.images_mask');
+
+  imageNavButtonPrev = document.querySelector('#image_nav_button_prev');
+  imageNavButtonNext = document.querySelector('#image_nav_button_next');
+
+  paginationDots = Array.from(selectedMission.querySelectorAll('.pagination_dot_radio'));
+  selectedImageIndex = 0;
+
+  // Only register if there is an image slider
+  if (missionImageSliderMask) {
+    missionImageSliderMask.addEventListener('scrollend', paginationAdjustAtScrollEnd);
+  }
+}
+
+function paginationUpdateUI(index) {
   if (index <= 0) {
     index = 0;
     imageNavButtonPrev.style.opacity = 0;
@@ -34,32 +61,29 @@ function paginationMoveToIndex(index) {
   }
 
   paginationDots[index].checked = true; // Rest are unchecked automatically
-
-  missionImageSlider.style.transform = "translate(" + (-index * 100).toString() + "%)";
   selectedImageIndex = index;
 }
 
+function paginationMoveToIndex(index) {
+  paginationUpdateUI(index);
+  missionImageSliderMask.scrollTo(index * missionImageSliderMask.clientWidth, 0);
+}
+
 function onLoad() {
-  // All of this needs to be done when a new mission is selected
-  selectedMission = document.getElementById('mission_0');
-  missionImageSlider = selectedMission.querySelector('.image_slider');
+  selectMission('mission_0');
 
-  imageNavButtonPrev = document.querySelector('#image_nav_button_prev');
-  imageNavButtonNext = document.querySelector('#image_nav_button_next');
-
-  paginationDots = Array.from(selectedMission.querySelectorAll('.pagination_dot_radio'));
-  selectedImageIndex = 0;
-
-  paginationMoveToIndex(selectedImageIndex);
+  if (missionImageSlider) {
+    paginationMoveToIndex(selectedImageIndex);
+  }
 
   const optionToggles = document.getElementsByClassName('options_list_toggle');
   for (let i = 0; i < optionToggles.length; i++) {
     optionToggles[i].addEventListener('click', function () {
       linkedOptions = document.getElementById(this.value);
 
-      linkedOptions.classList.toggle('hidden');
+      linkedOptions.classList.toggle('mobile_hidden');
 
-      if (linkedOptions.classList.contains('hidden')) {
+      if (linkedOptions.classList.contains('mobile_hidden')) {
         this.innerHTML = 'Select';
       } else {
         this.innerHTML = 'Hide';
@@ -82,10 +106,13 @@ function onLoad() {
       linkedPanelContainer.style.position = 'absolute';
     }
 
+    allOptions[i].addEventListener('click', function() {
+      selectedOptions[this.name].toggleButton.click();
+    });
+
     allOptions[i].addEventListener('change', function() {
       const key = this.name;
-      let currentOption = selectedOptions[key];
-
+      let currentOption = selectedOptions[key].currentSelection;
       let currentOptionInfoContainer = currentOption.querySelector('.option_info_container');
 
       // Hide previous info
@@ -101,13 +128,10 @@ function onLoad() {
       currentOptionInfoContainer = currentOption.querySelector('.option_info_container');
       currentOptionInfoContainer.style.position = 'relative';
 
-      const parentToggleID = this.getAttribute('data-parent-toggle');
-      document.getElementById(parentToggleID).click();
-
-      selectedOptions[key] = currentOption;
+      selectedOptions[key].currentSelection = currentOption;
     });
   }
-  
+
   { // Animate portrait
     const title = document.getElementById('character_title');
     const portrait = document.getElementById('character_portrait');
