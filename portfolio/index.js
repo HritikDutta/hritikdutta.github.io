@@ -85,14 +85,14 @@ function onLoad() {
   const optionToggles = document.getElementsByClassName('options_list_toggle');
   for (let i = 0; i < optionToggles.length; i++) {
     optionToggles[i].addEventListener('click', function () {
-      linkedOptions = document.getElementById(this.value);
+      let linkedOptions = document.getElementById(this.value);
 
       linkedOptions.classList.toggle('mobile_hidden');
 
       if (linkedOptions.classList.contains('mobile_hidden')) {
-        this.innerHTML = 'Select';
+        this.querySelector('.option_toggle_arrow').style.transform = 'rotateZ(-90deg)';
       } else {
-        this.innerHTML = 'Hide';
+        this.querySelector('.option_toggle_arrow').style.transform = 'rotateZ(90deg)';
       }
     });
   }
@@ -115,6 +115,9 @@ function onLoad() {
     }
 
     allOptions[i].addEventListener('click', function() {
+      let optionName = document.querySelector('label[for="' + this.id + '"] > span').textContent;
+
+      selectedOptions[this.name].toggleButton.querySelector('h2').textContent = optionName;
       selectedOptions[this.name].toggleButton.click();
     });
 

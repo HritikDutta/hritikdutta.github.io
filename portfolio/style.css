@@ -32,7 +32,7 @@ h1 {
 }
 
 h2 {
-  font-size: clamp(20px, 1.618vw, 40px); 
+  font-size: clamp(16px, 1.618vw, 40px); 
   text-transform: uppercase;
   font-weight: 700;
   font-style: italic;
@@ -46,6 +46,11 @@ p {
 
 img {
   pointer-events: none;
+}
+
+button {
+  color: inherit;
+  text-align: inherit;
 }
 
 .with_stroke {
@@ -380,6 +385,10 @@ main {
 .option_select_arrow {
   transform: rotateZ(180deg);
   opacity: 0;
+}
+
+.option_toggle_arrow {
+  transform: rotateZ(90deg);
 }
 
 .option_button img {
@@ -880,7 +889,33 @@ main {
   }
 
   .options_list_toggle {
-    display: block;
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    border: none;
+    background-color: transparent;
+  }
+
+  .options_list_toggle h2 {
+    flex-grow: 1;
+    text-shadow: 0px 0px 24px rgba(255, 255, 255, 0.5);
+  }
+
+  .options_list_toggle:active h2 {
+    text-shadow: 0px 0px 30px rgba(255, 255, 255, 0.5);
+    transform: translate(2px, 2px);
+
+    transition: transform 15ms ease-out;
+  }
+
+  .options_list_toggle img {
+    height: 0.8rem;
+    transition: transform 300ms ease-in-out;
+  }
+
+  .mission_info h2 {
+    display: none;
   }
 
   .mission_images {
