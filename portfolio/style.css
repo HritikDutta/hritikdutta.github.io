@@ -430,7 +430,7 @@ main {
   grid-row-start: 1;
 
   transition: transform 250ms ease-out,
-              opacity   150ms ease-in,
+              opacity   300ms ease-in,
               position  250ms linear;
 }
 
