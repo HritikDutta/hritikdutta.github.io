@@ -155,7 +155,7 @@ main {
 }
 
 #xbox_button_b {
-  color: var(--game-developer-light);
+  color: var(--film-maker-light);
 }
 
 #xbox_button_a {
@@ -456,8 +456,8 @@ main {
 }
 
 .skin_visual img {
+  height: 8rem;
   object-fit: contain;
-  width: 12rem;
 }
 
 #mission_select {
@@ -567,7 +567,6 @@ main {
 }
 
 .image_container img {
-  height: 100%;
   width: 100%;
   object-fit: contain;
 }
