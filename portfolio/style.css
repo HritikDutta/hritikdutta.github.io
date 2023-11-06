@@ -150,7 +150,7 @@ main {
 .gradient_background::after {
   content: '';
   width: 100%;
-  height: 100svh;
+  height: 100%;
   position: absolute;
   
   background: linear-gradient(0, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
@@ -568,10 +568,7 @@ main {
 
 .slider {
   display: flex;
-
-  width: 100%;
   height: 100%;
-
   transition: transform 250ms ease-in-out;
 }
 
@@ -688,11 +685,13 @@ main {
 .nav_buttons {
   position: absolute;
   top: 0;
-  left: calc(0.25 * var(--_content_padding_x));
+  left: 0;
 
   display: flex;
-  width: calc(100% - 0.5 * var(--_content_padding_x));
+  width: 100%;
   height: 100%;
+
+  padding: 0 calc(0.25 * var(--_content_padding_x));
 
   justify-content: space-between;
   align-items: center;
@@ -814,11 +813,6 @@ main {
   width: 100%;
   color: var(--light-grey);
 
-/*display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1.5rem; */
-
   position: relative;
 }
 
@@ -876,19 +870,13 @@ main {
 }
 
 .character_select_content {
-  width: fit-content;
-  margin: 2rem;
-
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-
+  width: min(70rem, 100svw);
+  margin: 2rem auto;
   gap: 1rem;
 }
 
 .character_select_header {
   width: 100%;
-
   padding: 0 2rem;
 
   display: flex;
@@ -897,10 +885,6 @@ main {
 
 .character_select_main {
   --_content_padding_x: 37.5%;
-  width: 70rem;
-  max-width: 100%;
-
-  height: fit-content;
   position: relative;
 }
 
@@ -1028,7 +1012,8 @@ main {
     width: 100%;
   }
 
-  .window_body {
+  .window_body,
+  .character_panel .window_body {
     padding: 0.75rem 1rem;
   }
   
@@ -1106,10 +1091,6 @@ main {
     --_padding_x: 0.5em;
   }
 
-  .nav_buttons {
-    width: 100%;
-  }
-
   .nav_buttons button {
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -1125,6 +1106,41 @@ main {
 
   .links {
     gap: 1rem;
+  }
+  
+  .character_panel .avatar_big {
+    height: 9rem;
+  }
+
+  .character_panel .avatar_big img {
+    height: 10rem;
+  }
+
+  .character_panel h1 {
+    font-size: clamp(24px, 2.618vw, 48px); 
+  }
+
+  .character_select_content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .character_panel img {
+    height: 150%;
+  }
+
+  .character_panel .window {
+    margin-left: 0;
+  }
+
+  .character_panel p {
+    width: 100%;
+    max-width: none;
+  }
+
+  .character_select_main .nav_buttons {
+    height: 110%;
+    align-items: end;
   }
 }
 
