@@ -28,19 +28,26 @@ function selectMission(id) {
 
   selectedMission = document.getElementById(id);
   missionImageSlider = selectedMission.querySelector('.image_slider');
-  missionImageSliderMask = selectedMission.querySelector('.images_mask');
-
-  imageNavButtonPrev = document.querySelector('#image_nav_button_prev');
-  imageNavButtonNext = document.querySelector('#image_nav_button_next');
-
-  paginationDots = Array.from(selectedMission.querySelectorAll('.pagination_dot_radio'));
-  selectedImageIndex = 0;
 
   // Only register if there is an image slider
-  if (missionImageSliderMask) {
+  if (missionImageSlider) {
+    missionImageSliderMask = selectedMission.querySelector('.images_mask');
     missionImageSliderMask.addEventListener('scrollend', paginationAdjustAtScrollEnd);
+  
+    imageNavButtonPrev = selectedMission.querySelector('#image_nav_button_prev');
+    imageNavButtonNext = selectedMission.querySelector('#image_nav_button_next');
+
     missionImageCount = missionImageSlider.childElementCount;
+
+    paginationDots = Array.from(selectedMission.querySelectorAll('.pagination_dot_radio'));
+
+    // Firefox doesn't like to scroll anything that's not visible (even though I'm the one telling it to) so it wouldn't update the ui properly. 
+    // I guess I'll not move back to the first image every time you switch missions then.
+    // I would have liked to move back to the first image but this isn't a bad tradeoff.
+    paginationAdjustAtScrollEnd();
   }
+
+  console.log('Updated mission cache for mission with id: ' + id);
 }
 
 function paginationUpdateUI(index) {
@@ -77,10 +84,6 @@ function paginationMoveToIndex(index) {
 
 function onLoad() {
   selectMission('mission_0');
-
-  if (missionImageSlider) {
-    paginationMoveToIndex(selectedImageIndex);
-  }
 
   const optionToggles = document.getElementsByClassName('options_list_toggle');
   for (let i = 0; i < optionToggles.length; i++) {
@@ -137,6 +140,11 @@ function onLoad() {
       currentOption.style.transform = "translate(0px)";
       currentOption.style.opacity = 1;
       currentOption.tabIndex = "0";
+
+      // Update mission cache if option has correct tag
+      if (currentOption.hasAttribute('data-updates-mission-cache')) {
+        selectMission(this.value);
+      }
 
       currentOptionInfoContainer = currentOption.querySelector('.option_info_container');
       currentOptionInfoContainer.style.position = 'relative';
