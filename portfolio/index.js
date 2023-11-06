@@ -3,6 +3,8 @@ selectedOptions['selected_skin'] = { currentSelection: document.getElementById('
 selectedOptions['selected_mission'] = { currentSelection: document.getElementById('mission_0'), toggleButton: document.getElementById('mission_toggle') };
 
 let selectedMission, missionImageSlider, missionImageSliderMask;
+let missionImageCount = 0;
+
 let imageNavButtonPrev, imageNavButtonNext;
 let paginationDots;
 let selectedImageIndex = 0;
@@ -10,7 +12,11 @@ let selectedImageIndex = 0;
 const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
 
 function paginationAdjustAtScrollEnd() {
-  let index = Math.floor(missionImageSliderMask.scrollLeft / missionImageSliderMask.clientWidth);
+  const width = missionImageSliderMask.getBoundingClientRect().width;
+
+  // Adding an offset based on number of images to the scroll to get more consistent indices.
+  // Otherwise JavaScripts bullshit 'number' math makes the scroll amount a tiny bit less than the width required.
+  let index = Math.floor((missionImageSliderMask.scrollLeft + missionImageCount) / width);
   paginationUpdateUI(index);
 }
 
@@ -33,6 +39,7 @@ function selectMission(id) {
   // Only register if there is an image slider
   if (missionImageSliderMask) {
     missionImageSliderMask.addEventListener('scrollend', paginationAdjustAtScrollEnd);
+    missionImageCount = missionImageSlider.childElementCount;
   }
 }
 
@@ -48,9 +55,8 @@ function paginationUpdateUI(index) {
     imageNavButtonPrev.tabIndex = "0";
   }
   
-  let lastChildIndex = missionImageSlider.childElementCount - 1;
-  if (index >= lastChildIndex) {
-    index = lastChildIndex;
+  if (index >= missionImageCount - 1) {
+    index = missionImageCount - 1;
     imageNavButtonNext.style.opacity = 0;
     imageNavButtonNext.style.cursor = 'auto';
     imageNavButtonNext.tabIndex = "-1";
@@ -65,7 +71,8 @@ function paginationUpdateUI(index) {
 }
 
 function paginationMoveToIndex(index) {
-  missionImageSliderMask.scrollTo(index * missionImageSliderMask.clientWidth, 0);
+  const width = missionImageSliderMask.getBoundingClientRect().width;
+  missionImageSliderMask.scrollTo(index * width, 0);
 }
 
 function onLoad() {
