@@ -6,7 +6,7 @@
 }
 
 :root {
-  --accent-blend-duration: 1s;
+  --accent-blend-duration: 1000ms;
 
   --accent-light: var(--game-developer-light);
   --accent-dark: var(--game-developer-dark);
@@ -1174,5 +1174,9 @@ main {
 
   .play_section > .glow_button {
     width: 100%;
+  }
+
+  .pagination_dot_radio {
+    border: 0.1em solid #000;
   }
 }
