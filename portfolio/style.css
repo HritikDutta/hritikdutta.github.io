@@ -6,6 +6,8 @@
 }
 
 :root {
+  --accent-blend-duration: 1s;
+
   --accent-light: var(--game-developer-light);
   --accent-dark: var(--game-developer-dark);
 
@@ -48,9 +50,29 @@ img {
   pointer-events: none;
 }
 
+.pixel_perfect {
+  image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
+  image-rendering: -moz-crisp-edges;          /* Firefox                        */
+  image-rendering: -o-crisp-edges;            /* Opera                          */
+  image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+  image-rendering: pixelated;                 /* Universal support since 2021   */
+  image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+  -ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
+}
+
 button {
   color: inherit;
   text-align: inherit;
+}
+
+.text_accent_light {
+  color: var(--accent-light);
+  transition: color var(--accent-blend-duration) ease-out;
+}
+
+.text_accent_dark {
+  color: var(--accent-dark);
+  transition: color var(--accent-blend-duration) ease-out;
 }
 
 .with_stroke {
@@ -111,6 +133,8 @@ main {
   z-index: -100;
   
   animation: gradient-animation 20s alternate infinite;
+
+  transition: opacity var(--accent-blend-duration) ease-out;
 }
 
 /* Mozilla Firefox doesn't support properties so need to keep constant gradient */
@@ -198,25 +222,28 @@ main {
   right: 0;
 
   height: 100%;
-
-  transform: translateX(-300px);
-  opacity: 0;
-
-  transition: transform 200ms ease-out,
-              opacity 150ms ease-out;
 }
 
 #character_title {
   position: absolute;
   bottom: 0;
   right: 10%;
-  color: var(--accent-light);
-  
+}
+
+.transition_on_load_horizontal {
   transform: translateX(-300px);
   opacity: 0;
+  
+  transition: transform 300ms ease-out,
+              opacity 250ms ease-in;
+}
 
-  transition: transform 200ms ease-out,
-              opacity 150ms ease-out;
+.transition_on_load_vertical {
+  transform: translateY(300px);
+  opacity: 0;
+
+  transition: transform 300ms ease-out,
+              opacity 250ms ease-in;
 }
 
 .window {
@@ -227,10 +254,6 @@ main {
   display: flex;
   flex-direction: column;
   align-items: start;
-
-  transform: translateY(300px);
-  opacity: 0%;
-  transition: 200ms ease-out;
 }
 
 .window_header {
@@ -253,6 +276,7 @@ main {
 .window_body {
   background-color: var(--window-background);
   border: 4px solid var(--accent-dark);
+  backdrop-filter: blur(14px);
 
   width: fit-content;
   padding: 1.5rem 2rem;
@@ -464,10 +488,6 @@ main {
   align-items: end;
 }
 
-.mission_header {
-  color: var(--accent-dark);
-}
-
 #mission_info_container {
   width: 40rem;
   max-width: 100%;
@@ -494,7 +514,6 @@ main {
   font-weight: 700;
   font-style: italic;
 
-  color: var(--accent-dark);
   margin-bottom: 10px;
 }
 
@@ -526,7 +545,7 @@ main {
   position: relative;
 }
 
-.images_mask {
+.slider_mask {
   overflow-x: scroll;
   scroll-behavior: smooth;
   overscroll-behavior-inline: contain;
@@ -547,7 +566,7 @@ main {
   display: none;
 }
 
-.image_slider {
+.slider {
   display: flex;
 
   width: 100%;
@@ -556,14 +575,15 @@ main {
   transition: transform 250ms ease-in-out;
 }
 
-.image_container {
+.slider_container {
   width: 100%;
-
   scroll-snap-align: start;
+  flex-shrink: 0;
+}
 
+.image_container {
   display: flex;
   justify-content: center;
-  flex-shrink: 0;
 }
 
 .image_container img {
@@ -665,7 +685,7 @@ main {
   justify-content: end;
 }
 
-.image_nav_buttons {
+.nav_buttons {
   position: absolute;
   top: 0;
   left: calc(0.25 * var(--_content_padding_x));
@@ -678,17 +698,17 @@ main {
   align-items: center;
 }
 
-.image_nav_buttons button {
+.nav_buttons button {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
 
-#image_nav_button_prev img,
-#image_nav_button_next img {
+#nav_button_prev img,
+#nav_button_next img {
   width: 2rem
 }
 
-#image_nav_button_prev img {
+#nav_button_prev img {
   transform: rotate(180deg);
 }
 
@@ -740,6 +760,8 @@ main {
 }
 
 .play_section {
+  width: 100%;
+
   display: flex;
   justify-content: end;
 }
@@ -763,6 +785,9 @@ main {
   background-color: var(--accent-light);
   box-shadow: 4px 4px 0px var(--accent-dark),
               0px 0px 14px var(--accent-light-half-opacity);
+
+  transition: background-color var(--accent-blend-duration) ease-out,
+              box-shadow var(--accent-blend-duration) ease-out;
 }
 
 .glow_button:hover {
@@ -848,6 +873,110 @@ main {
 .links a:hover {
   transform: scale(120%);
   transition: transform 100ms ease-out;
+}
+
+.character_select_content {
+  width: fit-content;
+  margin: 2rem;
+
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 1rem;
+}
+
+.character_select_header {
+  width: 100%;
+
+  padding: 0 2rem;
+
+  display: flex;
+  justify-content: end;
+}
+
+.character_select_main {
+  --_content_padding_x: 37.5%;
+  width: 70rem;
+  max-width: 100%;
+
+  height: fit-content;
+  position: relative;
+}
+
+.character_slider {
+  display: flex;
+  overflow-x: scroll;
+}
+
+.character_slide {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.character_panel {
+  width: fit-content;
+  margin: auto;
+}
+
+.character_panel .avatar_big {
+  height: clamp(75px, 5vw, 140px);
+}
+
+.character_panel img {
+  height: 350%;
+}
+
+.character_panel .window {
+  margin-left: 17rem;
+}
+
+.character_panel .window_body {
+  padding: 2rem 2.5rem;
+}
+
+.character_panel .window_content {
+  width: 30rem;
+
+  flex-direction: column;
+  align-items: center;
+
+  gap: 1rem;
+}
+
+.character_panel p {
+  max-width: 25rem;
+}
+
+.character_stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.character_stats_grid {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 0.5rem 1rem;
+}
+
+.stat {
+  display: flex;
+}
+
+.positive,
+.negative {
+  width: 1.5rem;
+  text-align: center;
+}
+
+.positive {
+  color: var(--game-developer-light);
+}
+
+.negative {
+  color: var(--film-maker-light);
 }
 
 @keyframes gradient-animation {
@@ -977,11 +1106,11 @@ main {
     --_padding_x: 0.5em;
   }
 
-  .image_nav_buttons {
+  .nav_buttons {
     width: 100%;
   }
 
-  .image_nav_buttons button {
+  .nav_buttons button {
     padding-top: 1rem;
     padding-bottom: 1rem;
   }

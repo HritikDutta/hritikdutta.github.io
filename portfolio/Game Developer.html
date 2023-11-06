@@ -15,10 +15,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;1,400;1,700;1,900&display=swap" rel="stylesheet">
 </head>
-<body onload="onLoad()">
+<body onload="onLoadMissionSelect()">
   <div class="gradient_background"></div>
   <header>
-    <a class="back_button" href="">
+    <a class="back_button transition_on_load_horizontal" href="index.html">
       <div class="button_prompt xbox_button" id="xbox_button_b">B</div>
       <img src="img/icons/arrow-small-back.svg" alt="">
       <span>Character Select</span>
@@ -27,11 +27,11 @@
   <main>
     <div class="content">
       <div class="avatar_big">
-        <img id="character_portrait" src="img/avatars/Portraits/Portrait Game Developer.png" alt="Game Developer Portrait">
-        <h1 class="with_stroke" id="character_title" value="Game Developer">Game Developer</h1>
+        <img class="transition_on_load_horizontal pixel_perfect" id="character_portrait" src="img/avatars/Portraits/Portrait Game Developer.png" alt="Game Developer Portrait">
+        <h1 class="with_stroke text_accent_light transition_on_load_horizontal" id="character_title" value="Game Developer">Game Developer</h1>
       </div>
       <div id="about">
-        <div class="window">
+        <div class="window transition_on_load_vertical">
           <div class="window_header">
             <h2>Skill Points</h2>
           </div>
@@ -99,7 +99,7 @@
           </div>
         </div>
         
-        <div class="window">
+        <div class="window transition_on_load_vertical">
           <div class="window_header">
             <h2>Skins</h2>
           </div>
@@ -139,21 +139,21 @@
               <div class="option_info_panel" id="skin_info_container">
                 <div class="skin_visual option_info" id="skin_0">
                   <div class="option_info_container">
-                    <img src="img/avatars/Sprites/Skin 1/Game Developer.gif" alt="">
+                    <img class="pixel_perfect" src="img/avatars/Sprites/Skin 1/Game Developer.gif" alt="">
                     <p>Sometimes vanilla is the best flavour.</p>
                   </div>
                 </div>
                 
                 <div class="skin_visual option_info" id="skin_1">
                   <div class="option_info_container">
-                    <img src="img/avatars/Sprites/Skin 2/Game Developer.gif" alt="">
+                    <img class="pixel_perfect" src="img/avatars/Sprites/Skin 2/Game Developer.gif" alt="">
                     <p>Retro games never get old.</p>
                   </div>
                 </div>
                 
                 <div class="skin_visual option_info" id="skin_2">
                   <div class="option_info_container">
-                    <img src="img/avatars/Sprites/Skin 3/Game Developer.gif" alt="">
+                    <img class="pixel_perfect" src="img/avatars/Sprites/Skin 3/Game Developer.gif" alt="">
                     <p>Unlocked after recruiting.</p>
                   </div>
                 </div>
@@ -163,7 +163,7 @@
         </div>
       </div>
       
-      <div class="window" id="mission_select">
+      <div class="window transition_on_load_vertical" id="mission_select">
         <div class="window_header">
           <h2>Mission Select</h2>
         </div>
@@ -175,7 +175,7 @@
             </button>
             <div class="options_list" id="mission_options">
               <div class="option_section">
-                <h2 class="mission_header with_stroke" value="Main Missions">Main Missions</h2>
+                <h2 class="text_accent_dark with_stroke" value="Main Missions">Main Missions</h2>
                 
                 <div class="option">
                   <input type="radio" autocomplete="off" class="option_radio_button" id="mission_7_radio" name="selected_mission" value="mission_7">
@@ -195,7 +195,7 @@
               </div>
               
               <div class="option_section">
-                <h2 class="mission_header with_stroke" value="Side Missions">Side Missions</h2>
+                <h2 class="text_accent_dark with_stroke" value="Side Missions">Side Missions</h2>
                 
                 <div class="option">
                   <input type="radio" autocomplete="off" class="option_radio_button" id="mission_5_radio" name="selected_mission" value="mission_5">
@@ -253,31 +253,33 @@
                   <h2>Hurry! Flurry</h2>
                   
                   <div class="mission_images">
-                    <div class="image_nav_buttons">
-                      <button class="glow_button" id="image_nav_button_prev" onclick="paginationMoveToIndex(selectedImageIndex - 1)">
+                    <div class="nav_buttons">
+                      <button class="glow_button" id="nav_button_prev" onclick="paginationMoveToIndex(sliderSelectionIndex - 1)">
                         <img src="img/icons/arrow-big-right.svg" alt="">
                       </button>
                       
-                      <button class="glow_button" id="image_nav_button_next" onclick="paginationMoveToIndex(selectedImageIndex + 1)">
+                      <button class="glow_button" id="nav_button_next" onclick="paginationMoveToIndex(sliderSelectionIndex + 1)">
                         <img src="img/icons/arrow-big-right.svg" alt="">
                       </button>
                     </div>
                     
                     <div class="mission_images_content">
-                      <div class="images_mask hide_scrollbar">
-                        <div class="image_slider">
-                          <div class="image_container"><img src="img/projects/games/01-Hurry Flurry/menu.gif" loading="lazy" alt=""></div>
-                          <div class="image_container"><img src="img/projects/games/01-Hurry Flurry/gameplay.gif" loading="lazy" alt=""></div>
-                          <div class="image_container"><img src="img/projects/games/01-Hurry Flurry/thumbnail_01.jpg" loading="lazy" alt=""></div>
-                          <div class="image_container"><img src="img/projects/games/01-Hurry Flurry/thumbnail_02.jpg" loading="lazy" alt=""></div>
-                          <div class="image_container"><img src="img/projects/games/01-Hurry Flurry/thumbnail_03.jpg" loading="lazy" alt=""></div>
-                          <div class="image_container"><img src="img/projects/games/01-Hurry Flurry/thumbnail_04.jpg" loading="lazy" alt=""></div>
-                          <div class="image_container"><img src="img/projects/games/01-Hurry Flurry/thumbnail_05.jpg" loading="lazy" alt=""></div>
+                      <div class="slider_mask hide_scrollbar">
+                        <div class="slider">
+                          <div class="slider_container image_container"><img src="img/projects/games/01-Hurry Flurry/menu.gif" loading="lazy" alt=""></div>
+                          <div class="slider_container image_container"><img src="img/projects/games/01-Hurry Flurry/gameplay.gif" loading="lazy" alt=""></div>
+                          <div class="slider_container image_container"><img src="img/projects/games/01-Hurry Flurry/thumbnail_01.jpg" loading="lazy" alt=""></div>
+                          <div class="slider_container image_container"><img src="img/projects/games/01-Hurry Flurry/thumbnail_02.jpg" loading="lazy" alt=""></div>
+                          <div class="slider_container image_container"><img src="img/projects/games/01-Hurry Flurry/thumbnail_03.jpg" loading="lazy" alt=""></div>
+                          <div class="slider_container image_container"><img src="img/projects/games/01-Hurry Flurry/thumbnail_04.jpg" loading="lazy" alt=""></div>
+                          <div class="slider_container image_container"><img src="img/projects/games/01-Hurry Flurry/thumbnail_05.jpg" loading="lazy" alt=""></div>
                         </div>
                       </div>
                       
                       <div class="image_lower_container">
                         <span>10th Sept 2020</span>
+                        <span class="difficulty_text">Difficulty: Medium</span>
+                        <!-- Pagination dots need to be in front so they can be interacted with -->
                         <span class="pagination_dots">
                           <input type="radio" autocomplete="off" class="pagination_dot_radio" name="mission_0_image_paginator" onchange="paginationMoveToIndex(0)" checked>
                           <input type="radio" autocomplete="off" class="pagination_dot_radio" name="mission_0_image_paginator" onchange="paginationMoveToIndex(1)">
@@ -287,7 +289,6 @@
                           <input type="radio" autocomplete="off" class="pagination_dot_radio" name="mission_0_image_paginator" onchange="paginationMoveToIndex(5)">
                           <input type="radio" autocomplete="off" class="pagination_dot_radio" name="mission_0_image_paginator" onchange="paginationMoveToIndex(6)">
                         </span>
-                        <span class="difficulty_text">Difficulty: Medium</span>
                       </div>
                     </div>
                   </div>
@@ -320,7 +321,7 @@
                   </div>
                   
                   <div class="mission_brief">
-                    <div class="mission_info_heading">Mission Brief</div>
+                    <div class="mission_info_heading text_accent_dark">Mission Brief</div>
                     <p>
                       An infinite puzzle platformer where the player can switch between states of matter (solid, liquid, gas) to solve puzzles and get as far as possible.<br />
                       <br />
@@ -330,7 +331,7 @@
                   
                   <div class="other_info">
                     <div class="challenges">
-                      <div class="mission_info_heading">Challenges</div>
+                      <div class="mission_info_heading text_accent_dark">Challenges</div>
                       <div class="challenge_list">
                         <div class="challenge"> <img class="challenge_checkbox" src="img/icons/Toggle On.png" alt=""> Program an infinite runner that cycles between multiple environments.</div>
                         <div class="challenge"> <img class="challenge_checkbox" src="img/icons/Toggle On.png" alt=""> Develop core mechanics of switching between Solid, Liquid, and Gas form with a simple control scheme.</div>
@@ -339,7 +340,7 @@
                     </div>
                     <div class="vertical_line"></div>
                     <div class="rewards">
-                      <div class="mission_info_heading">Rewards</div>
+                      <div class="mission_info_heading text_accent_dark">Rewards</div>
                       <table class="skill_points_table">
                         <tr>
                           <td><div class="skill_content">
@@ -395,33 +396,34 @@
                   <h2>The Waiting Game</h2>
                   
                   <div class="mission_images">
-                    <div class="image_nav_buttons">
-                      <button class="glow_button" id="image_nav_button_prev" onclick="paginationMoveToIndex(selectedImageIndex - 1)">
+                    <div class="nav_buttons">
+                      <button class="glow_button" id="nav_button_prev" onclick="paginationMoveToIndex(sliderSelectionIndex - 1)">
                         <img src="img/icons/arrow-big-right.svg" alt="">
                       </button>
                       
-                      <button class="glow_button" id="image_nav_button_next" onclick="paginationMoveToIndex(selectedImageIndex + 1)">
+                      <button class="glow_button" id="nav_button_next" onclick="paginationMoveToIndex(sliderSelectionIndex + 1)">
                         <img src="img/icons/arrow-big-right.svg" alt="">
                       </button>
                     </div>
                     
                     <div class="mission_images_content">
-                      <div class="images_mask hide_scrollbar">
-                        <div class="image_slider">
-                          <div class="image_container"><img src="img/projects/games/09-The Waiting Game/thumbnail_01.png" loading="lazy" alt=""></div>
-                          <div class="image_container"><img src="img/projects/games/09-The Waiting Game/thumbnail_02.png" loading="lazy" alt=""></div>
-                          <div class="image_container"><img src="img/projects/games/09-The Waiting Game/thumbnail_03.png" loading="lazy" alt=""></div>
+                      <div class="slider_mask hide_scrollbar">
+                        <div class="slider">
+                          <div class="slider_container image_container"><img src="img/projects/games/09-The Waiting Game/thumbnail_01.png" loading="lazy" alt=""></div>
+                          <div class="slider_container image_container"><img src="img/projects/games/09-The Waiting Game/thumbnail_02.png" loading="lazy" alt=""></div>
+                          <div class="slider_container image_container"><img src="img/projects/games/09-The Waiting Game/thumbnail_03.png" loading="lazy" alt=""></div>
                         </div>
                       </div>
                       
                       <div class="image_lower_container">
                         <span>12th Feb 2023</span>
+                        <span class="difficulty_text">Difficulty: Easy</span>
+                        <!-- Pagination dots need to be in front so they can be interacted with -->
                         <span class="pagination_dots">
                           <input type="radio" autocomplete="off" class="pagination_dot_radio" name="mission_4_image_paginator" onchange="paginationMoveToIndex(0)" checked>
                           <input type="radio" autocomplete="off" class="pagination_dot_radio" name="mission_4_image_paginator" onchange="paginationMoveToIndex(1)">
                           <input type="radio" autocomplete="off" class="pagination_dot_radio" name="mission_4_image_paginator" onchange="paginationMoveToIndex(2)">
                         </span>
-                        <span class="difficulty_text">Difficulty: Easy</span>
                       </div>
                     </div>
                   </div>
@@ -449,7 +451,7 @@
                   </div>
                   
                   <div class="mission_brief">
-                    <div class="mission_info_heading">Mission Brief</div>
+                    <div class="mission_info_heading text_accent_dark">Mission Brief</div>
                     <p>
                       A game based on loading screens, insprired by my office PC. Channeling feelings into art like a true artist.
                     </p>
@@ -457,7 +459,7 @@
                   
                   <div class="other_info">
                     <div class="challenges">
-                      <div class="mission_info_heading">Challenges</div>
+                      <div class="mission_info_heading text_accent_dark">Challenges</div>
                       <div class="challenge_list">
                         <div class="challenge"> <img class="challenge_checkbox" src="img/icons/Toggle On.png" alt=""> Program an infinite runner that cycles between multiple environments.</div>
                         <div class="challenge"> <img class="challenge_checkbox" src="img/icons/Toggle On.png" alt=""> Develop core mechanics of switching between Solid, Liquid, and Gas form with a simple control scheme.</div>
@@ -466,7 +468,7 @@
                     </div>
                     <div class="vertical_line"></div>
                     <div class="rewards">
-                      <div class="mission_info_heading">Rewards</div>
+                      <div class="mission_info_heading text_accent_dark">Rewards</div>
                       <table class="skill_points_table">
                         <tr>
                           <td><div class="skill_content">

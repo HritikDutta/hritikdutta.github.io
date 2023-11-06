@@ -2,42 +2,72 @@ const selectedOptions = {};
 selectedOptions['selected_skin'] = { currentSelection: document.getElementById('skin_0'), toggleButton: document.getElementById('skin_toggle') };
 selectedOptions['selected_mission'] = { currentSelection: document.getElementById('mission_0'), toggleButton: document.getElementById('mission_toggle') };
 
-let selectedMission, missionImageSlider, missionImageSliderMask;
-let missionImageCount = 0;
+const accentColorNames = [
+  'game-developer',
+  'film-maker',
+  'photographer',
+  'programmer'
+];
 
-let imageNavButtonPrev, imageNavButtonNext;
+let selectedMission;
+let gradientBackground;
+
+let sliderElementCount = 0;
+let slider, sliderMask;
+let navButtonPrev, navButtonNext;
 let paginationDots;
-let selectedImageIndex = 0;
+let sliderSelectionIndex = 0;
 
 const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
 
 function paginationAdjustAtScrollEnd() {
-  const width = missionImageSliderMask.getBoundingClientRect().width;
+  const width = sliderMask.getBoundingClientRect().width;
 
   // Adding an offset based on number of images to the scroll to get more consistent indices.
   // Otherwise JavaScripts bullshit 'number' math makes the scroll amount a tiny bit less than the width required.
-  let index = Math.floor((missionImageSliderMask.scrollLeft + missionImageCount) / width);
+  let index = Math.floor((sliderMask.scrollLeft + sliderElementCount) / width);
+  paginationUpdateUI(index);
+}
+
+function paginationAdjustAtScrollEndWithAccentColor() {
+  const width = sliderMask.getBoundingClientRect().width;
+
+  // Adding an offset based on number of images to the scroll to get more consistent indices.
+  // Otherwise JavaScripts bullshit 'number' math makes the scroll amount a tiny bit less than the width required.
+  let index = Math.floor((sliderMask.scrollLeft + sliderElementCount) / width);
+  gradientBackground.style.opacity = 0;
+
+  setTimeout(() => {
+    let root = document.querySelector(':root');
+    root.style.setProperty('--accent-light', 'var(--' + accentColorNames[index] + '-light)');
+    root.style.setProperty('--accent-dark', 'var(--' + accentColorNames[index] + '-dark)');
+    root.style.setProperty('--accent-light-half-opacity', 'var(--' + accentColorNames[index] + '-light-half-opacity)');
+    root.style.setProperty('--accent-dark-half-opacity', 'var(--' + accentColorNames[index] + '-dark-half-opacity)');
+
+    gradientBackground.style.opacity = 1;
+  }, 200);
+
   paginationUpdateUI(index);
 }
 
 function selectMission(id) {
-  // Un-register from scroll event
-  if (missionImageSliderMask) {
-    missionImageSliderMask.removeEventListener('scrollend', paginationAdjustAtScrollEnd);
+  // Un-register previous scroll callback
+  if (sliderMask) {
+    sliderMask.removeEventListener('scrollend', paginationAdjustAtScrollEnd);
   }
 
   selectedMission = document.getElementById(id);
-  missionImageSlider = selectedMission.querySelector('.image_slider');
+  slider = selectedMission.querySelector('.slider');
 
   // Only register if there is an image slider
-  if (missionImageSlider) {
-    missionImageSliderMask = selectedMission.querySelector('.images_mask');
-    missionImageSliderMask.addEventListener('scrollend', paginationAdjustAtScrollEnd);
+  if (slider) {
+    sliderMask = selectedMission.querySelector('.slider_mask');
+    sliderMask.addEventListener('scrollend', paginationAdjustAtScrollEnd);
   
-    imageNavButtonPrev = selectedMission.querySelector('#image_nav_button_prev');
-    imageNavButtonNext = selectedMission.querySelector('#image_nav_button_next');
+    navButtonPrev = selectedMission.querySelector('#nav_button_prev');
+    navButtonNext = selectedMission.querySelector('#nav_button_next');
 
-    missionImageCount = missionImageSlider.childElementCount;
+    sliderElementCount = slider.childElementCount;
 
     paginationDots = Array.from(selectedMission.querySelectorAll('.pagination_dot_radio'));
 
@@ -46,43 +76,44 @@ function selectMission(id) {
     // I would have liked to move back to the first image but this isn't a bad tradeoff.
     paginationAdjustAtScrollEnd();
   }
-
-  console.log('Updated mission cache for mission with id: ' + id);
 }
 
 function paginationUpdateUI(index) {
   if (index <= 0) {
     index = 0;
-    imageNavButtonPrev.style.opacity = 0;
-    imageNavButtonPrev.style.cursor = 'auto';
-    imageNavButtonPrev.tabIndex = "-1";
+    navButtonPrev.style.opacity = 0;
+    navButtonPrev.style.cursor = 'auto';
+    navButtonPrev.tabIndex = "-1";
   } else {
-    imageNavButtonPrev.style.opacity = 1;
-    imageNavButtonPrev.style.cursor = 'pointer';
-    imageNavButtonPrev.tabIndex = "0";
+    navButtonPrev.style.opacity = 1;
+    navButtonPrev.style.cursor = 'pointer';
+    navButtonPrev.tabIndex = "0";
   }
   
-  if (index >= missionImageCount - 1) {
-    index = missionImageCount - 1;
-    imageNavButtonNext.style.opacity = 0;
-    imageNavButtonNext.style.cursor = 'auto';
-    imageNavButtonNext.tabIndex = "-1";
+  if (index >= sliderElementCount - 1) {
+    index = sliderElementCount - 1;
+    navButtonNext.style.opacity = 0;
+    navButtonNext.style.cursor = 'auto';
+    navButtonNext.tabIndex = "-1";
   } else {
-    imageNavButtonNext.style.opacity = 1;
-    imageNavButtonNext.style.cursor = 'pointer';
-    imageNavButtonNext.tabIndex = "0";
+    navButtonNext.style.opacity = 1;
+    navButtonNext.style.cursor = 'pointer';
+    navButtonNext.tabIndex = "0";
   }
 
-  paginationDots[index].checked = true; // Rest are unchecked automatically
-  selectedImageIndex = index;
+  if (paginationDots) {
+    paginationDots[index].checked = true; // Rest are unchecked automatically
+  }
+
+  sliderSelectionIndex = index;
 }
 
 function paginationMoveToIndex(index) {
-  const width = missionImageSliderMask.getBoundingClientRect().width;
-  missionImageSliderMask.scrollTo(index * width, 0);
+  const width = sliderMask.getBoundingClientRect().width;
+  sliderMask.scrollTo(index * width, 0);
 }
 
-function onLoad() {
+function onLoadMissionSelect() {
   selectMission('mission_0');
 
   const optionToggles = document.getElementsByClassName('options_list_toggle');
@@ -153,30 +184,6 @@ function onLoad() {
     });
   }
 
-  { // Animate portrait
-    const title = document.getElementById('character_title');
-    const portrait = document.getElementById('character_portrait');
-
-    title.style.transform = "translateX(0)";
-    title.style.opacity = 1;
-    title.style.transitionDelay = "0.2s";
-
-    portrait.style.transform = "translateX(0)";
-    portrait.style.opacity = 1;
-  }
-
-  { // Animate Windows
-    const allWindows = document.getElementsByClassName('window');
-    const delayMultiplier = 0.13;
-    const baseDelay = 0;
-
-    for (let i = 0; i < allWindows.length; i++) {
-      allWindows[i].style.transform = "translateY(0)";
-      allWindows[i].style.opacity = 1;
-      allWindows[i].style.transitionDelay = (i * delayMultiplier + baseDelay).toString() + "s";
-    }
-  }
-
   { // Animate Skill Bars
     const allSkillBars = document.getElementsByClassName('skill_point_bar');
     const delayMultiplier = 0.1;
@@ -185,6 +192,63 @@ function onLoad() {
     for (let i = 0; i < allSkillBars.length; i++) {
       allSkillBars[i].style.setProperty('--_width', allSkillBars[i].getAttribute('value'));
       allSkillBars[i].style.setProperty('--_transitionDelay', (i * delayMultiplier + baseDelay).toString() + 's');
+    }
+  }
+
+  onLoadPlayTransitions();
+}
+
+function onLoadCharacterSelect() {
+  // Un-register previous scroll callback
+  if (sliderMask) {
+    sliderMask.removeEventListener('scrollend', paginationAdjustAtScrollEndWithAccentColor);
+  }
+
+  gradientBackground = document.querySelector('.gradient_background');
+  slider = document.querySelector('.slider');
+
+  if (slider) {
+    sliderMask = document.querySelector('.slider_mask');
+    sliderMask.addEventListener('scrollend', paginationAdjustAtScrollEndWithAccentColor);
+  
+    navButtonPrev = document.querySelector('#nav_button_prev');
+    navButtonNext = document.querySelector('#nav_button_next');
+
+    sliderElementCount = slider.childElementCount;
+
+    // Firefox doesn't like to scroll anything that's not visible (even though I'm the one telling it to) so it wouldn't update the ui properly. 
+    // I guess I'll not move back to the first image every time you switch missions then.
+    // I would have liked to move back to the first image but this isn't a bad tradeoff.
+    paginationAdjustAtScrollEndWithAccentColor();
+  }
+
+  onLoadPlayTransitions();
+}
+
+// Extra functions for pizazz
+
+function onLoadPlayTransitions() {
+  { // Animate Horizontal Transitions
+    const allHorizontal = document.getElementsByClassName('transition_on_load_horizontal');
+    const delayMultiplier = 0.13;
+    const baseDelay = 0;
+    
+    for (let i = 0; i < allHorizontal.length; i++) {
+      allHorizontal[i].style.transform = "translateX(0)";
+      allHorizontal[i].style.opacity = 1;
+      allHorizontal[i].style.transitionDelay = (i * delayMultiplier + baseDelay).toString() + "s";
+    }
+  }
+
+  { // Animate Vertical Transitions
+    const allVertical = document.getElementsByClassName('transition_on_load_vertical');
+    const delayMultiplier = 0.13;
+    const baseDelay = 0;
+
+    for (let i = 0; i < allVertical.length; i++) {
+      allVertical[i].style.transform = "translateY(0)";
+      allVertical[i].style.opacity = 1;
+      allVertical[i].style.transitionDelay = (i * delayMultiplier + baseDelay).toString() + "s";
     }
   }
 }
