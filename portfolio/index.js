@@ -207,6 +207,8 @@ function onLoadCharacterSelect() {
   // TODO: When the character panel goes outside the view, it should not be
   // accessible by tabs.
 
+  // TODO: Try using intersection observer to add interesting effects to slider
+
   // Un-register previous scroll callback
   if (sliderMask) {
     sliderMask.removeEventListener('scroll', sliderAdjustDuringScrollWithAccentColor);
