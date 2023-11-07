@@ -276,7 +276,6 @@ main {
 .window_body {
   background-color: var(--window-background);
   border: 4px solid var(--accent-dark);
-  backdrop-filter: blur(14px);
 
   width: fit-content;
   padding: 1.5rem 2rem;
@@ -599,7 +598,6 @@ main {
   padding: 0.4rem var(--_padding_x);
   
   background-color: var(--accent-dark-half-opacity);
-  backdrop-filter: blur(8px);
 
   font-size: min(0.7rem, 16px);
   text-transform: uppercase;
@@ -1017,7 +1015,23 @@ main {
 
   --_blend-duration: calc(var(--accent-blend-duration) / 2);
   transition: background-color var(--_blend-duration) ease-out;
-  backdrop-filter: blur(14px);
+}
+
+.window_body,
+.image_lower_container,
+.character_select_dot:checked::after {
+  --_blur-amount: 14px;
+  
+  /* Apparently transform indicates to the browser that these should be hardware accelerated */
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+
+  /* Apparently safari needs this for blurring to work :/ */
+  -webkit-backdrop-filter: blur(var(--_blur-amount));
+  backdrop-filter: blur(var(--_blur-amount));
 }
 
 @keyframes gradient-animation {
