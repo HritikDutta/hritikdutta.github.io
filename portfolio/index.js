@@ -15,25 +15,25 @@ let gradientBackground;
 let sliderElementCount = 0;
 let slider, sliderMask;
 let navButtonPrev, navButtonNext;
-let paginationDots;
+let sliderDots;
 let sliderCurrentSelectionIndex = -1;
 let sliderTargetSelectionIndex  = 0;
 
 const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
 
-function paginationAdjustDuringScroll() {
+function sliderAdjustDuringScroll() {
   const width = sliderMask.getBoundingClientRect().width;
   let index = Math.floor((sliderMask.scrollLeft / width) + 0.5);
 
   if (index != sliderCurrentSelectionIndex) {
-    paginationUpdateUI(index);
+    sliderUpdateUI(index);
   }
 }
 
 function selectMission(id) {
   // Un-register previous scroll callback
   if (sliderMask) {
-    sliderMask.removeEventListener('scroll', paginationAdjustDuringScroll);
+    sliderMask.removeEventListener('scroll', sliderAdjustDuringScroll);
   }
   
   selectedMission = document.getElementById(id);
@@ -42,23 +42,23 @@ function selectMission(id) {
   // Only register if there is an image slider
   if (slider) {
     sliderMask = selectedMission.querySelector('.slider_mask');
-    sliderMask.addEventListener('scroll', paginationAdjustDuringScroll);
+    sliderMask.addEventListener('scroll', sliderAdjustDuringScroll);
     
     navButtonPrev = selectedMission.querySelector('#nav_button_prev');
     navButtonNext = selectedMission.querySelector('#nav_button_next');
     
     sliderElementCount = slider.childElementCount;
     
-    paginationDots = Array.from(selectedMission.querySelectorAll('.pagination_dot_radio'));
+    sliderDots = Array.from(selectedMission.querySelectorAll('.slider_dot_radio'));
     
     // Firefox doesn't like to scroll anything that's not visible (even though I'm the one telling it to) so it wouldn't update the ui properly. 
     // I guess I'll not move back to the first image every time you switch missions then.
     // I would have liked to move back to the first image but this isn't a bad tradeoff.
-    paginationAdjustDuringScroll();
+    sliderAdjustDuringScroll();
   }
 }
 
-function paginationUpdateUI(index) {
+function sliderUpdateUI(index) {
   if (index <= 0) {
     index = 0;
     navButtonPrev.style.opacity = 0;
@@ -81,16 +81,18 @@ function paginationUpdateUI(index) {
     navButtonNext.tabIndex = "0";
   }
   
-  if (paginationDots) {
-    paginationDots[index].checked = true; // Rest are unchecked automatically
-  }
-  
+  sliderDots[index].checked = true; // Rest are unchecked automatically
   sliderCurrentSelectionIndex = index;
 }
 
-function paginationMoveToIndex(index) {
+function sliderMoveToIndex(index) {
   const width = sliderMask.getBoundingClientRect().width;
   sliderTargetSelectionIndex = clamp(index, 0, sliderElementCount - 1);
+
+  // Unchecking the selected dot because scrolling would eventually land on it and
+  // check it anyways. Otherwise it was creating conflicts when movign using the dots.
+  sliderDots[sliderTargetSelectionIndex].checked = false;
+  
   sliderMask.scrollTo(sliderTargetSelectionIndex * width, 0);
 }
 
@@ -179,13 +181,11 @@ function onLoadMissionSelect() {
   onLoadPlayTransitions();
 }
 
-function paginationAdjustDuringScrollWithAccentColor() {
+function sliderAdjustDuringScrollWithAccentColor() {
   const width = sliderMask.getBoundingClientRect().width;
-  
   let index = Math.floor((sliderMask.scrollLeft / width) + 0.5);
   
   if (index != sliderCurrentSelectionIndex) {
-
     if (gradientBackground.style.opacity >= 1)
       gradientBackground.style.opacity = 0;
     
@@ -199,14 +199,17 @@ function paginationAdjustDuringScrollWithAccentColor() {
       gradientBackground.style.opacity = 1;
     }, 200);
     
-    paginationUpdateUI(index);
+    sliderUpdateUI(index);
   }
 }
 
 function onLoadCharacterSelect() {
+  // TODO: When the character panel goes outside the view, it should not be
+  // accessible by tabs.
+
   // Un-register previous scroll callback
   if (sliderMask) {
-    sliderMask.removeEventListener('scroll', paginationAdjustDuringScrollWithAccentColor);
+    sliderMask.removeEventListener('scroll', sliderAdjustDuringScrollWithAccentColor);
   }
   
   gradientBackground = document.querySelector('.gradient_background');
@@ -214,18 +217,20 @@ function onLoadCharacterSelect() {
   
   if (slider) {
     sliderMask = document.querySelector('.slider_mask');
-    sliderMask.addEventListener('scroll', paginationAdjustDuringScrollWithAccentColor);
+    sliderMask.addEventListener('scroll', sliderAdjustDuringScrollWithAccentColor);
     
     navButtonPrev = document.querySelector('#nav_button_prev');
     navButtonNext = document.querySelector('#nav_button_next');
     
     sliderElementCount = slider.childElementCount;
+
+    sliderDots = Array.from(document.querySelectorAll('.slider_dot_radio'));
     
     // Firefox doesn't like to scroll anything that's not visible (even though I'm the one telling it to) so it wouldn't update the ui properly. 
     // I guess I'll not move back to the first image every time you switch missions then.
     // I would have liked to move back to the first image but this isn't a bad tradeoff.
     
-    paginationAdjustDuringScrollWithAccentColor();
+    sliderAdjustDuringScrollWithAccentColor();
   }
   
   onLoadPlayTransitions();
