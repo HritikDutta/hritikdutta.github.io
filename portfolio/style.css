@@ -1253,3 +1253,9 @@ main {
     border: 0.1em solid #000;
   }
 }
+
+@media screen and (max-width: 406px) {
+  .nav_buttons {
+    display: none;
+  }
+}
