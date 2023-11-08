@@ -956,15 +956,16 @@ main {
 
 .character_select_lower_container {
   --_padding_x: 1rem;
+  position: relative;
 
-  position: absolute;
-  bottom: -2rem;
+  margin-top: 1rem;
 
   width: 100%;
   height: fit-content;
 }
 
 .character_select_lower_container .slider_dots {
+  position: relative;
   gap: 1rem;
 }
 
@@ -1015,6 +1016,11 @@ main {
 
   --_blend-duration: calc(var(--accent-blend-duration) / 2);
   transition: background-color var(--_blend-duration) ease-out;
+}
+
+.character_select_content .footer {
+  margin-top: 2rem;
+  margin-bottom: 0;
 }
 
 .window_body,
@@ -1210,7 +1216,7 @@ main {
   }
 
   .character_select_main .nav_buttons {
-    height: 110%;
+    height: 98.5%;
     align-items: end;
   }
 }
@@ -1251,6 +1257,10 @@ main {
 
   .image_slider_dot {
     border: 0.1em solid #000;
+  }
+
+  .character_select_main {
+    padding: 0 1rem;
   }
 }
 

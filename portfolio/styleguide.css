@@ -11,7 +11,7 @@
     --programmer-light: rgba(255, 163, 0, 1);
     --programmer-dark: rgba(171, 82, 54, 1);
     --photographer-light: rgba(41, 173, 255, 1);
-    --photographer-dark: rgba(29, 43, 83, 1);
+    --photographer-dark: rgb(39, 61, 121);
 
     --game-developer-light-half-opacity: rgba(0, 230, 54, 0.5);
     --game-developer-dark-half-opacity: rgba(0, 135, 81, 0.5);
@@ -20,5 +20,5 @@
     --programmer-light-half-opacity: rgba(255, 163, 0, 0.5);
     --programmer-dark-half-opacity: rgba(171, 82, 54, 0.5);
     --photographer-light-half-opacity: rgba(41, 173, 255, 0.5);
-    --photographer-dark-half-opacity: rgba(29, 43, 83, 0.5);
+    --photographer-dark-half-opacity: rgba(39, 61, 121, 0.5);
 }
