@@ -1203,11 +1203,6 @@ main {
     width: 100%;
     max-width: none;
   }
-
-  .character_select_main .nav_buttons {
-    height: 98.5%;
-    align-items: end;
-  }
 }
 
 @media screen and (max-width: 700px) {
@@ -1251,9 +1246,14 @@ main {
   .character_select_main {
     padding: 0 1rem;
   }
+
+  .character_select_main .nav_buttons {
+    height: 98.5%;
+    align-items: end;
+  }
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 406px) {
   .nav_buttons {
     display: none;
   }
