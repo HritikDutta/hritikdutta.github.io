@@ -307,6 +307,9 @@ main {
   fill: var(--accent-light);
   -webkit-filter: drop-shadow( 0px 0px 24px var(--accent-light));
   filter: drop-shadow( 0px 0px 24px var(--accent-light));
+
+  display: flex;
+  justify-content: center;
 }
 
 .skill_point_bar {
