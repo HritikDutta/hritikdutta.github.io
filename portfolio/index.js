@@ -50,6 +50,7 @@ function selectMission(id) {
     sliderElementCount = slider.childElementCount;
     
     sliderDots = Array.from(selectedMission.querySelectorAll('.slider_dot_radio'));
+    sliderCurrentSelectionIndex = -1;
     
     // Firefox doesn't like to scroll anything that's not visible (even though I'm the one telling it to) so it wouldn't update the ui properly. 
     // I guess I'll not move back to the first image every time you switch missions then.
@@ -227,6 +228,7 @@ function onLoadCharacterSelect() {
     sliderElementCount = slider.childElementCount;
 
     sliderDots = Array.from(document.querySelectorAll('.slider_dot_radio'));
+    sliderCurrentSelectionIndex = -1; // Just to be safe
     
     // Firefox doesn't like to scroll anything that's not visible (even though I'm the one telling it to) so it wouldn't update the ui properly. 
     // I guess I'll not move back to the first image every time you switch missions then.
