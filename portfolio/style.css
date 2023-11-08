@@ -5,16 +5,6 @@
   box-sizing: border-box;
 }
 
-:root {
-  --accent-blend-duration: 1000ms;
-
-  --accent-light: var(--game-developer-light);
-  --accent-dark: var(--game-developer-dark);
-
-  --accent-light-half-opacity: var(--game-developer-light-half-opacity);
-  --accent-dark-half-opacity: var(--game-developer-dark-half-opacity);
-}
-
 html {
   font-size: clamp(14px, 1vw, 24px);
 }

@@ -2,13 +2,6 @@ const selectedOptions = {};
 selectedOptions['selected_skin'] = { currentSelection: document.getElementById('skin_0'), toggleButton: document.getElementById('skin_toggle') };
 selectedOptions['selected_mission'] = { currentSelection: document.getElementById('mission_0'), toggleButton: document.getElementById('mission_toggle') };
 
-const accentColorNames = [
-  'game-developer',
-  'film-maker',
-  'photographer',
-  'programmer'
-];
-
 let selectedMission;
 let gradientBackground;
 

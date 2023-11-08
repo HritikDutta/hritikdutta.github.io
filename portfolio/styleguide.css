@@ -21,4 +21,6 @@
     --programmer-dark-half-opacity: rgba(171, 82, 54, 0.5);
     --photographer-light-half-opacity: rgba(41, 173, 255, 0.5);
     --photographer-dark-half-opacity: rgba(39, 61, 121, 0.5);
+    
+    --accent-blend-duration: 1000ms;
 }
