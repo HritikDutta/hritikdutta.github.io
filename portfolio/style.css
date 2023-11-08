@@ -592,7 +592,7 @@ main {
   
   background-color: var(--accent-dark-half-opacity);
 
-  font-size: min(0.7rem, 16px);
+  font-size: min(0.6rem, 16px);
   text-transform: uppercase;
 }
 
@@ -810,13 +810,9 @@ main {
 .resume_link_container {
   position: absolute;
 
-  top: 50%;
+  top: 0;
   left: 50%;
-  transform: translate(-50%, -50%);
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  transform: translate(-50%, 0);
 }
 
 .resume_link_container a {
@@ -832,16 +828,12 @@ main {
 .links {
   position: absolute;
 
-  top: 50%;
+  top: 0;
   left: 100%;
-  transform: translate(-100%, -50%);
+  transform: translate(-100%, 0);
 
   display: flex;
-  align-items: center;
-  justify-content: end;
   gap: 1.5rem;
-
-  font-size: 1px;
 }
 
 .links img {
@@ -855,7 +847,7 @@ main {
 
 .character_select_content {
   width: min(70rem, 100svw);
-  margin: 2rem auto;
+  margin: 1rem auto;
   gap: 1rem;
 }
 
@@ -1012,8 +1004,8 @@ main {
 }
 
 .character_select_content .footer {
-  margin-top: 2rem;
-  margin-bottom: 0;
+  max-width: 75%;
+  margin: 2rem auto 0 auto;
 }
 
 .window_body,
@@ -1111,6 +1103,10 @@ main {
 
   #about .window_content {
     width: 100%;
+  }
+  
+  .skill_points_table td:last-child {
+    width: max(40svw, 14rem);
   }
 
   .options_list {
@@ -1257,8 +1253,28 @@ main {
   }
 }
 
-@media screen and (max-width: 406px) {
+@media screen and (max-width: 350px) {
   .nav_buttons {
+    display: none;
+  }
+
+  .back_button {
+    position: relative;
+  }
+  
+  h1 {
+    font-size: clamp(20px, 10svw, 64px);
+  }
+  
+  #character_title {
+    right: 0;
+  }
+  
+  .character_select_main {
+    padding: 0;
+  }
+
+  .difficulty_text {
     display: none;
   }
 }
