@@ -64,10 +64,12 @@ function sliderUpdateUI(index) {
     index = 0;
     navButtonPrev.style.opacity = 0;
     navButtonPrev.style.cursor = 'auto';
+    navButtonPrev.style.pointerEvents = 'none';
     navButtonPrev.tabIndex = "-1";
   } else {
     navButtonPrev.style.opacity = 1;
     navButtonPrev.style.cursor = 'pointer';
+    navButtonPrev.style.pointerEvents = 'auto';
     navButtonPrev.tabIndex = "0";
   }
   
@@ -75,10 +77,12 @@ function sliderUpdateUI(index) {
     index = sliderElementCount - 1;
     navButtonNext.style.opacity = 0;
     navButtonNext.style.cursor = 'auto';
+    navButtonNext.style.pointerEvents = 'none';
     navButtonNext.tabIndex = "-1";
   } else {
     navButtonNext.style.opacity = 1;
     navButtonNext.style.cursor = 'pointer';
+    navButtonNext.style.pointerEvents = 'auto';
     navButtonNext.tabIndex = "0";
   }
   
