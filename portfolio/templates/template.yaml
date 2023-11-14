@@ -62,7 +62,6 @@ characters:
     
     main-missions:
       - name: Mayangari
-        finished: false
 
         date: Ongoing
         difficulty: Hard
@@ -97,7 +96,6 @@ characters:
 
       - name: Bump Pong
         href: https://play.google.com/store/apps/details?id=com.sempervi.bump
-        finished: true
 
         date: 19th Apr 2021
         difficulty: Hard
@@ -130,7 +128,6 @@ characters:
     side-missions:
       - name: Hurry! Flurry
         href: https://play.google.com/store/apps/details?id=com.AFKStudios.HurryFlurry
-        finished: true
         
         date: 10th Sept 2020
         difficulty: Medium
@@ -223,7 +220,6 @@ characters:
     main-missions:
       - name: Bonkers
         href: https://www.mxplayer.in/show/watch-bonkers-series-online-8e0eadbe1fcfec1f6488418aed6c3bdf
-        finished: true
 
         date: 18th Jan 2022
         difficulty: Hard
@@ -252,7 +248,6 @@ characters:
     side-missions:
       - name: A Tale of Passion
         href: https://youtu.be/jzz1xMU5YCs
-        finished: true
         
         date: 18th Oct 2019
         difficulty: Hard
@@ -288,7 +283,6 @@ characters:
 
       - name: Room Temperature
         href: https://youtu.be/2vQ4EzGkUpk
-        finished: true
         
         date: 23rd Aug 2019
         difficulty: Medium
@@ -327,7 +321,6 @@ characters:
 
       - name: Deadline
         href: https://youtu.be/Q7KG49R1Of0
-        finished: true
         
         date: 3rd July 2019
         difficulty: Easy
@@ -362,7 +355,6 @@ characters:
           
       - name: Pratibimb
         href: https://youtu.be/vRULSmAdJm0
-        finished: true
         
         date: 10th Mar 2019
         difficulty: Medium

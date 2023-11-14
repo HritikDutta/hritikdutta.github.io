@@ -123,7 +123,7 @@
                 <input type="radio" autocomplete="off" class="option_radio_button" id="<$ mission-id $>_radio" name="selected_mission" value="<$ mission-id $>" <$ if index=checked-index {checked}$>>
                 <label for="<$ mission-id $>_radio" class="option_button">
                   <span><$ mission.name $></span>
-                  <$ if mission.finished {<img class="option_select_arrow" src="img/icons/arrow-small-back.svg" alt="">} else {<img src="img/icons/locked.svg" alt="">} $>
+                  <$ if mission.href {<img class="option_select_arrow" src="img/icons/arrow-small-back.svg" alt="">} else {<img src="img/icons/locked.svg" alt="">} $>
                 </label>
               </div>
               } $>
@@ -247,7 +247,7 @@
                   </div>
                   
                   <div class="play_section">
-                  <$ if mission.finished {
+                  <$ if mission.href {
                     <a class="glow_button" href="<$ mission.href $>" target="_blank">
                       <div class="button_prompt xbox_button" id="xbox_button_a">A</div>
                       <span>Play</span>
