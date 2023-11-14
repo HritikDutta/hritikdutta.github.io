@@ -1,6 +1,4 @@
 const selectedOptions = {};
-selectedOptions['selected_skin'] = { currentSelection: document.getElementById('skin_0'), toggleButton: document.getElementById('skin_toggle') };
-selectedOptions['selected_mission'] = { currentSelection: document.getElementById('mission_0'), toggleButton: document.getElementById('mission_toggle') };
 
 let selectedMission;
 let gradientBackground;
@@ -31,7 +29,9 @@ function selectMission(id) {
   
   selectedMission = document.getElementById(id);
   slider = selectedMission.querySelector('.slider');
-  
+
+  selectedOptions['selected_mission'] = { currentSelection: selectedMission, toggleButton: document.getElementById('mission_toggle') };
+
   // Only register if there is an image slider
   if (slider) {
     sliderMask = selectedMission.querySelector('.slider_mask');
@@ -95,7 +95,9 @@ function sliderMoveToIndex(index) {
 }
 
 function onLoadMissionSelect() {
-  selectMission('mission_0');
+  selectedOptions['selected_skin'] = { currentSelection: document.getElementById('skin_0'), toggleButton: document.getElementById('skin_toggle') };
+  
+  selectMission(missionIDToSelectOnLoad);
   
   const optionToggles = document.getElementsByClassName('options_list_toggle');
   for (let i = 0; i < optionToggles.length; i++) {

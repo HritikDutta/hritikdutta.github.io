@@ -70,6 +70,10 @@ button {
   z-index: 1;
 }
 
+.dark_icon {
+  fill: var(--dark);
+}
+
 .with_stroke::after {
   -webkit-text-stroke: 0.5rem #000;
   content: attr(value);
@@ -480,6 +484,10 @@ main {
   align-items: end;
 }
 
+#mission_select .options_list {
+  width: 18rem;
+}
+
 #mission_info_container {
   width: 40rem;
   max-width: 100%;
@@ -756,6 +764,11 @@ main {
   justify-content: end;
 }
 
+.colour_transition_box {
+  transition: background-color var(--accent-blend-duration) ease-out,
+              box-shadow var(--accent-blend-duration) ease-out;
+}
+
 .glow_button {
   width: fit-content;
   padding: 1rem 1.2rem;
@@ -775,9 +788,6 @@ main {
   background-color: var(--accent-light);
   box-shadow: 4px 4px 0px var(--accent-dark),
               0px 0px 14px var(--accent-light-half-opacity);
-
-  transition: background-color var(--accent-blend-duration) ease-out,
-              box-shadow var(--accent-blend-duration) ease-out;
 }
 
 .glow_button:hover {
@@ -1111,6 +1121,10 @@ main {
 
   .options_list {
     max-width: none;
+  }
+  
+  #mission_select .options_list {
+    width: 100%;
   }
 
   .mobile_hidden {

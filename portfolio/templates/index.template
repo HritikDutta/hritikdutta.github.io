@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Select</title>
+
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="styleguide.css" />
+    <link rel="stylesheet" href="style.css" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --accent-light: rgba(0, 0, 0, 1);
+            --accent-dark: rgba(0, 0, 0, 1);
+
+            --accent-light-half-opacity: rgba(0, 0, 0, 0.5);
+            --accent-dark-half-opacity: rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body onload="onLoadCharacterSelect()">
+  <div class="gradient_background"></div>
+  <main>
+    <div class="character_select_content">
+      <div class="character_select_header">
+        <h2 class="with_stroke transition_on_load_horizontal" value="Character Select">Character Select</h2>
+      </div>
+
+      <div class="character_select_main">
+        <div class="nav_buttons">
+          <button class="glow_button" id="nav_button_prev" onclick="sliderMoveToIndex(sliderTargetSelectionIndex - 1)">
+            <img src="img/icons/arrow-big-right.svg" alt="">
+          </button>
+          
+          <button class="glow_button" id="nav_button_next" onclick="sliderMoveToIndex(sliderTargetSelectionIndex + 1)">
+            <img src="img/icons/arrow-big-right.svg" alt="">
+          </button>
+        </div>
+        
+        <div class="slider_mask hide_scrollbar">
+          <div class="slider">
+
+            <$ for character: characters {
+            <div class="slider_container">
+              <div class="character_panel">
+                <div class="avatar_big">
+                  <img class="transition_on_load_horizontal pixel_perfect" src="<$ character.portrait $>" alt="<$ character.name $> Portrait">
+                </div>
+                
+                <div class="window transition_on_load_horizontal">
+                  <div class="window_body">
+                    <div class="window_content">
+                      <h1 class="text_accent_light with_stroke" value="<$ character.name $>"><$ character.name $></h1>
+                      <p><$ character.blurb $></p>
+                      
+                      <div class="character_stats">
+                        <h2 class="text_accent_dark with_stroke" value="Character Stats">Character Stats</h2>
+                        <div class="character_stats_grid">
+                          <$ for skill: character.skills[0, 4] {
+                          <div class="stat">
+                            <div class="positive">+</div> <$ skill.label $>
+                          </div>
+                          } $>
+                          <div class="stat">
+                            <div class="negative">-</div> <$ character.vice $>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div class="play_section">
+                        <a class="glow_button colour_transition_box" href="<$ character.name $>.html">
+                          <div class="button_prompt xbox_button" id="xbox_button_a">A</div>
+                          <span>Select</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            } $>
+
+          </div>
+        </div>
+
+        <div class="character_select_lower_container transition_on_load_vertical">
+          <span class="slider_dots">
+            <$ for character, index: characters {
+            <input type="radio" autocomplete="off" style="--_character-avatar: url('<$ character.portrait $>')" class="slider_dot_radio character_select_dot" name="character_select_slide" onchange="sliderMoveToIndex(<$ index $>)" <$ if index=0 {checked} $>>
+            } $>
+          </span>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="portfolio_description">
+          Hritik Dutta<br>
+          Combined Portfolio
+        </div>
+        
+        <div class="links">
+          <$ for link: links {
+          <a href="<$ link.href $>" target="_blank"><img src="<$ link.icon $>" alt="<$ link.alt $>"></a>
+          } $>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const accentColorNames = [
+      <$ for character : characters {
+        '<$ character.css-style-prefix $>',
+      } $>
+    ];
+  </script>
+    
+  <script src="index.js"></script>
+</body>
+</html>
