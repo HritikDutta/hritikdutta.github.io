@@ -630,6 +630,10 @@ main {
   transition-delay: 0s;
 }
 
+.mute_toggle:active > * {
+  transform: scale(85%);
+}
+
 .image_lower_container {
   --_padding_x: 1rem;
 
