@@ -262,7 +262,7 @@ function onLoadCharacterSelect() {
     navButtonPrev = document.querySelector('#nav_button_prev');
     navButtonNext = document.querySelector('#nav_button_next');
     
-    sliderElements.length = slider.children;
+    sliderElements = slider.children;
 
     sliderDots = Array.from(document.querySelectorAll('.slider_dot_radio'));
     sliderCurrentSelectionIndex = -1; // Just to be safe
