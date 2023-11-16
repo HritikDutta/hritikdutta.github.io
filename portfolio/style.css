@@ -36,7 +36,7 @@ p {
   margin: 0;
 }
 
-img {
+img, video {
   pointer-events: none;
 }
 
@@ -298,12 +298,14 @@ main {
 }
 
 .skill_icon {
+  display: flex;
+  justify-content: center;
+}
+
+.skill_icon > * {
   fill: var(--accent-light);
   -webkit-filter: drop-shadow( 0px 0px 24px var(--accent-light));
   filter: drop-shadow( 0px 0px 24px var(--accent-light));
-
-  display: flex;
-  justify-content: center;
 }
 
 .skill_point_bar {
@@ -543,6 +545,8 @@ main {
   box-shadow: 0px 0px 14px var(--accent-light-half-opacity);
 
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .slider_mask {
@@ -581,17 +585,55 @@ main {
 .image_container {
   display: flex;
   justify-content: center;
+  position: relative;
 }
 
-.image_container img {
+.image_container > * {
   width: 100%;
   object-fit: contain;
+}
+
+.mute_toggle {
+  position: absolute;
+  height: 100%;
+  background-color: #00000000;
+  border: none;
+
+  display: flex;
+  align-items: start;
+  justify-content: end;
+
+  padding: 0.5em;
+  z-index: 0;
+}
+
+.mute_toggle > * {
+  height: 2.25em;
+  aspect-ratio: 1;
+
+  background-color: rgba(0, 0, 0, 0.25);
+  padding: 0.5em;
+  border-radius: 50%;
+  
+  /* Apparently safari needs this for blurring to work :/ */
+  -webkit-backdrop-filter: blur(var(--_blur-amount));
+  backdrop-filter: blur(var(--_blur-amount));
+
+  opacity: 0;
+  transition: opacity 1s ease-out;
+  transition-delay: 1.2s;
+}
+
+.mute_toggle:hover > * {
+  opacity: 1;
+  transition: opacity 150ms ease-out;
+  transition-delay: 0s;
 }
 
 .image_lower_container {
   --_padding_x: 1rem;
 
-  position: absolute;
+  position: relative;
   bottom: 0;
 
   width: 100%;
@@ -1019,7 +1061,6 @@ main {
 }
 
 .window_body,
-.image_lower_container,
 .character_select_dot:checked::after {
   --_blur-amount: 14px;
   
@@ -1165,6 +1206,10 @@ main {
     --_content_padding_x: 0;
     min-width: 100%;
     height: auto;
+  }
+
+  .mute_toggle > * {
+    transition-delay: 0s;
   }
   
   .image_lower_container {

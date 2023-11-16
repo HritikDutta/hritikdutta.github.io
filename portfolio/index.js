@@ -1,9 +1,11 @@
 const selectedOptions = {};
 
 let selectedMission;
+let selectedVideo, selectedVideoMuteIcon, selectedVideoUnmuteIcon;
+let selectedVideoHasAudio;
 let gradientBackground;
 
-let sliderElementCount = 0;
+let sliderElements;
 let slider, sliderMask;
 let navButtonPrev, navButtonNext;
 let sliderDots;
@@ -19,6 +21,17 @@ function sliderAdjustDuringScroll() {
   if (index != sliderCurrentSelectionIndex) {
     sliderUpdateUI(index);
   }
+}
+
+function toggleMute() {
+  if (selectedVideo) {
+    selectedVideo.muted = !selectedVideo.muted;
+  }
+}
+
+function toggleMuteIcons() {
+  selectedVideoMuteIcon.style.display   = selectedVideo.muted ? 'block' : 'none';
+  selectedVideoUnmuteIcon.style.display = selectedVideo.muted ? 'none' : 'block';
 }
 
 function selectMission(id) {
@@ -40,14 +53,13 @@ function selectMission(id) {
     navButtonPrev = selectedMission.querySelector('#nav_button_prev');
     navButtonNext = selectedMission.querySelector('#nav_button_next');
     
-    sliderElementCount = slider.childElementCount;
+    sliderElements = slider.children;
     
     sliderDots = Array.from(selectedMission.querySelectorAll('.slider_dot_radio'));
     sliderCurrentSelectionIndex = -1;
     
-    // Firefox doesn't like to scroll anything that's not visible (even though I'm the one telling it to) so it wouldn't update the ui properly. 
-    // I guess I'll not move back to the first image every time you switch missions then.
-    // I would have liked to move back to the first image but this isn't a bad tradeoff.
+    const width = sliderMask.getBoundingClientRect().width;
+    sliderTargetSelectionIndex = Math.floor((sliderMask.scrollLeft / width) + 0.5);
     sliderAdjustDuringScroll();
   }
 }
@@ -66,8 +78,8 @@ function sliderUpdateUI(index) {
     navButtonPrev.tabIndex = "0";
   }
   
-  if (index >= sliderElementCount - 1) {
-    index = sliderElementCount - 1;
+  if (index >= sliderElements.length - 1) {
+    index = sliderElements.length - 1;
     navButtonNext.style.opacity = 0;
     navButtonNext.style.cursor = 'auto';
     navButtonNext.style.pointerEvents = 'none';
@@ -81,11 +93,37 @@ function sliderUpdateUI(index) {
   
   sliderDots[index].checked = true; // Rest are unchecked automatically
   sliderCurrentSelectionIndex = index;
+
+  // Mute previous video
+  if (selectedVideo) {
+    selectedVideo.pause();
+
+    if (selectedVideoHasAudio)
+      selectedVideo.removeEventListener('volumechange', toggleMuteIcons);
+
+    // Just to be safe
+    selectedVideoMuteIcon = null;
+    selectedVideoUnmuteIcon = null;
+    selectedVideoHasAudio = false;
+  }
+
+  selectedVideo = sliderElements[index].querySelector('video');
+
+  if (selectedVideo) {
+    selectedVideo.play();
+    selectedVideoMuteIcon   = sliderElements[index].querySelector('.mute_icon');
+    selectedVideoUnmuteIcon = sliderElements[index].querySelector('.unmute_icon');
+
+    // Mute/Unmute button are omitted if the video doesn't have any audio
+    selectedVideoHasAudio = selectedVideoMuteIcon && selectedVideoUnmuteIcon;
+    if (selectedVideoHasAudio)
+      selectedVideo.addEventListener('volumechange', toggleMuteIcons);
+  }
 }
 
 function sliderMoveToIndex(index) {
   const width = sliderMask.getBoundingClientRect().width;
-  sliderTargetSelectionIndex = clamp(index, 0, sliderElementCount - 1);
+  sliderTargetSelectionIndex = clamp(index, 0, sliderElements.length - 1);
 
   // Unchecking the selected dot because scrolling would eventually land on it and
   // check it anyways. Otherwise it was creating conflicts when movign using the dots.
@@ -224,15 +262,13 @@ function onLoadCharacterSelect() {
     navButtonPrev = document.querySelector('#nav_button_prev');
     navButtonNext = document.querySelector('#nav_button_next');
     
-    sliderElementCount = slider.childElementCount;
+    sliderElements.length = slider.children;
 
     sliderDots = Array.from(document.querySelectorAll('.slider_dot_radio'));
     sliderCurrentSelectionIndex = -1; // Just to be safe
     
-    // Firefox doesn't like to scroll anything that's not visible (even though I'm the one telling it to) so it wouldn't update the ui properly. 
-    // I guess I'll not move back to the first image every time you switch missions then.
-    // I would have liked to move back to the first image but this isn't a bad tradeoff.
-    
+    const width = sliderMask.getBoundingClientRect().width;
+    sliderTargetSelectionIndex = Math.floor((sliderMask.scrollLeft / width) + 0.5);
     sliderAdjustDuringScrollWithAccentColor();
   }
   

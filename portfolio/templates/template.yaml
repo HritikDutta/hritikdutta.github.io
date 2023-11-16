@@ -70,11 +70,15 @@ characters:
                 A large scale open world mobile game based on the city of Mumbai, India. It's being worked on by Hypernova Interactive, a team of 30 highly skilled people.
                 <br><br>
                 His first professional gig of this scale as a game designer and technical artist.
-        images:
-          - img/projects/games/01-Mayanagari/thumbnail_01.webp
-          - img/projects/games/01-Mayanagari/thumbnail_02.webp
-          - img/projects/games/01-Mayanagari/thumbnail_03.webp
-          - img/projects/games/01-Mayanagari/thumbnail_04.webp
+        media:
+          - is-video: false
+            path: img/projects/games/01-Mayanagari/thumbnail_01.webp
+          - is-video: false
+            path: img/projects/games/01-Mayanagari/thumbnail_02.webp
+          - is-video: false
+            path: img/projects/games/01-Mayanagari/thumbnail_03.webp
+          - is-video: false
+            path: img/projects/games/01-Mayanagari/thumbnail_04.webp
         tags:
           - label: Unity
             icon: <svg height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M243.583 91.6027L323.695 138.384C326.575 140.026 326.68 144.583 323.695 146.225L228.503 201.854C225.623 203.55 222.22 203.444 219.549 201.854L124.357 146.225C121.425 144.636 121.373 139.973 124.357 138.384L204.417 91.6027V0L0 119.417V358.252L78.3843 312.477V218.914C78.3319 215.576 82.2066 213.192 85.0865 214.993L180.279 270.622C183.159 272.318 184.782 275.338 184.782 278.464V389.669C184.834 393.007 180.959 395.391 178.079 393.589L97.9673 346.808L19.583 392.583L224 512L428.417 392.583L350.033 346.808L269.921 393.589C267.093 395.338 263.114 393.06 263.218 389.669V278.464C263.218 275.126 265.051 272.159 267.721 270.622L362.914 214.993C365.741 213.245 369.72 215.47 369.616 218.914V312.477L448 358.252V119.417L243.583 0V91.6027Z"/></svg>
@@ -112,11 +116,15 @@ characters:
                 A digital version of an old game called Blip. He worked on this game as the main Unity developer during his internship at Monkhub Innovations Pvt. Ltd.
                 <br><br>
                 While this was his first professional project, he also helped out with many other projects in the company.
-        images:
-          - https://drive.google.com/uc?id=1kd4jBQcu0sD6TJA0kZZRCmNRES94rFtc
-          - img/projects/games/02-Bump Pong/thumbnail_01.jpg
-          - img/projects/games/02-Bump Pong/thumbnail_02.jpg
-          - img/projects/games/02-Bump Pong/thumbnail_03.jpg
+        media:
+          - is-video: false
+            path: https://drive.google.com/uc?id=1kd4jBQcu0sD6TJA0kZZRCmNRES94rFtc
+          - is-video: false
+            path: img/projects/games/02-Bump Pong/thumbnail_01.jpg
+          - is-video: false
+            path: img/projects/games/02-Bump Pong/thumbnail_02.jpg
+          - is-video: false
+            path: img/projects/games/02-Bump Pong/thumbnail_03.jpg
         tags:
           - label: Unity
             icon: <svg height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M243.583 91.6027L323.695 138.384C326.575 140.026 326.68 144.583 323.695 146.225L228.503 201.854C225.623 203.55 222.22 203.444 219.549 201.854L124.357 146.225C121.425 144.636 121.373 139.973 124.357 138.384L204.417 91.6027V0L0 119.417V358.252L78.3843 312.477V218.914C78.3319 215.576 82.2066 213.192 85.0865 214.993L180.279 270.622C183.159 272.318 184.782 275.338 184.782 278.464V389.669C184.834 393.007 180.959 395.391 178.079 393.589L97.9673 346.808L19.583 392.583L224 512L428.417 392.583L350.033 346.808L269.921 393.589C267.093 395.338 263.114 393.06 263.218 389.669V278.464C263.218 275.126 265.051 272.159 267.721 270.622L362.914 214.993C365.741 213.245 369.72 215.47 369.616 218.914V312.477L448 358.252V119.417L243.583 0V91.6027Z"/></svg>
@@ -147,10 +155,13 @@ characters:
                 A small game meant to replicate the frustration of working on a PC that's really slow along with more annoying pop ups. Load the project as fast as possible.
                 <br><br>
                 Like a true artist, he took his real life frustration with his office PC and made it into a game.
-        images:
-          - img/projects/games/10-The Waiting Game/thumbnail_01.png
-          - img/projects/games/10-The Waiting Game/thumbnail_02.png
-          - img/projects/games/10-The Waiting Game/thumbnail_03.png
+        media:
+          - is-video: false
+            path: img/projects/games/10-The Waiting Game/thumbnail_01.png
+          - is-video: false
+            path: img/projects/games/10-The Waiting Game/thumbnail_02.png
+          - is-video: false
+            path: img/projects/games/10-The Waiting Game/thumbnail_03.png
         tags:
           - label: C++
             icon: <svg height="1em" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M64 96c0-35.3 28.7-64 64-64H512c35.3 0 64 28.7 64 64V352H512V96H128V352H64V96zM0 403.2C0 392.6 8.6 384 19.2 384H620.8c10.6 0 19.2 8.6 19.2 19.2c0 42.4-34.4 76.8-76.8 76.8H76.8C34.4 480 0 445.6 0 403.2zM281 209l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-48-48c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zM393 175l48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"/></svg>
@@ -180,14 +191,21 @@ characters:
                 A small experiment in rendering 3D worlds in the style of minecraft. The player can place and remove blocks from the world.
                 <br><br>
                 He was learning 3D rendering using only C++ and OpenGL at the time.
-        images:
-          - img/projects/games/09-Minecraft Clone/thumbnail_01.jpg
-          - img/projects/games/09-Minecraft Clone/thumbnail_02.jpg
-          - img/projects/games/09-Minecraft Clone/thumbnail_03.jpg
-          - img/projects/games/09-Minecraft Clone/thumbnail_04.jpg
-          - https://drive.google.com/uc?id=1mBSirPvsxxGuWAdhaNJCQelLlBpS-6IP
-          - https://drive.google.com/uc?id=1YFq55aIu4eKGSt_kwl87fp81hIQ84CFw
-          - https://drive.google.com/uc?id=1h1ClU6xZ5TYnrkjmtkDPzylB2Fd3_zy3
+        media:
+          - is-video: false
+            path: img/projects/games/09-Minecraft Clone/thumbnail_01.jpg
+          - is-video: false
+            path: img/projects/games/09-Minecraft Clone/thumbnail_02.jpg
+          - is-video: false
+            path: img/projects/games/09-Minecraft Clone/thumbnail_03.jpg
+          - is-video: false
+            path: img/projects/games/09-Minecraft Clone/thumbnail_04.jpg
+          - is-video: false
+            path: https://drive.google.com/uc?id=1mBSirPvsxxGuWAdhaNJCQelLlBpS-6IP
+          - is-video: false
+            path: https://drive.google.com/uc?id=1YFq55aIu4eKGSt_kwl87fp81hIQ84CFw
+          - is-video: false
+            path: https://drive.google.com/uc?id=1h1ClU6xZ5TYnrkjmtkDPzylB2Fd3_zy3
         tags:
           - label: C++
             icon: <svg height="1em" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M64 96c0-35.3 28.7-64 64-64H512c35.3 0 64 28.7 64 64V352H512V96H128V352H64V96zM0 403.2C0 392.6 8.6 384 19.2 384H620.8c10.6 0 19.2 8.6 19.2 19.2c0 42.4-34.4 76.8-76.8 76.8H76.8C34.4 480 0 445.6 0 403.2zM281 209l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-48-48c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zM393 175l48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"/></svg>
@@ -218,8 +236,9 @@ characters:
                 Exactly what the name suggests...
                 <br><br>
                 He found himself so addicted to wordle that he couldn't wait for a whole day for the next word. So he made a version that he can play as many times as he wants.
-        images:
-          - img/projects/games/08-Shameless Wordle Clone/thumbnail_01.png
+        media:
+          - is-video: false
+            path: img/projects/games/08-Shameless Wordle Clone/thumbnail_01.png
         tags:
           - label: C++
             icon: <svg height="1em" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M64 96c0-35.3 28.7-64 64-64H512c35.3 0 64 28.7 64 64V352H512V96H128V352H64V96zM0 403.2C0 392.6 8.6 384 19.2 384H620.8c10.6 0 19.2 8.6 19.2 19.2c0 42.4-34.4 76.8-76.8 76.8H76.8C34.4 480 0 445.6 0 403.2zM281 209l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-48-48c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zM393 175l48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"/></svg>
@@ -246,13 +265,19 @@ characters:
                 An Stealth Based RTS Dungeon Crawler set in Ramayana, where you command your monkey troops indirectly by placing bananas. It was made for the Historically Accurate Game Jam 2021.
                 <br><br>
                 Unity gave him so much trouble during this game, that he decided to never use it for his own projects from then.
-        images:
-          - img/projects/games/07-Saving Princess Sita/thumbnail_01.png
-          - img/projects/games/07-Saving Princess Sita/thumbnail_02.png
-          - img/projects/games/07-Saving Princess Sita/thumbnail_03.png
-          - img/projects/games/07-Saving Princess Sita/thumbnail_04.png
-          - img/projects/games/07-Saving Princess Sita/thumbnail_05.png
-          - img/projects/games/07-Saving Princess Sita/thumbnail_06.png
+        media:
+          - is-video: false
+            path: img/projects/games/07-Saving Princess Sita/thumbnail_01.png
+          - is-video: false
+            path: img/projects/games/07-Saving Princess Sita/thumbnail_02.png
+          - is-video: false
+            path: img/projects/games/07-Saving Princess Sita/thumbnail_03.png
+          - is-video: false
+            path: img/projects/games/07-Saving Princess Sita/thumbnail_04.png
+          - is-video: false
+            path: img/projects/games/07-Saving Princess Sita/thumbnail_05.png
+          - is-video: false
+            path: img/projects/games/07-Saving Princess Sita/thumbnail_06.png
         tags:
           - label: Unity
             icon: <svg height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M243.583 91.6027L323.695 138.384C326.575 140.026 326.68 144.583 323.695 146.225L228.503 201.854C225.623 203.55 222.22 203.444 219.549 201.854L124.357 146.225C121.425 144.636 121.373 139.973 124.357 138.384L204.417 91.6027V0L0 119.417V358.252L78.3843 312.477V218.914C78.3319 215.576 82.2066 213.192 85.0865 214.993L180.279 270.622C183.159 272.318 184.782 275.338 184.782 278.464V389.669C184.834 393.007 180.959 395.391 178.079 393.589L97.9673 346.808L19.583 392.583L224 512L428.417 392.583L350.033 346.808L269.921 393.589C267.093 395.338 263.114 393.06 263.218 389.669V278.464C263.218 275.126 265.051 272.159 267.721 270.622L362.914 214.993C365.741 213.245 369.72 215.47 369.616 218.914V312.477L448 358.252V119.417L243.583 0V91.6027Z"/></svg>
@@ -282,8 +307,9 @@ characters:
                 A spritesheet editor made with a custom rendering library with C++ and OpenGL.
                 <br><br>
                 It was to help him make animated sprites for his 2D games.
-        images:
-          - img/projects/games/05-Spedit/demo.gif
+        media:
+          - is-video: false
+            path: img/projects/games/05-Spedit/demo.gif
         tags:
           - label: C++
             icon: <svg height="1em" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M64 96c0-35.3 28.7-64 64-64H512c35.3 0 64 28.7 64 64V352H512V96H128V352H64V96zM0 403.2C0 392.6 8.6 384 19.2 384H620.8c10.6 0 19.2 8.6 19.2 19.2c0 42.4-34.4 76.8-76.8 76.8H76.8C34.4 480 0 445.6 0 403.2zM281 209l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-48-48c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zM393 175l48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"/></svg>
@@ -309,14 +335,21 @@ characters:
                 An infinite puzzle platformer where the player can switch between states of matter (solid, liquid, gas) to solve puzzles and get as far as possible.
                 <br><br>
                 Quite literally his first rodeo...
-        images:
-          - https://drive.google.com/uc?id=1rf8GKMtG7gxfeX-qSU0IOzhv6tJjaf4B
-          - https://drive.google.com/uc?id=1gvPFFmZHuR3F9EZYEmtcyGD-K1Fcsvf5
-          - img/projects/games/01-Hurry Flurry/thumbnail_01.jpg
-          - img/projects/games/01-Hurry Flurry/thumbnail_02.jpg
-          - img/projects/games/01-Hurry Flurry/thumbnail_03.jpg
-          - img/projects/games/01-Hurry Flurry/thumbnail_04.jpg
-          - img/projects/games/01-Hurry Flurry/thumbnail_05.jpg
+        media:
+          - is-video: false
+            path: https://drive.google.com/uc?id=1rf8GKMtG7gxfeX-qSU0IOzhv6tJjaf4B
+          - is-video: false
+            path: https://drive.google.com/uc?id=1gvPFFmZHuR3F9EZYEmtcyGD-K1Fcsvf5
+          - is-video: false
+            path: img/projects/games/01-Hurry Flurry/thumbnail_01.jpg
+          - is-video: false
+            path: img/projects/games/01-Hurry Flurry/thumbnail_02.jpg
+          - is-video: false
+            path: img/projects/games/01-Hurry Flurry/thumbnail_03.jpg
+          - is-video: false
+            path: img/projects/games/01-Hurry Flurry/thumbnail_04.jpg
+          - is-video: false
+            path: img/projects/games/01-Hurry Flurry/thumbnail_05.jpg
         tags:
           - label: Unity
             icon: <svg height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M243.583 91.6027L323.695 138.384C326.575 140.026 326.68 144.583 323.695 146.225L228.503 201.854C225.623 203.55 222.22 203.444 219.549 201.854L124.357 146.225C121.425 144.636 121.373 139.973 124.357 138.384L204.417 91.6027V0L0 119.417V358.252L78.3843 312.477V218.914C78.3319 215.576 82.2066 213.192 85.0865 214.993L180.279 270.622C183.159 272.318 184.782 275.338 184.782 278.464V389.669C184.834 393.007 180.959 395.391 178.079 393.589L97.9673 346.808L19.583 392.583L224 512L428.417 392.583L350.033 346.808L269.921 393.589C267.093 395.338 263.114 393.06 263.218 389.669V278.464C263.218 275.126 265.051 272.159 267.721 270.622L362.914 214.993C365.741 213.245 369.72 215.47 369.616 218.914V312.477L448 358.252V119.417L243.583 0V91.6027Z"/></svg>
@@ -401,8 +434,9 @@ characters:
                 A coming of age story about a young boy on the quest to find a job he is satisfied with. But he doesn't know that life has other plans for him.
                 <br><br>
                 He's not proud of this one but it was his first step into the world of film-making.
-        images:
-          - img/projects/films/01-Bonkers/thumbnail_01.jpg
+        media:
+          - is-video: false
+            path: img/projects/films/01-Bonkers/thumbnail_01.jpg
         tags:
           - label: Screenwriting
             icon: <svg height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M278.5 215.6L23 471c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l57-57h68c49.7 0 97.9-14.4 139-41c11.1-7.2 5.5-23-7.8-23c-5.1 0-9.2-4.1-9.2-9.2c0-4.1 2.7-7.6 6.5-8.8l81-24.3c2.5-.8 4.8-2.1 6.7-4l22.4-22.4c10.1-10.1 2.9-27.3-11.3-27.3l-32.2 0c-5.1 0-9.2-4.1-9.2-9.2c0-4.1 2.7-7.6 6.5-8.8l112-33.6c4-1.2 7.4-3.9 9.3-7.7C506.4 207.6 512 184.1 512 160c0-41-16.3-80.3-45.3-109.3l-5.5-5.5C432.3 16.3 393 0 352 0s-80.3 16.3-109.3 45.3L139 149C91 197 64 262.1 64 330v55.3L253.6 195.8c6.2-6.2 16.4-6.2 22.6 0c5.4 5.4 6.1 13.6 2.2 19.8z"/></svg>
@@ -429,13 +463,19 @@ characters:
                 A group of passionate film-makers comes together to make a film under 50 hours for a competition. It is a re-edit of the original film.
                 <br><br>
                 He shot this with his friends as a part of the India Film Project 50 hour competition. The scenes in this film are almost completely improvised.
-        images:
-          - img/projects/films/04-A Tale of Passion/thumbnail_01.jpg
-          - img/projects/films/04-A Tale of Passion/thumbnail_02.jpg
-          - img/projects/films/04-A Tale of Passion/thumbnail_03.jpg
-          - img/projects/films/04-A Tale of Passion/thumbnail_04.jpg
-          - img/projects/films/04-A Tale of Passion/thumbnail_05.jpg
-          - img/projects/films/04-A Tale of Passion/thumbnail_06.jpg
+        media:
+          - is-video: false
+            path: img/projects/films/04-A Tale of Passion/thumbnail_01.jpg
+          - is-video: false
+            path: img/projects/films/04-A Tale of Passion/thumbnail_02.jpg
+          - is-video: false
+            path: img/projects/films/04-A Tale of Passion/thumbnail_03.jpg
+          - is-video: false
+            path: img/projects/films/04-A Tale of Passion/thumbnail_04.jpg
+          - is-video: false
+            path: img/projects/films/04-A Tale of Passion/thumbnail_05.jpg
+          - is-video: false
+            path: img/projects/films/04-A Tale of Passion/thumbnail_06.jpg
         tags:
           - label: Direction
             icon: <svg height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M448 32H361.9l-1 1-127 127h92.1l1-1L453.8 32.3c-1.9-.2-3.8-.3-5.8-.3zm64 128V96c0-15.1-5.3-29.1-14-40l-104 104H512zM294.1 32H201.9l-1 1L73.9 160h92.1l1-1 127-127zM64 32C28.7 32 0 60.7 0 96v64H6.1l1-1 127-127H64zM512 192H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V192z"/></svg>
@@ -464,11 +504,15 @@ characters:
                 A man has a rare disease. He will die if surprised. However he finds someone to brighten up his life.
                 <br>
                 Another project with a larger team. It was his first foray into sound design.
-        images:
-          - img/projects/films/03-Room Temperature/thumbnail_01.jpg
-          - img/projects/films/03-Room Temperature/thumbnail_02.jpg
-          - img/projects/films/03-Room Temperature/thumbnail_03.jpg
-          - img/projects/films/03-Room Temperature/thumbnail_04.jpg
+        media:
+          - is-video: false
+            path: img/projects/films/03-Room Temperature/thumbnail_01.jpg
+          - is-video: false
+            path: img/projects/films/03-Room Temperature/thumbnail_02.jpg
+          - is-video: false
+            path: img/projects/films/03-Room Temperature/thumbnail_03.jpg
+          - is-video: false
+            path: img/projects/films/03-Room Temperature/thumbnail_04.jpg
         tags:
           - label: Sound Design
             icon: <svg height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 80C149.9 80 62.4 159.4 49.6 262c9.4-3.8 19.6-6 30.4-6c26.5 0 48 21.5 48 48V432c0 26.5-21.5 48-48 48c-44.2 0-80-35.8-80-80V384 336 288C0 146.6 114.6 32 256 32s256 114.6 256 256v48 48 16c0 44.2-35.8 80-80 80c-26.5 0-48-21.5-48-48V304c0-26.5 21.5-48 48-48c10.8 0 21 2.1 30.4 6C449.6 159.4 362.1 80 256 80z"/></svg>
@@ -501,10 +545,13 @@ characters:
         brief: >
                 A montage style film where a writer spends too much time on getting comfortable than on writing.
                 A small project he made completely on his own because he was bored.
-        images:
-          - img/projects/films/02-Deadline/thumbnail_01.jpg
-          - img/projects/films/02-Deadline/thumbnail_02.jpg
-          - img/projects/films/02-Deadline/thumbnail_03.jpg
+        media:
+          - is-video: false
+            path: img/projects/films/02-Deadline/thumbnail_01.jpg
+          - is-video: false
+            path: img/projects/films/02-Deadline/thumbnail_02.jpg
+          - is-video: false
+            path: img/projects/films/02-Deadline/thumbnail_03.jpg
         tags:
           - label: Cinematography
             icon: <svg height="1em" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M0 128C0 92.7 28.7 64 64 64H320c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128zM559.1 99.8c10.4 5.6 16.9 16.4 16.9 28.2V384c0 11.8-6.5 22.6-16.9 28.2s-23 5-32.9-1.6l-96-64L416 337.1V320 192 174.9l14.2-9.5 96-64c9.8-6.5 22.4-7.2 32.9-1.6z"/></svg>
@@ -536,11 +583,15 @@ characters:
                 Rohit finds catharsis in narcissism. However it blinds him to the people who actually care.
                 <br><br>
                 Unsatisfied with his first professional web series, he decided to work on his own and hone his skills as a film maker.
-        images:
-          - img/projects/films/01-Pratibimb/thumbnail_01.jpg
-          - img/projects/films/01-Pratibimb/thumbnail_02.jpg
-          - img/projects/films/01-Pratibimb/thumbnail_03.jpg
-          - img/projects/films/01-Pratibimb/thumbnail_04.jpg
+        media:
+          - is-video: false
+            path: img/projects/films/01-Pratibimb/thumbnail_01.jpg
+          - is-video: false
+            path: img/projects/films/01-Pratibimb/thumbnail_02.jpg
+          - is-video: false
+            path: img/projects/films/01-Pratibimb/thumbnail_03.jpg
+          - is-video: false
+            path: img/projects/films/01-Pratibimb/thumbnail_04.jpg
         tags:
           - label: Screenwriting
             icon: <svg height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M278.5 215.6L23 471c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l57-57h68c49.7 0 97.9-14.4 139-41c11.1-7.2 5.5-23-7.8-23c-5.1 0-9.2-4.1-9.2-9.2c0-4.1 2.7-7.6 6.5-8.8l81-24.3c2.5-.8 4.8-2.1 6.7-4l22.4-22.4c10.1-10.1 2.9-27.3-11.3-27.3l-32.2 0c-5.1 0-9.2-4.1-9.2-9.2c0-4.1 2.7-7.6 6.5-8.8l112-33.6c4-1.2 7.4-3.9 9.3-7.7C506.4 207.6 512 184.1 512 160c0-41-16.3-80.3-45.3-109.3l-5.5-5.5C432.3 16.3 393 0 352 0s-80.3 16.3-109.3 45.3L139 149C91 197 64 262.1 64 330v55.3L253.6 195.8c6.2-6.2 16.4-6.2 22.6 0c5.4 5.4 6.1 13.6 2.2 19.8z"/></svg>
@@ -739,14 +790,21 @@ characters:
                 A small experiment in rendering 3D worlds in the style of minecraft. The player can place and remove blocks from the world.
                 <br><br>
                 He was learning 3D rendering using only C++ and OpenGL at the time.
-        images:
-          - img/projects/games/09-Minecraft Clone/thumbnail_01.jpg
-          - img/projects/games/09-Minecraft Clone/thumbnail_02.jpg
-          - img/projects/games/09-Minecraft Clone/thumbnail_03.jpg
-          - img/projects/games/09-Minecraft Clone/thumbnail_04.jpg
-          - https://drive.google.com/uc?id=1mBSirPvsxxGuWAdhaNJCQelLlBpS-6IP
-          - https://drive.google.com/uc?id=1YFq55aIu4eKGSt_kwl87fp81hIQ84CFw
-          - https://drive.google.com/uc?id=1h1ClU6xZ5TYnrkjmtkDPzylB2Fd3_zy3
+        media:
+          - is-video: false
+            path: img/projects/games/09-Minecraft Clone/thumbnail_01.jpg
+          - is-video: false
+            path: img/projects/games/09-Minecraft Clone/thumbnail_02.jpg
+          - is-video: false
+            path: img/projects/games/09-Minecraft Clone/thumbnail_03.jpg
+          - is-video: false
+            path: img/projects/games/09-Minecraft Clone/thumbnail_04.jpg
+          - is-video: false
+            path: https://drive.google.com/uc?id=1mBSirPvsxxGuWAdhaNJCQelLlBpS-6IP
+          - is-video: false
+            path: https://drive.google.com/uc?id=1YFq55aIu4eKGSt_kwl87fp81hIQ84CFw
+          - is-video: false
+            path: https://drive.google.com/uc?id=1h1ClU6xZ5TYnrkjmtkDPzylB2Fd3_zy3
         tags:
           - label: C++
             icon: <svg height="1em" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M64 96c0-35.3 28.7-64 64-64H512c35.3 0 64 28.7 64 64V352H512V96H128V352H64V96zM0 403.2C0 392.6 8.6 384 19.2 384H620.8c10.6 0 19.2 8.6 19.2 19.2c0 42.4-34.4 76.8-76.8 76.8H76.8C34.4 480 0 445.6 0 403.2zM281 209l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-48-48c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zM393 175l48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"/></svg>
@@ -777,8 +835,9 @@ characters:
                 A spritesheet editor made with a custom rendering library with C++ and OpenGL.
                 <br><br>
                 It was to help Game Developer make animated sprites for his 2D games.
-        images:
-          - img/projects/games/05-Spedit/demo.gif
+        media:
+          - is-video: false
+            path: img/projects/games/05-Spedit/demo.gif
         tags:
           - label: C++
             icon: <svg height="1em" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M64 96c0-35.3 28.7-64 64-64H512c35.3 0 64 28.7 64 64V352H512V96H128V352H64V96zM0 403.2C0 392.6 8.6 384 19.2 384H620.8c10.6 0 19.2 8.6 19.2 19.2c0 42.4-34.4 76.8-76.8 76.8H76.8C34.4 480 0 445.6 0 403.2zM281 209l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-48-48c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zM393 175l48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"/></svg>
