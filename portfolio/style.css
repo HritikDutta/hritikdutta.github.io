@@ -507,8 +507,26 @@ main {
   gap: 1.6rem;
 }
 
-.mission_info h2 {
+.mission_header {
+  display: flex;
+  align-items: center;
+}
+
+.mission_header h2 {
   text-shadow: 0px 0px 24px rgba(255, 255, 255, 0.5);
+  flex-grow: 1;
+}
+
+.mission_header a {
+  font-size: 0.8rem;
+
+  color: var(--light-grey);
+  text-decoration: none;
+}
+
+.mission_header a:hover {
+  color: var(--light-grey);
+  text-decoration: underline;
 }
 
 .mission_info_heading {
@@ -1202,7 +1220,7 @@ main {
     transition: transform 300ms ease-in-out;
   }
 
-  .mission_info h2 {
+  .mission_header h2 {
     display: none;
   }
 

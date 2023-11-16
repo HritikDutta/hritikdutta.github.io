@@ -62,12 +62,16 @@ characters:
         animated-sprite: img/avatars/Sprites/Skin 3/Game Developer.gif
     
     main-missions:
-      - name: Mayangari
+      - name: Mayanagari
+        href: https://youtu.be/_Ofj-bAjJ8Y
+        company:
+          name: Hypernova Interactive
+          href: https://www.hypernovainteractive.com/
 
         date: Ongoing
         difficulty: Hard
         brief: >
-                A large scale open world mobile game based on the city of Mumbai, India. It's being worked on by Hypernova Interactive, a team of 30 highly skilled people.
+                A large scale open world mobile game based on the city of Mumbai, India. An enormous game being worked on by a very short but highly skilled team.
                 <br><br>
                 His first professional gig of this scale as a game designer and technical artist.
         media:
@@ -113,6 +117,9 @@ characters:
 
       - name: Bump Pong
         href: https://play.google.com/store/apps/details?id=com.sempervi.bump
+        company:
+          name: Monkhub Innovations
+          href: https://www.monkhub.com/us
 
         date: 19th Apr 2021
         difficulty: Hard
@@ -437,6 +444,9 @@ characters:
     main-missions:
       - name: Bonkers
         href: https://www.mxplayer.in/show/watch-bonkers-series-online-8e0eadbe1fcfec1f6488418aed6c3bdf
+        company:
+          name: Bazingaa Production
+          href: https://bazingaaproduction.in/
 
         date: 18th Jan 2022
         difficulty: Hard
