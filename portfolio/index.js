@@ -1,7 +1,7 @@
 const selectedOptions = {};
 
 let selectedMission;
-let selectedVideo, selectedVideoMuteIcon, selectedVideoUnmuteIcon;
+let selectedVideo, selectedVideoMuteIcon, selectedVideoUnmuteIcon, selectedVideoPoster;
 let selectedVideoHasAudio;
 let gradientBackground;
 
@@ -203,6 +203,18 @@ function onLoadMissionSelect() {
       
       selectedOptions[key].currentSelection = currentOption;
     });
+  }
+
+  { // Register events for poster images in videos
+    const allVideos = document.querySelectorAll('video');
+    for (let i = 0; i < allVideos.length; i++) {
+      allVideos[i].addEventListener('canplay', function() {
+        let poster = this.parentElement.querySelector('.poster_image');
+        if (poster) {
+          poster.style.display = 'none';
+        }
+      });
+    }
   }
   
   { // Animate Skill Bars
