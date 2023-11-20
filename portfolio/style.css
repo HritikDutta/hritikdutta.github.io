@@ -455,7 +455,6 @@ main {
 #skin_info_container {
   grid-auto-columns: 16rem;
 }
-
 .option_info {
   grid-column-start: 1;
   grid-row-start: 1;
@@ -480,6 +479,16 @@ main {
 .skin_visual img {
   height: 8rem;
   object-fit: contain;
+}
+
+.skin_visual p > img {
+  height: 1em;
+}
+
+.skin_visual p {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
 }
 
 #mission_select {

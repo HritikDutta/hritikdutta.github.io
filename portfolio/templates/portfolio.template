@@ -81,7 +81,7 @@
                   <input type="radio" autocomplete="off" class="option_radio_button" id="skin_<$ index $>_radio" name="selected_skin" value="skin_<$ index $>" <$ if index=0 {checked} $>>
                   <label for="skin_<$ index $>_radio" class="option_button">
                     <span><$ skin.name $></span>
-                    <$ if skin.unlocked {<img class="option_select_arrow" src="img/icons/arrow-small-back.svg" alt="">} else {<img src="img/icons/locked.svg" alt="">} $>
+                    <$ if skin.locked {<img src="img/icons/locked.svg" alt="">} else {<img class="option_select_arrow" src="img/icons/arrow-small-back.svg" alt="">} $>
                   </label>
                 </div>  
                 } $>
@@ -93,7 +93,9 @@
                 <div class="skin_visual option_info" id="skin_<$ index $>">
                   <div class="option_info_container">
                     <img class="pixel_perfect" src="<$ skin.animated-sprite $>" alt="<$ character.name $> <$ skin.name $> Skin">
-                    <p><$ skin.caption $></p>
+                    <p>
+                    <$ if skin.locked {<img src="img/icons/locked.svg" alt="">} $>
+                    <$ skin.caption $></p>
                   </div>
                 </div>
                 } $>
