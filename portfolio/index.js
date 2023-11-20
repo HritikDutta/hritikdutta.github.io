@@ -205,13 +205,15 @@ function onLoadMissionSelect() {
     });
   }
 
-  { // Register events for poster images in videos
+  { // Register events for poster images or other elements in videos
     const allVideos = document.querySelectorAll('video');
     for (let i = 0; i < allVideos.length; i++) {
       allVideos[i].addEventListener('canplay', function() {
-        let poster = this.parentElement.querySelector('.poster_image');
-        if (poster) {
-          poster.style.display = 'none';
+        let elements = this.parentElement.querySelectorAll('.disappear_on_video_load');
+        if (elements) {
+          for (let j = 0; j < elements.length; j++) {
+            elements[j].style.display = 'none';
+          }
         }
       });
     }

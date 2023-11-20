@@ -184,7 +184,10 @@
                         <$ for media: mission.media {
                         <$ if media.is-video {
                           <div class="slider_container image_container">
-                            <$ if media.poster {<img class="poster_image" src="<$ media.poster $>" loading="lazy" alt="">} $>
+                            <$ if media.poster {<img class="disappear_on_video_load poster_image" src="<$ media.poster $>" loading="lazy" alt="">} $>
+                            <div class="disappear_on_video_load buffer_holder">
+                              <img class="buffer_icon" src="img/icons/buffer.svg" alt="">
+                            </div>
                             <video loop playsinline muted preload="none" tabindex="-1"><source src="<$ media.path $>" type="video/mp4"></video>
                             <$ if media.has-audio {
                             <button class="mute_toggle" onclick="toggleMute()">
