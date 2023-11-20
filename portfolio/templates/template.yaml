@@ -54,12 +54,15 @@ characters:
       - name: Standard
         caption: Sometimes vanilla is the best flavour.
         animated-sprite: img/avatars/Sprites/Skin 1/Game Developer.gif
+        unlocked: true
       - name: 2-Bit
         caption: Retro games never get old.
         animated-sprite: img/avatars/Sprites/Skin 2/Game Developer.gif
+        unlocked: true
       - name: Realistic
         caption: Hire to unlock.
         animated-sprite: img/avatars/Sprites/Skin 3/Game Developer.gif
+        unlocked: false
     
     main-missions:
       - name: Mayanagari
@@ -434,12 +437,15 @@ characters:
       - name: Standard
         caption: It's popular for a reason.
         animated-sprite: img/avatars/Sprites/Skin 1/Film Maker.gif
+        unlocked: true
       - name: 2-Bit
         caption: Brings back the old days.
         animated-sprite: img/avatars/Sprites/Skin 2/Film Maker.gif
+        unlocked: true
       - name: Realistic
         caption: Hire to unlock.
         animated-sprite: img/avatars/Sprites/Skin 3/Film Maker.gif
+        unlocked: false
     
     main-missions:
       - name: Bonkers
@@ -683,12 +689,15 @@ characters:
       - name: Standard
         caption: Nothing beats it.
         animated-sprite: img/avatars/Sprites/Skin 1/Programmer.gif
+        unlocked: true
       - name: 2-Bit
         caption: Less data more information.
         animated-sprite: img/avatars/Sprites/Skin 2/Programmer.gif
+        unlocked: true
       - name: Realistic
         caption: Hire to unlock.
         animated-sprite: img/avatars/Sprites/Skin 3/Programmer.gif
+        unlocked: false
       
     main-missions:
       - name: This Website
