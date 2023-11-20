@@ -12,6 +12,15 @@ let sliderDots;
 let sliderCurrentSelectionIndex = -1;
 let sliderTargetSelectionIndex  = 0;
 
+const videoIntersectionObserver = new IntersectionObserver(function (items) {
+  items.forEach(function (item) {
+    if (item.isIntersecting)
+      item.target.play();
+    else
+      item.target.pause();
+  });
+});
+
 const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
 
 function sliderAdjustDuringScroll() {
@@ -96,10 +105,16 @@ function sliderUpdateUI(index) {
 
   // Mute previous video
   if (selectedVideo) {
-    selectedVideo.pause();
+    videoIntersectionObserver.unobserve(selectedVideo);
 
-    if (selectedVideoHasAudio)
+    // Can't pause if it's not loaded
+    if (selectedVideo.readyState === 4) {
+      selectedVideo.pause();
+    }
+
+    if (selectedVideoHasAudio) {
       selectedVideo.removeEventListener('volumechange', toggleMuteIcons);
+    }
 
     // Just to be safe
     selectedVideoMuteIcon = null;
@@ -110,14 +125,16 @@ function sliderUpdateUI(index) {
   selectedVideo = sliderElements[index].querySelector('video');
 
   if (selectedVideo) {
-    selectedVideo.play();
+    videoIntersectionObserver.observe(selectedVideo);
+    
     selectedVideoMuteIcon   = sliderElements[index].querySelector('.mute_icon');
     selectedVideoUnmuteIcon = sliderElements[index].querySelector('.unmute_icon');
 
     // Mute/Unmute button are omitted if the video doesn't have any audio
     selectedVideoHasAudio = selectedVideoMuteIcon && selectedVideoUnmuteIcon;
-    if (selectedVideoHasAudio)
+    if (selectedVideoHasAudio) {
       selectedVideo.addEventListener('volumechange', toggleMuteIcons);
+    }
   }
 }
 
@@ -209,6 +226,9 @@ function onLoadMissionSelect() {
     const allVideos = document.querySelectorAll('video');
     for (let i = 0; i < allVideos.length; i++) {
       allVideos[i].addEventListener('canplay', function() {
+        if (this != selectedVideo)
+          this.pause();
+
         let elements = this.parentElement.querySelectorAll('.disappear_on_video_load');
         if (elements) {
           for (let j = 0; j < elements.length; j++) {
