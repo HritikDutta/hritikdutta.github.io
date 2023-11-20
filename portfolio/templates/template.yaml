@@ -58,7 +58,7 @@ characters:
         caption: Retro games never get old.
         animated-sprite: img/avatars/Sprites/Skin 2/Game Developer.gif
       - name: Realistic
-        caption: Unlocked after recruiting.
+        caption: Hire to unlock.
         animated-sprite: img/avatars/Sprites/Skin 3/Game Developer.gif
     
     main-missions:
@@ -438,7 +438,7 @@ characters:
         caption: Brings back the old days.
         animated-sprite: img/avatars/Sprites/Skin 2/Film Maker.gif
       - name: Realistic
-        caption: Unlocked after recruiting.
+        caption: Hire to unlock.
         animated-sprite: img/avatars/Sprites/Skin 3/Film Maker.gif
     
     main-missions:
@@ -687,7 +687,7 @@ characters:
         caption: Less data more information.
         animated-sprite: img/avatars/Sprites/Skin 2/Programmer.gif
       - name: Realistic
-        caption: Unlocked after recruiting.
+        caption: Hire to unlock.
         animated-sprite: img/avatars/Sprites/Skin 3/Programmer.gif
       
     main-missions:

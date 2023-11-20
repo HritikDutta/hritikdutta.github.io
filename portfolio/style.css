@@ -898,12 +898,12 @@ main {
   transform: translate(-50%, 0);
 }
 
-.resume_link_container a {
+.footer a {
   color: var(--light-grey);
   text-decoration: none;
 }
 
-.resume_link_container a:hover {
+.footer a:hover {
   color: var(--light-grey);
   text-decoration: underline;
 }

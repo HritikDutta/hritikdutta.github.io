@@ -301,6 +301,14 @@
         <div class="portfolio_description">
           Hritik Dutta<br>
           <$ character.name $> Portfolio
+          
+          <br>
+          <$ for char, char-index: characters {
+          <$ if char-index = params.selected-index {} else {
+          <br>
+          <a style="color: var(--<$ char.css-style-prefix $>-dark)" href="<$ char.name $>.html"><$ char.name $> Portfolio</a>
+          } $>
+          } $>
         </div>
         
         <div class="resume_link_container">
