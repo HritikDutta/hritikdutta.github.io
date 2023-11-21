@@ -204,7 +204,7 @@
                       </div>
                       
                       <div class="image_lower_container">
-                        <span><$ mission.date $></span>
+                        <$ if mission.date {<span><$ mission.date $></span>} $>
                         <span class="difficulty_text">Difficulty: <$ mission.difficulty $></span>
                         <!-- Slider dots need to be in front so they can be interacted with -->
                         <span class="slider_dots">
