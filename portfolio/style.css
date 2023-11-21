@@ -672,7 +672,7 @@ main {
   justify-content: end;
 
   padding: 0.5em;
-  z-index: 0;
+  z-index: 1;
 }
 
 .mute_toggle > * {
