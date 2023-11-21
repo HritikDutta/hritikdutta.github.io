@@ -2,6 +2,7 @@ const selectedOptions = {};
 
 let selectedMission;
 let selectedVideo, selectedVideoMuteIcon, selectedVideoUnmuteIcon, selectedVideoPoster;
+let isSelectedVideoVisible;
 let selectedVideoHasAudio;
 let gradientBackground;
 
@@ -12,12 +13,23 @@ let sliderDots;
 let sliderCurrentSelectionIndex = -1;
 let sliderTargetSelectionIndex  = 0;
 
+function togglePlayStateOfVideo(video, shouldPlay) {
+  if (shouldPlay)
+    video.play();
+  else
+    video.pause();
+}
+
+function toggleVideoPlayBasedOnVisibility() {
+  if (selectedVideo) {
+    togglePlayStateOfVideo(selectedVideo, isSelectedVideoVisible && !document.hidden);
+  }
+}
+
 const videoIntersectionObserver = new IntersectionObserver(function (items) {
   items.forEach(function (item) {
-    if (item.isIntersecting)
-      item.target.play();
-    else
-      item.target.pause();
+    togglePlayStateOfVideo(item.target, item.isIntersecting);
+    isSelectedVideoVisible = item.isIntersecting;
   });
 });
 
@@ -116,6 +128,8 @@ function sliderUpdateUI(index) {
       selectedVideo.removeEventListener('volumechange', toggleMuteIcons);
     }
 
+    document.removeEventListener('visibilitychange', toggleVideoPlayBasedOnVisibility);
+
     // Just to be safe
     selectedVideoMuteIcon = null;
     selectedVideoUnmuteIcon = null;
@@ -129,6 +143,8 @@ function sliderUpdateUI(index) {
     
     selectedVideoMuteIcon   = sliderElements[index].querySelector('.mute_icon');
     selectedVideoUnmuteIcon = sliderElements[index].querySelector('.unmute_icon');
+
+    document.addEventListener('visibilitychange', toggleVideoPlayBasedOnVisibility);
 
     // Mute/Unmute button are omitted if the video doesn't have any audio
     selectedVideoHasAudio = selectedVideoMuteIcon && selectedVideoUnmuteIcon;
