@@ -937,6 +937,9 @@ main {
   top: 0;
   left: 50%;
   transform: translate(-50%, 0);
+
+  width: fit-content;
+  text-align: center;
 }
 
 .footer a {
@@ -1371,6 +1374,7 @@ main {
   }
 
   .portfolio_description {
+    width: 100%;
     text-align: center;
   }
 
