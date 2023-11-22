@@ -44,6 +44,11 @@ function sliderAdjustDuringScroll() {
   }
 }
 
+function sliderAdjustAtScrollEnd() {
+  const width = sliderMask.getBoundingClientRect().width;
+  sliderTargetSelectionIndex = Math.floor((sliderMask.scrollLeft / width) + 0.5);
+}
+
 function toggleMute() {
   if (selectedVideo) {
     selectedVideo.muted = !selectedVideo.muted;
@@ -59,6 +64,7 @@ function selectMission(id) {
   // Un-register previous scroll callback
   if (sliderMask) {
     sliderMask.removeEventListener('scroll', sliderAdjustDuringScroll);
+    sliderMask.removeEventListener('scrollend', sliderAdjustAtScrollEnd);
   }
   
   selectedMission = document.getElementById(id);
@@ -70,6 +76,7 @@ function selectMission(id) {
   if (slider) {
     sliderMask = selectedMission.querySelector('.slider_mask');
     sliderMask.addEventListener('scroll', sliderAdjustDuringScroll);
+    sliderMask.addEventListener('scrollend', sliderAdjustAtScrollEnd);
     
     navButtonPrev = selectedMission.querySelector('#nav_button_prev');
     navButtonNext = selectedMission.querySelector('#nav_button_next');
