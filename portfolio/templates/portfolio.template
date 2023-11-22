@@ -163,7 +163,7 @@
                 <div class="option_info_container">
                   <div class="mission_header">
                     <h2><$ mission.name $></h2>
-                    <$ if mission.company { <a href="<$ mission.company.href $>" target="_blank"><$ mission.company.name $></a> } $>
+                    <$ if mission.context { <a href="<$ mission.context.href $>" target="_blank"><$ mission.context.name $></a> } $>
                   </div>
                   
                   <$ if mission.media {
