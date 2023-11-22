@@ -652,10 +652,6 @@ main {
   background-color: rgba(0, 0, 0, 0.25);
   padding: 0.4em;
   border-radius: 50%;
-  
-  /* Apparently safari needs this for blurring to work :/ */
-  -webkit-backdrop-filter: blur(var(--_blur-amount));
-  backdrop-filter: blur(var(--_blur-amount));
 
   z-index: 1;
   animation: buffer-rotate-animation 1.5s linear infinite;
@@ -682,10 +678,6 @@ main {
   background-color: rgba(0, 0, 0, 0.25);
   padding: 0.5em;
   border-radius: 50%;
-  
-  /* Apparently safari needs this for blurring to work :/ */
-  -webkit-backdrop-filter: blur(var(--_blur-amount));
-  backdrop-filter: blur(var(--_blur-amount));
 
   opacity: 0;
   transition: opacity 1s ease-out;
@@ -1135,6 +1127,9 @@ main {
   margin: 2rem auto 0 auto;
 }
 
+/* This should be a separate class */
+.buffer_icon,
+.mute_toggle > *,
 .window_body,
 .character_select_dot:checked::after {
   --_blur-amount: 14px;
