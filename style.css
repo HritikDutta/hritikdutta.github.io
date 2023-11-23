@@ -580,8 +580,8 @@ main {
   overflow-x: scroll;
   scroll-behavior: smooth;
   overscroll-behavior-inline: contain;
-  -webkit-scroll-snap-type: inline proximity;
-  scroll-snap-type: inline proximity;
+  -webkit-scroll-snap-type: inline mandatory;
+  scroll-snap-type: inline mandatory;
   
   -webkit-overflow-scrolling: touch;
   
