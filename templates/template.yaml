@@ -16,6 +16,7 @@ characters:
 
     # Visuals and flavour text
     portrait: img/avatars/Portraits/Portrait Game Developer.png
+    icon: img/icons/favicons/Icon Game Developer.png
     blurb: >
             A <span class="text_accent_light">passionate game developer</span> from New Delhi, India. He is known to adapt to any kind of work quickly and learn new tools instantly.
             <br><br>
@@ -408,6 +409,7 @@ characters:
 
     # Visuals and flavour text
     portrait: img/avatars/Portraits/Portrait Programmer.png
+    icon: img/icons/favicons/Icon Programmer.png
     blurb: >
             A <span class="text_accent_light">sneaky programmer</span> who adapts to any new tech very quickly. He has a knack of going into the details of things so he understands his work from inside out.            
             <br><br>
@@ -716,6 +718,7 @@ characters:
 
     # Visuals and flavour text
     portrait: img/avatars/Portraits/Portrait Film Maker.png
+    icon: img/icons/favicons/Icon Film Maker.png
     blurb: >
             An <span class="text_accent_light">aspiring film-maker</span> from New Delhi, India. He is a master of deception and can whip up a story instantly.
             <br><br>
@@ -962,6 +965,7 @@ characters:
 
     # Visuals and flavour text
     portrait: img/avatars/Portraits/Portrait Photographer.png
+    icon: img/icons/favicons/Icon Photographer.png
     blurb: >
             An <span class="text_accent_light">avid photographer</span> from New Delhi, India. He has a keen eye for beautiful stills and can capture any number of emotions in a single shot.
             <br><br>
