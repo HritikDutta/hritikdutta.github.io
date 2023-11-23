@@ -580,6 +580,7 @@ main {
   overflow-x: scroll;
   scroll-behavior: smooth;
   overscroll-behavior-inline: contain;
+  -webkit-scroll-snap-type: inline mandatory;
   scroll-snap-type: inline mandatory;
   
   width: 100%;
@@ -605,7 +606,8 @@ main {
 
 .slider_container {
   width: 100%;
-  scroll-snap-align: center;
+  -webkit-scroll-snap-align: start;
+  scroll-snap-align: start;
   flex-shrink: 0;
 }
 

@@ -44,7 +44,6 @@
         
         <div class="slider_mask hide_scrollbar">
           <div class="slider">
-
             <$ for character: characters {
             <div class="slider_container">
               <div class="character_panel">

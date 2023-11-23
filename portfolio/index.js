@@ -13,6 +13,8 @@ let sliderDots;
 let sliderCurrentSelectionIndex = -1;
 let sliderTargetSelectionIndex  = 0;
 
+let forcedScrolling = false;
+
 function togglePlayStateOfVideo(video, shouldPlay) {
   if (shouldPlay)
     video.play();
@@ -36,10 +38,12 @@ const videoIntersectionObserver = new IntersectionObserver(function (items) {
 const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
 
 function sliderAdjustDuringScroll() {
+  forcedScrolling = true;
+
   const width = sliderMask.getBoundingClientRect().width;
   let index = Math.floor((sliderMask.scrollLeft / width) + 0.5);
 
-  if (index != sliderCurrentSelectionIndex) {
+  if (sliderCurrentSelectionIndex !== index) {
     sliderUpdateUI(index);
   }
 }
@@ -47,6 +51,14 @@ function sliderAdjustDuringScroll() {
 function sliderAdjustAtScrollEnd() {
   const width = sliderMask.getBoundingClientRect().width;
   sliderTargetSelectionIndex = Math.floor((sliderMask.scrollLeft / width) + 0.5);
+  forcedScrolling = false;
+
+  setTimeout(function() {
+    // Custom scroll snapping to ensure it works on all browsers consistently
+    if (!forcedScrolling && Math.abs((sliderMask.scrollLeft / width) - sliderTargetSelectionIndex) >= 0.01) {
+      sliderMask.scrollTo(sliderTargetSelectionIndex * width, 0);
+    }
+  }, 50);
 }
 
 function toggleMute() {
@@ -71,6 +83,8 @@ function selectMission(id) {
   slider = selectedMission.querySelector('.slider');
 
   selectedOptions['selected_mission'] = { currentSelection: selectedMission, toggleButton: document.getElementById('mission_toggle') };
+
+  forcedScrolling = false;
 
   // Only register if there is an image slider
   if (slider) {
@@ -277,6 +291,8 @@ function onLoadMissionSelect() {
 }
 
 function sliderAdjustDuringScrollWithAccentColor() {
+  forcedScrolling = true;
+
   const width = sliderMask.getBoundingClientRect().width;
   let index = Math.floor((sliderMask.scrollLeft / width) + 0.5);
   
@@ -307,14 +323,18 @@ function onLoadCharacterSelect() {
   // Un-register previous scroll callback
   if (sliderMask) {
     sliderMask.removeEventListener('scroll', sliderAdjustDuringScrollWithAccentColor);
+    sliderMask.removeEventListener('scrollend', sliderAdjustAtScrollEnd);
   }
   
   gradientBackground = document.querySelector('.gradient_background');
   slider = document.querySelector('.slider');
   
+  forcedScrolling = false;
+  
   if (slider) {
     sliderMask = document.querySelector('.slider_mask');
     sliderMask.addEventListener('scroll', sliderAdjustDuringScrollWithAccentColor);
+    sliderMask.addEventListener('scrollend', sliderAdjustAtScrollEnd);
     
     navButtonPrev = document.querySelector('#nav_button_prev');
     navButtonNext = document.querySelector('#nav_button_next');
