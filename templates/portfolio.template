@@ -317,9 +317,9 @@
           } $>
         </div>
         
-        <$ if character.resume-path {
+        <$ if character.resume-link {
         <div class="resume_link_container">
-          <a href="<$ character.resume-path $>" target="_blank">View <$ character.name $> Resume</a>
+          <a href="<$ character.resume-link $>" target="_blank">View <$ character.name $> Resume</a>
         </div>
         } $>
         
