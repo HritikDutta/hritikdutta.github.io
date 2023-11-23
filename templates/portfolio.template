@@ -317,9 +317,11 @@
           } $>
         </div>
         
+        <$ if character.resume-path {
         <div class="resume_link_container">
-          <a href="<$ character.resume-path $>" target="_blank">Download <$ character.name $> Resume</a>
+          <a href="<$ character.resume-path $>" target="_blank">View <$ character.name $> Resume</a>
         </div>
+        } $>
         
         <div class="links">
           <$ for link: links {

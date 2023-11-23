@@ -414,9 +414,6 @@ characters:
             He works with his own tools almost exclusively and often leaves hidden messages everywhere is his work.
     vice: Forgetful
 
-    # Links
-    resume-path: ""
-
     skills:
       - label: C/C++
         confidence: 90
@@ -721,9 +718,6 @@ characters:
             <br><br>
             His stories are so believable that even the police let him off every time.
     vice: Clumsy
-
-    # Links
-    resume-path: ""
 
     skills:
       - label: Screenwriting
