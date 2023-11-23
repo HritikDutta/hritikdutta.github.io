@@ -648,7 +648,7 @@ main {
 }
 
 .buffer_icon {
-  fill: #fff;
+  fill: var(--white);
 
   width: 2em;
   height: 2em;
