@@ -1,27 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Character Select</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Character Select</title>
 
-    <link rel="stylesheet" href="globals.css" />
-    <link rel="stylesheet" href="styleguide.css" />
-    <link rel="stylesheet" href="style.css" />
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;1,400;1,700;1,900&display=swap" rel="stylesheet">
-    
-    <style>
-        :root {
-            --accent-light: rgba(0, 0, 0, 1);
-            --accent-dark: rgba(0, 0, 0, 1);
+  <link rel="stylesheet" href="globals.css" />
+  <link rel="stylesheet" href="styleguide.css" />
+  <link rel="stylesheet" href="style.css" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  
+  <style>
+      :root {
+          --accent-light: rgba(0, 0, 0, 1);
+          --accent-dark: rgba(0, 0, 0, 1);
 
-            --accent-light-half-opacity: rgba(0, 0, 0, 0.5);
-            --accent-dark-half-opacity: rgba(0, 0, 0, 0.5);
-        }
-    </style>
+          --accent-light-half-opacity: rgba(0, 0, 0, 0.5);
+          --accent-dark-half-opacity: rgba(0, 0, 0, 0.5);
+      }
+  </style>
+  <script data-goatcounter="https://hritikdutta.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body onload="onLoadCharacterSelect()">
   <div class="gradient_background"></div>
