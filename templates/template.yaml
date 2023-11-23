@@ -23,7 +23,7 @@ characters:
     vice: Long Afternoon Naps
 
     # Links
-    resume-link: https://drive.google.com/file/d/1ng7wkv0K8crkOrX5gGpRYcPiH17rAY1v/
+    resume-link: res/Resume Game Developer.pdf
 
     skills:
       - label: Combat Design
@@ -712,7 +712,7 @@ characters:
     css-style-prefix: film-maker
 
     # Link
-    resume-link: https://drive.google.com/file/d/16rpy27ffR6FKlqZ5A8Wu_txV3cAtmuDi/
+    resume-link: res/Resume Film Maker.pdf
 
     # Visuals and flavour text
     portrait: img/avatars/Portraits/Portrait Film Maker.png
