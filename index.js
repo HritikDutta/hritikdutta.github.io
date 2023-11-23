@@ -1,7 +1,7 @@
 const selectedOptions = {};
 
 let selectedMission;
-let selectedVideo, selectedVideoMuteIcon, selectedVideoUnmuteIcon, selectedVideoPoster;
+let selectedVideo, selectedVideoMuteIcon, selectedVideoUnmuteIcon;
 let isSelectedVideoVisible;
 let selectedVideoHasAudio;
 let gradientBackground;
