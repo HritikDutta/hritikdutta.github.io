@@ -1,283 +1,1938 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hritik the Game Developer</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="res/icons/game-dev.png" />
-    <style>
-        .signature-color {
-            color: #5eb944;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hritik: Game Developer</title>
+  
+  <link rel="shortcut icon" href="img/avatars/Portraits/Portrait Game Developer.png">
+  
+  <link rel="stylesheet" href="globals.css" />
+  <link rel="stylesheet" href="styleguide.css" />
+  <link rel="stylesheet" href="style.css" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --accent-light: var(--game-developer-light);
+      --accent-dark: var(--game-developer-dark);
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B4QS73RGYC"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-B4QS73RGYC');
-    </script>
+      --accent-light-half-opacity: var(--game-developer-light-half-opacity);
+      --accent-dark-half-opacity: var(--game-developer-dark-half-opacity);
+    }
+  </style>
 </head>
-<body>
-    <nav id="navbar" class="container">
-        <div id="link-container">
-            <div id="select-hritik" class="special-text">Select your Hritik</div>
-            <div id="links" class="special-text">
-                <div class="link selected">
-                    <a href="Game Developer.html"><img src="res/icons/game-dev.png" /></a>
-                        <h6 style="color: #5eb944;">Game Developer</h6>
+<body onload="onLoadMissionSelect()">
+  <div class="gradient_background"></div>
+  <header>
+    <a class="back_button transition_on_load_horizontal" href="index.html">
+      <div class="button_prompt xbox_button" id="xbox_button_b">B</div>
+      <img src="img/icons/arrow-small-back.svg" alt="">
+      <span>Character Select</span>
+    </a>
+  </header>
+  <main>
+    <div class="content">
+      <div class="avatar_big">
+        <img class="transition_on_load_horizontal pixel_perfect" id="character_portrait" src="img/avatars/Portraits/Portrait Game Developer.png" alt="Game Developer Portrait">
+        <h1 class="with_stroke text_accent_light transition_on_load_horizontal" id="character_title" value="Game Developer">Game Developer</h1>
+      </div>
+      <div id="about">
+        <div class="window transition_on_load_vertical">
+          <div class="window_header">
+            <h2>Skill Points</h2>
+          </div>
+          <div class="window_body">
+            <div class="window_content">
+              <table class="skill_points_table">
+                
+                <tr>
+                  <td><div class="skill_content">
+                    <div class="skill_icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M469.3 19.3l23.4 23.4c25 25 25 65.5 0 90.5l-56.4 56.4L322.3 75.7l56.4-56.4c25-25 65.5-25 90.5 0zM44.9 353.2L299.7 98.3 413.7 212.3 158.8 467.1c-6.7 6.7-15.1 11.6-24.2 14.2l-104 29.7c-8.4 2.4-17.4 .1-23.6-6.1s-8.5-15.2-6.1-23.6l29.7-104c2.6-9.2 7.5-17.5 14.2-24.2zM249.4 103.4L103.4 249.4 16 161.9c-18.7-18.7-18.7-49.1 0-67.9L94.1 16c18.7-18.7 49.1-18.7 67.9 0l19.8 19.8c-.3 .3-.7 .6-1 .9l-64 64c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0l64-64c.3-.3 .6-.7 .9-1l45.1 45.1zM408.6 262.6l45.1 45.1c-.3 .3-.7 .6-1 .9l-64 64c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0l64-64c.3-.3 .6-.7 .9-1L496 350.1c18.7 18.7 18.7 49.1 0 67.9L417.9 496c-18.7 18.7-49.1 18.7-67.9 0l-87.4-87.4L408.6 262.6z"/></svg>
                     </div>
-                <div class="link">
-                    <a href="Programmer.html"><img src="res/icons/programmer.png" /></a>
-                        <h6 style="color: #f3d73b;">Programmer</h6>
+                  </div></td>
+                  <td><div class="skill_content">Combat Design</div></td>
+                  <td><div class="skill_content"><div class="skill_point_bar" value="60%"></div></div></td>
+                </tr>
+                
+                <tr>
+                  <td><div class="skill_content">
+                    <div class="skill_icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M469.3 19.3l23.4 23.4c25 25 25 65.5 0 90.5l-56.4 56.4L322.3 75.7l56.4-56.4c25-25 65.5-25 90.5 0zM44.9 353.2L299.7 98.3 413.7 212.3 158.8 467.1c-6.7 6.7-15.1 11.6-24.2 14.2l-104 29.7c-8.4 2.4-17.4 .1-23.6-6.1s-8.5-15.2-6.1-23.6l29.7-104c2.6-9.2 7.5-17.5 14.2-24.2zM249.4 103.4L103.4 249.4 16 161.9c-18.7-18.7-18.7-49.1 0-67.9L94.1 16c18.7-18.7 49.1-18.7 67.9 0l19.8 19.8c-.3 .3-.7 .6-1 .9l-64 64c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0l64-64c.3-.3 .6-.7 .9-1l45.1 45.1zM408.6 262.6l45.1 45.1c-.3 .3-.7 .6-1 .9l-64 64c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0l64-64c.3-.3 .6-.7 .9-1L496 350.1c18.7 18.7 18.7 49.1 0 67.9L417.9 496c-18.7 18.7-49.1 18.7-67.9 0l-87.4-87.4L408.6 262.6z"/></svg>
                     </div>
-                <div class="link">
-                    <a href="Film Maker.html"><img src="res/icons/filmmaker.png" /></a>
-                        <h6 style="color: #f72323;">Film Maker</h6>
+                  </div></td>
+                  <td><div class="skill_content">AI Design</div></td>
+                  <td><div class="skill_content"><div class="skill_point_bar" value="69%"></div></div></td>
+                </tr>
+                
+                <tr>
+                  <td><div class="skill_content">
+                    <div class="skill_icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M64 96c0-35.3 28.7-64 64-64H512c35.3 0 64 28.7 64 64V352H512V96H128V352H64V96zM0 403.2C0 392.6 8.6 384 19.2 384H620.8c10.6 0 19.2 8.6 19.2 19.2c0 42.4-34.4 76.8-76.8 76.8H76.8C34.4 480 0 445.6 0 403.2zM281 209l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-48-48c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zM393 175l48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"/></svg>
                     </div>
-                <div class="link">
-                    <a href="Photographer.html"><img src="res/icons/photographer.png" /></a>
-                        <h6 style="color: #78afff;">Photographer</h6>
+                  </div></td>
+                  <td><div class="skill_content">C/C++</div></td>
+                  <td><div class="skill_content"><div class="skill_point_bar" value="90%"></div></div></td>
+                </tr>
+                
+                <tr>
+                  <td><div class="skill_content">
+                    <div class="skill_icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M64 96c0-35.3 28.7-64 64-64H512c35.3 0 64 28.7 64 64V352H512V96H128V352H64V96zM0 403.2C0 392.6 8.6 384 19.2 384H620.8c10.6 0 19.2 8.6 19.2 19.2c0 42.4-34.4 76.8-76.8 76.8H76.8C34.4 480 0 445.6 0 403.2zM281 209l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-48-48c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zM393 175l48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"/></svg>
                     </div>
-                </div>
+                  </div></td>
+                  <td><div class="skill_content">C#</div></td>
+                  <td><div class="skill_content"><div class="skill_point_bar" value="75%"></div></div></td>
+                </tr>
+                
+                <tr>
+                  <td><div class="skill_content">
+                    <div class="skill_icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M176 24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64c-35.3 0-64 28.7-64 64H24c-13.3 0-24 10.7-24 24s10.7 24 24 24H64v56H24c-13.3 0-24 10.7-24 24s10.7 24 24 24H64v56H24c-13.3 0-24 10.7-24 24s10.7 24 24 24H64c0 35.3 28.7 64 64 64v40c0 13.3 10.7 24 24 24s24-10.7 24-24V448h56v40c0 13.3 10.7 24 24 24s24-10.7 24-24V448h56v40c0 13.3 10.7 24 24 24s24-10.7 24-24V448c35.3 0 64-28.7 64-64h40c13.3 0 24-10.7 24-24s-10.7-24-24-24H448V280h40c13.3 0 24-10.7 24-24s-10.7-24-24-24H448V176h40c13.3 0 24-10.7 24-24s-10.7-24-24-24H448c0-35.3-28.7-64-64-64V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H280V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H176V24zM160 128H352c17.7 0 32 14.3 32 32V352c0 17.7-14.3 32-32 32H160c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32zm192 32H160V352H352V160z"/></svg>
+                    </div>
+                  </div></td>
+                  <td><div class="skill_content">OpenGL</div></td>
+                  <td><div class="skill_content"><div class="skill_point_bar" value="75%"></div></div></td>
+                </tr>
+                
+                <tr>
+                  <td><div class="skill_content">
+                    <div class="skill_icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M176 24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64c-35.3 0-64 28.7-64 64H24c-13.3 0-24 10.7-24 24s10.7 24 24 24H64v56H24c-13.3 0-24 10.7-24 24s10.7 24 24 24H64v56H24c-13.3 0-24 10.7-24 24s10.7 24 24 24H64c0 35.3 28.7 64 64 64v40c0 13.3 10.7 24 24 24s24-10.7 24-24V448h56v40c0 13.3 10.7 24 24 24s24-10.7 24-24V448h56v40c0 13.3 10.7 24 24 24s24-10.7 24-24V448c35.3 0 64-28.7 64-64h40c13.3 0 24-10.7 24-24s-10.7-24-24-24H448V280h40c13.3 0 24-10.7 24-24s-10.7-24-24-24H448V176h40c13.3 0 24-10.7 24-24s-10.7-24-24-24H448c0-35.3-28.7-64-64-64V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H280V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H176V24zM160 128H352c17.7 0 32 14.3 32 32V352c0 17.7-14.3 32-32 32H160c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32zm192 32H160V352H352V160z"/></svg>
+                    </div>
+                  </div></td>
+                  <td><div class="skill_content">GLSL/HLSL</div></td>
+                  <td><div class="skill_content"><div class="skill_point_bar" value="65%"></div></div></td>
+                </tr>
+                
+                <tr>
+                  <td><div class="skill_content">
+                    <div class="skill_icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M176 88v40H336V88c0-4.4-3.6-8-8-8H184c-4.4 0-8 3.6-8 8zm-48 40V88c0-30.9 25.1-56 56-56H328c30.9 0 56 25.1 56 56v40h28.1c12.7 0 24.9 5.1 33.9 14.1l51.9 51.9c9 9 14.1 21.2 14.1 33.9V304H384V288c0-17.7-14.3-32-32-32s-32 14.3-32 32v16H192V288c0-17.7-14.3-32-32-32s-32 14.3-32 32v16H0V227.9c0-12.7 5.1-24.9 14.1-33.9l51.9-51.9c9-9 21.2-14.1 33.9-14.1H128zM0 416V336H128v16c0 17.7 14.3 32 32 32s32-14.3 32-32V336H320v16c0 17.7 14.3 32 32 32s32-14.3 32-32V336H512v80c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64z"/></svg>
+                    </div>
+                  </div></td>
+                  <td><div class="skill_content">Unity</div></td>
+                  <td><div class="skill_content"><div class="skill_point_bar" value="80%"></div></div></td>
+                </tr>
+                
+                <tr>
+                  <td><div class="skill_content">
+                    <div class="skill_icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M0 80C0 53.5 21.5 32 48 32h96c26.5 0 48 21.5 48 48V96H384V80c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48H432c-26.5 0-48-21.5-48-48V160H192v16c0 1.7-.1 3.4-.3 5L272 288h96c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48H272c-26.5 0-48-21.5-48-48V336c0-1.7 .1-3.4 .3-5L144 224H48c-26.5 0-48-21.5-48-48V80z"/></svg>
+                    </div>
+                  </div></td>
+                  <td><div class="skill_content">Data Structures</div></td>
+                  <td><div class="skill_content"><div class="skill_point_bar" value="90%"></div></div></td>
+                </tr>
+                
+              </table>
+            </div>
+          </div>
         </div>
-        <div id="details">
-            <a class="social-link" href="https://github.com/HritikDutta" target="_blank">
-                    <img src="res/icons/links/github.svg" style="fill: #181717;" alt="GitHub" />
-                </a>
-            <a class="social-link" href="https://www.instagram.com/isnt.a.gram/" target="_blank">
-                    <img src="res/icons/links/instagram.svg" style="fill: #E4405F;" alt="Instagram" />
-                </a>
-            <a class="social-link" href="https://medium.com/@threewaydude" target="_blank">
-                    <img src="res/icons/links/medium.svg" style="fill: #000000;" alt="Medium Blog" />
-                </a>
-            <a class="social-link" href="https://www.linkedin.com/in/hritik-dutta-a2b498154/" target="_blank">
-                    <img src="res/icons/links/linkedin.svg" style="fill: #0A66C2;" alt="LinkedIn" />
-                </a>
-            <a class="social-link" href="mailto:dutta.hritik@gmail.com" target="_blank">
-                    <img src="res/icons/links/gmail.svg" style="fill: #EA4335;" alt="Gmail" />
-                </a>
+        
+        <div class="window transition_on_load_vertical">
+          <div class="window_header">
+            <h2>Skins</h2>
+          </div>
+          <div class="window_body">
+            <div class="window_content">
+              <button class="options_list_toggle" id="skin_toggle" value="skin_options">
+                <h2>Standard</h2>
+                <img class="option_toggle_arrow" src="img/icons/arrow-small-back.svg" alt="">
+              </button>
+              <div class="options_list" id="skin_options">
+                
+                <div class="option">
+                  <input type="radio" autocomplete="off" class="option_radio_button" id="skin_0_radio" name="selected_skin" value="skin_0" checked>
+                  <label for="skin_0_radio" class="option_button">
+                    <span>Standard</span>
+                    <img class="option_select_arrow" src="img/icons/arrow-small-back.svg" alt="">
+                  </label>
+                </div>  
+                
+                <div class="option">
+                  <input type="radio" autocomplete="off" class="option_radio_button" id="skin_1_radio" name="selected_skin" value="skin_1" >
+                  <label for="skin_1_radio" class="option_button">
+                    <span>2-Bit</span>
+                    <img class="option_select_arrow" src="img/icons/arrow-small-back.svg" alt="">
+                  </label>
+                </div>  
+                
+                <div class="option">
+                  <input type="radio" autocomplete="off" class="option_radio_button" id="skin_2_radio" name="selected_skin" value="skin_2" >
+                  <label for="skin_2_radio" class="option_button">
+                    <span>Realistic</span>
+                    <img src="img/icons/locked.svg" alt="">
+                  </label>
+                </div>  
+                
+              </div>
+              <div class="vertical_line"></div>
+              
+              <div class="option_info_panel" id="skin_info_container">
+                
+                <div class="skin_visual option_info" id="skin_0">
+                  <div class="option_info_container">
+                    <img class="pixel_perfect" src="img/avatars/Sprites/Skin 1/Game Developer.gif" alt="Game Developer Standard Skin">
+                    <p>
+                    
+                    Sometimes vanilla is the best flavour.</p>
+                  </div>
+                </div>
+                
+                <div class="skin_visual option_info" id="skin_1">
+                  <div class="option_info_container">
+                    <img class="pixel_perfect" src="img/avatars/Sprites/Skin 2/Game Developer.gif" alt="Game Developer 2-Bit Skin">
+                    <p>
+                    
+                    Retro games never get old.</p>
+                  </div>
+                </div>
+                
+                <div class="skin_visual option_info" id="skin_2">
+                  <div class="option_info_container">
+                    <img class="pixel_perfect" src="img/avatars/Sprites/Skin 3/Game Developer.gif" alt="Game Developer Realistic Skin">
+                    <p>
+                    <img src="img/icons/locked.svg" alt="">
+                    Hire to unlock.</p>
+                  </div>
+                </div>
+                
+              </div>
             </div>
-    </nav>
-
-    <section id="about-character" class="container">
-        <h1 class="special-text">Hritik the <span class="signature-color">Game Developer</span></h1>
-        <div id="about">
-            <div id="hero-image-section"><img src="res/images/game-dev.png" alt="Game DeveloperPersona" class="hero-image" /></div>
-            <div id="abilities">
-                <h3 class="special-text signature-color">Abilities</h3>
-                <div id="ability-list">
-                    <div>C/C++</div>
-                    <div>OpenGL</div>
-                    <div>WebGL</div>
-                    <div>Unity</div>
-                    <div>C#</div>
-                    <div>Javascript</div>
-                    <div>Three.js</div>
-                    <div>Algorithms</div>
-                    <div>Data Structures</div>
-                    </div>
-            </div>
-            <div id="blurb">
-                <h3 class="special-text signature-color">Blurb</h3>
-                <p>
-                    A passionate game developer who thinks the code and logic behind the game is as much an art as the visuals and sound.</p>
-            </div>
+          </div>
         </div>
-    </section>
+      </div>
+      
+      
+      
+      <div class="window transition_on_load_vertical" id="mission_select">
+        <div class="window_header">
+          <h2>Mission Select</h2>
+        </div>
+        <div class="window_body">
+          <div class="window_content">
+            <button class="options_list_toggle" id="mission_toggle" value="mission_options">
+              <h2>Mayanagari</h2>
+              <img class="option_toggle_arrow" src="img/icons/arrow-small-back.svg" alt="">
+            </button>
+            <div class="options_list" id="mission_options">
+              
 
-    <section id="projects" class="container">
-        <h1 id="projects-header" class="special-text grey-text">Projects</h1>
-        <div id="project-list">
-            <!-- Project: The Waiting Game-->
-                <div class="project-card">
-                    <nav>
-                        <a href="https://hritikdutta.itch.io/the-waiting-game" class="project-title special-text signature-color">The Waiting Game</a>
-                        <div class="project-date grey-text">12th Feb 2023</div>
-                    </nav>
-                    <ul>
-                        <li class="project-skill grey-text">C++</li>
-                        <li class="project-skill grey-text">OpenGL</li>
-                        <li class="project-skill grey-text">SSE2</li>
-                        <li class="project-skill grey-text">UI</li>
-                        <li class="project-skill grey-text">Serialization</li>
-                        </ul>
-                    <div class="image-scroll">
-                        <img src="res/images/games/09-The Waiting Game/thumbnail_01.png" />
-                        <img src="res/images/games/09-The Waiting Game/thumbnail_02.png" />
-                        <img src="res/images/games/09-The Waiting Game/thumbnail_03.png" />
-                        </div>
-                    <p>
-                        A game based on loading screens, insprired by my office PC. Channeling feelings into art like a true artist.</p>
-                </div>
-            <!-- Project: Shameless Wordle Clone-->
-                <div class="project-card">
-                    <nav>
-                        <a href="https://hritikdutta.itch.io/wordle-clone" class="project-title special-text signature-color">Shameless Wordle Clone</a>
-                        <div class="project-date grey-text">18th Mar 2022</div>
-                    </nav>
-                    <ul>
-                        <li class="project-skill grey-text">C++</li>
-                        <li class="project-skill grey-text">OpenGL</li>
-                        <li class="project-skill grey-text">SSE2</li>
-                        </ul>
-                    <div class="image-scroll">
-                        <img src="res/images/games/08-Shameless Wordle Clone/thumbnail_01.png" />
-                        </div>
-                    <p>
-                        I wanted a wordle game that allowed me to play it more than once so I made one for myself.</p>
-                </div>
-            <!-- Project: Saving Princess Sita-->
-                <div class="project-card">
-                    <nav>
-                        <a href="https://boytoyroy.itch.io/saving-princess-sita" class="project-title special-text signature-color">Saving Princess Sita</a>
-                        <div class="project-date grey-text">28th June 2021</div>
-                    </nav>
-                    <ul>
-                        <li class="project-skill grey-text">Unity</li>
-                        <li class="project-skill grey-text">C#</li>
-                        <li class="project-skill grey-text">AI Programming</li>
-                        <li class="project-skill grey-text">Path Finding</li>
-                        <li class="project-skill grey-text">Level Design</li>
-                        </ul>
-                    <div class="image-scroll">
-                        <img src="res/images/games/07-Saving Princess Sita/thumbnail_01.png" />
-                        <img src="res/images/games/07-Saving Princess Sita/thumbnail_02.png" />
-                        <img src="res/images/games/07-Saving Princess Sita/thumbnail_03.png" />
-                        <img src="res/images/games/07-Saving Princess Sita/thumbnail_04.png" />
-                        <img src="res/images/games/07-Saving Princess Sita/thumbnail_05.png" />
-                        </div>
-                    <p>
-                        An Stealth Based RTS Dungeon Crawler set in Ramayana, where you command your monkey troops indirectly by placing bananas.<br /><br />This game was made for the Historically Accurate Game Jam 2021 using Unity.</p>
-                </div>
-            <!-- Project: Hurry Flurry-->
-                <div class="project-card">
-                    <nav>
-                        <a href="https://play.google.com/store/apps/details?id=com.AFKStudios.HurryFlurry" class="project-title special-text signature-color">Hurry Flurry</a>
-                        <div class="project-date grey-text">10th Sept 2020</div>
-                    </nav>
-                    <ul>
-                        <li class="project-skill grey-text">Unity</li>
-                        <li class="project-skill grey-text">C#</li>
-                        <li class="project-skill grey-text">OOP</li>
-                        <li class="project-skill grey-text">Level Generation</li>
-                        </ul>
-                    <div class="image-scroll">
-                        <img src="res/images/games/01-Hurry Flurry/gameplay.gif" />
-                        <img src="res/images/games/01-Hurry Flurry/thumbnail_01.jpg" />
-                        <img src="res/images/games/01-Hurry Flurry/thumbnail_02.jpg" />
-                        <img src="res/images/games/01-Hurry Flurry/thumbnail_03.jpg" />
-                        <img src="res/images/games/01-Hurry Flurry/thumbnail_04.jpg" />
-                        <img src="res/images/games/01-Hurry Flurry/thumbnail_05.jpg" />
-                        <img src="res/images/games/01-Hurry Flurry/menu.gif" />
-                        </div>
-                    <p>
-                        My first mobile game I made with my friends using Unity. It is an endless runner mixed with puzzle platformer where the player can turn into solid, liquid or gas to get through as many obstacles as possible.</p>
-                </div>
-            <!-- Project: Bump Pong-->
-                <div class="project-card">
-                    <nav>
-                        <a href="https://play.google.com/store/apps/details?id=com.sempervi.bump" class="project-title special-text signature-color">Bump Pong</a>
-                        <div class="project-date grey-text">19th Apr 2021</div>
-                    </nav>
-                    <ul>
-                        <li class="project-skill grey-text">Unity</li>
-                        <li class="project-skill grey-text">C#</li>
-                        <li class="project-skill grey-text">OOP</li>
-                        <li class="project-skill grey-text">Photon Engine</li>
-                        <li class="project-skill grey-text">Realtime Multiplayer</li>
-                        </ul>
-                    <div class="image-scroll">
-                        <img src="res/images/games/02-Bump Pong/gameplay.gif" />
-                        <img src="res/images/games/02-Bump Pong/thumbnail_01.jpg" />
-                        <img src="res/images/games/02-Bump Pong/thumbnail_02.jpg" />
-                        <img src="res/images/games/02-Bump Pong/thumbnail_03.jpg" />
-                        </div>
-                    <p>
-                        A digital version of an old game called Blip. I worked on this game as the main Unity developer during my internship at Monkhub Innovations Pvt. Ltd.</p>
-                </div>
-            <!-- Project: Tic Tac Toe-->
-                <div class="project-card">
-                    <nav>
-                        <a href="https://github.com/HritikDutta/Tic-Tac-Toe" class="project-title special-text signature-color">Tic Tac Toe</a>
-                        <div class="project-date grey-text">26th Apr 2021</div>
-                    </nav>
-                    <ul>
-                        <li class="project-skill grey-text">C++</li>
-                        <li class="project-skill grey-text">OpenGL</li>
-                        <li class="project-skill grey-text">SSE2</li>
-                        </ul>
-                    <div class="image-scroll">
-                        <img src="res/images/games/03-Tic Tac Toe/thumbnail_01.jpg" />
-                        <img src="res/images/games/03-Tic Tac Toe/thumbnail_02.jpg" />
-                        </div>
-                    <p>
-                        A quick practice game I made using my own game library because I was bored.</p>
-                </div>
-            <!-- Project: Custom Game Engine-->
-                <div class="project-card">
-                    <nav>
-                        <a href="" class="project-title special-text signature-color">Custom Game Engine</a>
-                        <div class="project-date grey-text">In Progress</div>
-                    </nav>
-                    <ul>
-                        <li class="project-skill grey-text">C++</li>
-                        <li class="project-skill grey-text">OpenGL</li>
-                        <li class="project-skill grey-text">SSE2</li>
-                        <li class="project-skill grey-text">3D Graphics</li>
-                        <li class="project-skill grey-text">Entity Component System</li>
-                        </ul>
-                    <div class="image-scroll">
-                        <img src="res/images/games/06-Custom Game Engine/demo.gif" />
-                        </div>
-                    <p>
-                        I am currently working on my own ECS based 3D game engine/library to make games on using C++ and OpenGL.</p>
-                </div>
-            <!-- Project: Spedit-->
-                <div class="project-card">
-                    <nav>
-                        <a href="https://github.com/HritikDutta/spedit" class="project-title special-text signature-color">Spedit</a>
-                        <div class="project-date grey-text">13th June 2021</div>
-                    </nav>
-                    <ul>
-                        <li class="project-skill grey-text">C++</li>
-                        <li class="project-skill grey-text">OpenGL</li>
-                        <li class="project-skill grey-text">SSE2</li>
-                        </ul>
-                    <div class="image-scroll">
-                        <img src="res/images/games/05-Spedit/demo.gif" />
-                        </div>
-                    <p>
-                        A spritesheet editor made with my own rendering library using C++ and OpenGL.</p>
-                </div>
-            <!-- Project: Solar System Demo-->
-                <div class="project-card">
-                    <nav>
-                        <a href="https://github.com/HritikDutta/Solar-System" class="project-title special-text signature-color">Solar System Demo</a>
-                        <div class="project-date grey-text">30th Apr 2021</div>
-                    </nav>
-                    <ul>
-                        <li class="project-skill grey-text">C++</li>
-                        <li class="project-skill grey-text">OpenGL</li>
-                        <li class="project-skill grey-text">SSE2</li>
-                        <li class="project-skill grey-text">3D Graphics</li>
-                        </ul>
-                    <div class="image-scroll">
-                        <img src="res/images/games/04-Solar System Demo/thumbnail_01.jpg" />
-                        <img src="res/images/games/04-Solar System Demo/thumbnail_02.jpg" />
-                        <img src="res/images/games/04-Solar System Demo/thumbnail_03.jpg" />
-                        </div>
-                    <p>
-                        A simple solar system explorer demo I made to practice 3D graphics with OpenGL.</p>
-                </div>
+              
+              <div class="option_section">
+                <h2 class="text_accent_dark with_stroke" value="Main Missions">Main Missions</h2>
+                
+                
+                
+                
+              
+              
+              <div class="option">
+                <input type="radio" autocomplete="off" class="option_radio_button" id="main_mission_0_radio" name="selected_mission" value="main_mission_0" checked>
+                <label for="main_mission_0_radio" class="option_button">
+                  <span>Mayanagari</span>
+                  <img class="option_select_arrow" src="img/icons/arrow-small-back.svg" alt="">
+                </label>
+              </div>
+              
+              
+              <div class="option">
+                <input type="radio" autocomplete="off" class="option_radio_button" id="main_mission_1_radio" name="selected_mission" value="main_mission_1" >
+                <label for="main_mission_1_radio" class="option_button">
+                  <span>Bump Pong</span>
+                  <img class="option_select_arrow" src="img/icons/arrow-small-back.svg" alt="">
+                </label>
+              </div>
+              
+              
+              </div>
+              
+
+              
+              <div class="option_section">
+                <h2 class="text_accent_dark with_stroke" value="Side Missions">Side Missions</h2>
+                
+                
+                
+                
+                
+                
+              
+              
+              <div class="option">
+                <input type="radio" autocomplete="off" class="option_radio_button" id="side_mission_0_radio" name="selected_mission" value="side_mission_0" >
+                <label for="side_mission_0_radio" class="option_button">
+                  <span>The Waiting Game</span>
+                  <img class="option_select_arrow" src="img/icons/arrow-small-back.svg" alt="">
+                </label>
+              </div>
+              
+              
+              <div class="option">
+                <input type="radio" autocomplete="off" class="option_radio_button" id="side_mission_1_radio" name="selected_mission" value="side_mission_1" >
+                <label for="side_mission_1_radio" class="option_button">
+                  <span>Minecraft Clone</span>
+                  <img class="option_select_arrow" src="img/icons/arrow-small-back.svg" alt="">
+                </label>
+              </div>
+              
+              
+              <div class="option">
+                <input type="radio" autocomplete="off" class="option_radio_button" id="side_mission_2_radio" name="selected_mission" value="side_mission_2" >
+                <label for="side_mission_2_radio" class="option_button">
+                  <span>Shameless Wordle Clone</span>
+                  <img class="option_select_arrow" src="img/icons/arrow-small-back.svg" alt="">
+                </label>
+              </div>
+              
+              
+              <div class="option">
+                <input type="radio" autocomplete="off" class="option_radio_button" id="side_mission_3_radio" name="selected_mission" value="side_mission_3" >
+                <label for="side_mission_3_radio" class="option_button">
+                  <span>Saving Princess Sita</span>
+                  <img class="option_select_arrow" src="img/icons/arrow-small-back.svg" alt="">
+                </label>
+              </div>
+              
+              
+              <div class="option">
+                <input type="radio" autocomplete="off" class="option_radio_button" id="side_mission_4_radio" name="selected_mission" value="side_mission_4" >
+                <label for="side_mission_4_radio" class="option_button">
+                  <span>Spedit</span>
+                  <img class="option_select_arrow" src="img/icons/arrow-small-back.svg" alt="">
+                </label>
+              </div>
+              
+              
+              <div class="option">
+                <input type="radio" autocomplete="off" class="option_radio_button" id="side_mission_5_radio" name="selected_mission" value="side_mission_5" >
+                <label for="side_mission_5_radio" class="option_button">
+                  <span>Hurry! Flurry</span>
+                  <img class="option_select_arrow" src="img/icons/arrow-small-back.svg" alt="">
+                </label>
+              </div>
+              
+              
+              </div>
+              
+
             </div>
-    </section>
+            <div class="vertical_line"></div>
+            <div class="option_info_panel" id="mission_info_container">
+              
+
+              
+              
+              
+              
+              
+              
+              <div class="mission_info option_info" id="main_mission_0" data-updates-mission-cache>
+                <div class="option_info_container">
+                  <div class="mission_header">
+                    <h2>Mayanagari</h2>
+                     <a href="https://www.hypernovainteractive.com/" target="_blank">Hypernova Interactive</a> 
+                  </div>
+                  
+                  
+                  <div class="mission_images">
+                    <div class="nav_buttons">
+                      <button class="glow_button" id="nav_button_prev" onclick="sliderMoveToIndex(sliderTargetSelectionIndex - 1)">
+                        <img src="img/icons/arrow-big-right.svg" alt="">
+                      </button>
+                      
+                      <button class="glow_button" id="nav_button_next" onclick="sliderMoveToIndex(sliderTargetSelectionIndex + 1)">
+                        <img src="img/icons/arrow-big-right.svg" alt="">
+                      </button>
+                    </div>
+                    
+                    <div class="mission_images_content">
+                      <div class="slider_mask hide_scrollbar"  tabindex="-1">
+                        <div class="slider">
+                        
+                        <div class="slider_container image_container">
+                          
+                          <img class="disappear_on_video_load poster_image" src="img/projects/games/01-Mayanagari/wallpaper_01.gif" loading="lazy" alt="">
+                          <div class="disappear_on_video_load buffer_holder">
+                            <img class="buffer_icon" src="img/icons/buffer.svg" alt="">
+                          </div>
+                          <video loop playsinline muted preload="none" tabindex="-1"><source src="https://drive.google.com/uc?id=1Q8o1PsHXSx36JVqrQD4yPF_qKBZCRLhW" type="video/mp4"></video>
+                          
+                          <button class="mute_toggle" onclick="toggleMute()">
+                            <svg class="unmute_icon" fill="white" viewBox="0 0 640 512" style="display: none"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M533.6 32.5C598.5 85.3 640 165.8 640 256s-41.5 170.8-106.4 223.5c-10.3 8.4-25.4 6.8-33.8-3.5s-6.8-25.4 3.5-33.8C557.5 398.2 592 331.2 592 256s-34.5-142.2-88.7-186.3c-10.3-8.4-11.8-23.5-3.5-33.8s23.5-11.8 33.8-3.5zM473.1 107c43.2 35.2 70.9 88.9 70.9 149s-27.7 113.8-70.9 149c-10.3 8.4-25.4 6.8-33.8-3.5s-6.8-25.4 3.5-33.8C475.3 341.3 496 301.1 496 256s-20.7-85.3-53.2-111.8c-10.3-8.4-11.8-23.5-3.5-33.8s23.5-11.8 33.8-3.5zm-60.5 74.5C434.1 199.1 448 225.9 448 256s-13.9 56.9-35.4 74.5c-10.3 8.4-25.4 6.8-33.8-3.5s-6.8-25.4 3.5-33.8C393.1 284.4 400 271 400 256s-6.9-28.4-17.7-37.3c-10.3-8.4-11.8-23.5-3.5-33.8s23.5-11.8 33.8-3.5zM301.1 34.8C312.6 40 320 51.4 320 64V448c0 12.6-7.4 24-18.9 29.2s-25 3.1-34.4-5.3L131.8 352H64c-35.3 0-64-28.7-64-64V224c0-35.3 28.7-64 64-64h67.8L266.7 40.1c9.4-8.4 22.9-10.4 34.4-5.3z"/></svg>
+                            <svg class="mute_icon" fill="white" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M301.1 34.8C312.6 40 320 51.4 320 64V448c0 12.6-7.4 24-18.9 29.2s-25 3.1-34.4-5.3L131.8 352H64c-35.3 0-64-28.7-64-64V224c0-35.3 28.7-64 64-64h67.8L266.7 40.1c9.4-8.4 22.9-10.4 34.4-5.3zM425 167l55 55 55-55c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-55 55 55 55c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-55-55-55 55c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l55-55-55-55c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"/></svg>
+                          </button>
+                          
+                          
+                          </div>
+                        
+                        <div class="slider_container image_container">
+                          
+                            <img src="img/projects/games/01-Mayanagari/thumbnail_01.webp" loading="lazy" alt="">
+                          
+                          </div>
+                        
+                        <div class="slider_container image_container">
+                          
+                            <img src="img/projects/games/01-Mayanagari/thumbnail_02.webp" loading="lazy" alt="">
+                          
+                          </div>
+                        
+                        <div class="slider_container image_container">
+                          
+                            <img src="img/projects/games/01-Mayanagari/thumbnail_03.webp" loading="lazy" alt="">
+                          
+                          </div>
+                        
+                        <div class="slider_container image_container">
+                          
+                            <img src="img/projects/games/01-Mayanagari/thumbnail_04.webp" loading="lazy" alt="">
+                          
+                          </div>
+                        
+                        </div>
+                      </div>
+                      
+                      <div class="image_lower_container">
+                        <span>Ongoing</span>
+                        <span class="difficulty_text">Difficulty: Hard</span>
+                        <!-- Slider dots need to be in front so they can be interacted with -->
+                        <span class="slider_dots">
+                          
+                          <input type="radio" autocomplete="off" class="slider_dot_radio image_slider_dot" name="main_mission_0_image" onchange="sliderMoveToIndex(0)" checked>
+                          
+                          <input type="radio" autocomplete="off" class="slider_dot_radio image_slider_dot" name="main_mission_0_image" onchange="sliderMoveToIndex(1)" >
+                          
+                          <input type="radio" autocomplete="off" class="slider_dot_radio image_slider_dot" name="main_mission_0_image" onchange="sliderMoveToIndex(2)" >
+                          
+                          <input type="radio" autocomplete="off" class="slider_dot_radio image_slider_dot" name="main_mission_0_image" onchange="sliderMoveToIndex(3)" >
+                          
+                          <input type="radio" autocomplete="off" class="slider_dot_radio image_slider_dot" name="main_mission_0_image" onchange="sliderMoveToIndex(4)" >
+                          
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  
+                  <div class="mission_tags">
+                  
+                  <div class="mission_tag">
+                    <div class="skill_icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M243.583 91.6027L323.695 138.384C326.575 140.026 326.68 144.583 323.695 146.225L228.503 201.854C225.623 203.55 222.22 203.444 219.549 201.854L124.357 146.225C121.425 144.636 121.373 139.973 124.357 138.384L204.417 91.6027V0L0 119.417V358.252L78.3843 312.477V218.914C78.3319 215.576 82.2066 213.192 85.0865 214.993L180.279 270.622C183.159 272.318 184.782 275.338 184.782 278.464V389.669C184.834 393.007 180.959 395.391 178.079 393.589L97.9673 346.808L19.583 392.583L224 512L428.417 392.583L350.033 346.808L269.921 393.589C267.093 395.338 263.114 393.06 263.218 389.669V278.464C263.218 275.126 265.051 272.159 267.721 270.622L362.914 214.993C365.741 213.245 369.72 215.47 369.616 218.914V312.477L448 358.252V119.417L243.583 0V91.6027Z"/></svg>
+                    </div>
+                    Unity
+                  </div>
+                  
+                  <div class="mission_tag">
+                    <div class="skill_icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M184 0c30.9 0 56 25.1 56 56V456c0 30.9-25.1 56-56 56c-28.9 0-52.7-21.9-55.7-50.1c-5.2 1.4-10.7 2.1-16.3 2.1c-35.3 0-64-28.7-64-64c0-7.4 1.3-14.6 3.6-21.2C21.4 367.4 0 338.2 0 304c0-31.9 18.7-59.5 45.8-72.3C37.1 220.8 32 207 32 192c0-30.7 21.6-56.3 50.4-62.6C80.8 123.9 80 118 80 112c0-29.9 20.6-55.1 48.3-62.1C131.3 21.9 155.1 0 184 0zM328 0c28.9 0 52.6 21.9 55.7 49.9c27.8 7 48.3 32.1 48.3 62.1c0 6-.8 11.9-2.4 17.4c28.8 6.2 50.4 31.9 50.4 62.6c0 15-5.1 28.8-13.8 39.7C493.3 244.5 512 272.1 512 304c0 34.2-21.4 63.4-51.6 74.8c2.3 6.6 3.6 13.8 3.6 21.2c0 35.3-28.7 64-64 64c-5.6 0-11.1-.7-16.3-2.1c-3 28.2-26.8 50.1-55.7 50.1c-30.9 0-56-25.1-56-56V56c0-30.9 25.1-56 56-56z"/></svg>
+                    </div>
+                    Video Game AI
+                  </div>
+                  
+                  <div class="mission_tag">
+                    <div class="skill_icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M192 0c17.7 0 32 14.3 32 32V144H160V32c0-17.7 14.3-32 32-32zM64 64c0-17.7 14.3-32 32-32s32 14.3 32 32v80H64V64zm192 0c0-17.7 14.3-32 32-32s32 14.3 32 32v96c0 17.7-14.3 32-32 32s-32-14.3-32-32V64zm96 64c0-17.7 14.3-32 32-32s32 14.3 32 32v64c0 17.7-14.3 32-32 32s-32-14.3-32-32V128zm-96 88l0-.6c9.4 5.4 20.3 8.6 32 8.6c13.2 0 25.4-4 35.6-10.8c8.7 24.9 32.5 42.8 60.4 42.8c11.7 0 22.6-3.1 32-8.6V256c0 52.3-25.1 98.8-64 128v96c0 17.7-14.3 32-32 32H160c-17.7 0-32-14.3-32-32V401.6c-17.3-7.9-33.2-18.8-46.9-32.5L69.5 357.5C45.5 333.5 32 300.9 32 267V240c0-35.3 28.7-64 64-64h88c22.1 0 40 17.9 40 40s-17.9 40-40 40H128c-8.8 0-16 7.2-16 16s7.2 16 16 16h56c39.8 0 72-32.2 72-72z"/></svg>
+                    </div>
+                    Combat Design
+                  </div>
+                  
+                  <div class="mission_tag">
+                    <div class="skill_icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M288 64v64H416L368 64H288zM419.2 25.6L496 128h80c17.7 0 32 14.3 32 32v64c17.7 0 32 14.3 32 32s-14.3 32-32 32c-29.2-38.9-75.7-64-128-64s-98.8 25.1-128 64H288c-29.2-38.9-75.7-64-128-64s-98.8 25.1-128 64c-17.7 0-32-14.3-32-32s14.3-32 32-32V160c0-17.7 14.3-32 32-32H224V48c0-26.5 21.5-48 48-48h96c20.1 0 39.1 9.5 51.2 25.6zM152 256h16c12.1 0 22.1 8.9 23.8 20.6c7.6 2.2 14.9 5.3 21.7 9c9.4-7 22.8-6.3 31.3 2.3l11.3 11.3c8.6 8.6 9.3 21.9 2.3 31.3c3.7 6.8 6.8 14.1 9 21.7c11.6 1.7 20.6 11.7 20.6 23.8v16c0 12.1-8.9 22.1-20.6 23.8c-2.2 7.6-5.3 14.9-9 21.7c7 9.4 6.3 22.8-2.3 31.3l-11.3 11.3c-8.6 8.6-21.9 9.3-31.3 2.2c-6.8 3.7-14.1 6.8-21.7 9C190.1 503.1 180.1 512 168 512H152c-12.1 0-22.1-8.9-23.8-20.6c-7.6-2.2-14.9-5.3-21.7-9c-9.4 7.1-22.8 6.3-31.3-2.2L63.8 468.9c-8.6-8.6-9.3-21.9-2.3-31.3c-3.7-6.9-6.8-14.1-9-21.8C40.9 414.1 32 404.1 32 392V376c0-12.1 8.9-22.1 20.6-23.8c2.2-7.6 5.3-14.9 9-21.8c-7-9.4-6.3-22.8 2.3-31.3l11.3-11.3c8.6-8.6 21.9-9.3 31.3-2.3c6.8-3.7 14.1-6.8 21.7-9c1.7-11.6 11.7-20.6 23.8-20.6zm8 176a48 48 0 1 0 0-96 48 48 0 1 0 0 96zM448.2 276.6c1.7-11.6 11.7-20.6 23.8-20.6h16c12.1 0 22.1 8.9 23.8 20.6c7.6 2.2 14.9 5.3 21.8 9c9.4-7 22.8-6.3 31.3 2.3l11.3 11.3c8.6 8.6 9.3 21.9 2.2 31.3c3.7 6.8 6.8 14.1 9 21.7c11.6 1.7 20.6 11.7 20.6 23.8v16c0 12.1-8.9 22.1-20.6 23.8c-2.2 7.6-5.3 14.9-9 21.7c7 9.4 6.3 22.8-2.2 31.3l-11.3 11.3c-8.6 8.6-21.9 9.3-31.3 2.2c-6.9 3.7-14.1 6.8-21.8 9C510.1 503.1 500.1 512 488 512H472c-12.1 0-22.1-8.9-23.8-20.6c-7.6-2.2-14.9-5.3-21.7-9c-9.4 7.1-22.8 6.3-31.3-2.2l-11.3-11.3c-8.6-8.6-9.3-21.9-2.2-31.3c-3.7-6.9-6.8-14.1-9-21.8C360.9 414.1 352 404.1 352 392V376c0-12.1 8.9-22.1 20.6-23.8c2.2-7.6 5.3-14.9 9-21.8c-7-9.4-6.3-22.8 2.2-31.3l11.3-11.3c8.6-8.6 21.9-9.3 31.3-2.3c6.8-3.7 14.1-6.8 21.7-9zM528 384a48 48 0 1 0 -96 0 48 48 0 1 0 96 0z"/></svg>
+                    </div>
+                    Vehicle Design
+                  </div>
+                  
+                  <div class="mission_tag">
+                    <div class="skill_icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M176 24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64c-35.3 0-64 28.7-64 64H24c-13.3 0-24 10.7-24 24s10.7 24 24 24H64v56H24c-13.3 0-24 10.7-24 24s10.7 24 24 24H64v56H24c-13.3 0-24 10.7-24 24s10.7 24 24 24H64c0 35.3 28.7 64 64 64v40c0 13.3 10.7 24 24 24s24-10.7 24-24V448h56v40c0 13.3 10.7 24 24 24s24-10.7 24-24V448h56v40c0 13.3 10.7 24 24 24s24-10.7 24-24V448c35.3 0 64-28.7 64-64h40c13.3 0 24-10.7 24-24s-10.7-24-24-24H448V280h40c13.3 0 24-10.7 24-24s-10.7-24-24-24H448V176h40c13.3 0 24-10.7 24-24s-10.7-24-24-24H448c0-35.3-28.7-64-64-64V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H280V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H176V24zM160 128H352c17.7 0 32 14.3 32 32V352c0 17.7-14.3 32-32 32H160c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32zm192 32H160V352H352V160z"/></svg>
+                    </div>
+                    Technical Art
+                  </div>
+                  
+                  <div class="mission_tag">
+                    <div class="skill_icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M243.583 91.6027L323.695 138.384C326.575 140.026 326.68 144.583 323.695 146.225L228.503 201.854C225.623 203.55 222.22 203.444 219.549 201.854L124.357 146.225C121.425 144.636 121.373 139.973 124.357 138.384L204.417 91.6027V0L0 119.417V358.252L78.3843 312.477V218.914C78.3319 215.576 82.2066 213.192 85.0865 214.993L180.279 270.622C183.159 272.318 184.782 275.338 184.782 278.464V389.669C184.834 393.007 180.959 395.391 178.079 393.589L97.9673 346.808L19.583 392.583L224 512L428.417 392.583L350.033 346.808L269.921 393.589C267.093 395.338 263.114 393.06 263.218 389.669V278.464C263.218 275.126 265.051 272.159 267.721 270.622L362.914 214.993C365.741 213.245 369.72 215.47 369.616 218.914V312.477L448 358.252V119.417L243.583 0V91.6027Z"/></svg>
+                    </div>
+                    Unity ShaderLab
+                  </div>
+                  
+                  <div class="mission_tag">
+                    <div class="skill_icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M64 96c0-35.3 28.7-64 64-64H512c35.3 0 64 28.7 64 64V352H512V96H128V352H64V96zM0 403.2C0 392.6 8.6 384 19.2 384H620.8c10.6 0 19.2 8.6 19.2 19.2c0 42.4-34.4 76.8-76.8 76.8H76.8C34.4 480 0 445.6 0 403.2zM281 209l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-48-48c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zM393 175l48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"/></svg>
+                    </div>
+                    C#
+                  </div>
+                  
+                  <div class="mission_tag">
+                    <div class="skill_icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M64 96c0-35.3 28.7-64 64-64H512c35.3 0 64 28.7 64 64V352H512V96H128V352H64V96zM0 403.2C0 392.6 8.6 384 19.2 384H620.8c10.6 0 19.2 8.6 19.2 19.2c0 42.4-34.4 76.8-76.8 76.8H76.8C34.4 480 0 445.6 0 403.2zM281 209l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-48-48c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zM393 175l48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"/></svg>
+                    </div>
+                    HLSL
+                  </div>
+                  
+                  </div>
+                  
+                  <div class="mission_brief">
+                    <div class="mission_info_heading text_accent_dark">Mission Brief</div>
+                    <p>A large scale open world mobile game based on the city of Mumbai, India. An enormous game being worked on by a very short but highly skilled team. <br><br> His first professional gig of this scale as a game designer and technical artist. </p>
+                  </div>
+                  
+                  <div class="other_info">
+                    
+                    <div class="challenges">
+                      <div class="mission_info_heading text_accent_dark">Challenges</div>
+                      <div class="challenge_list">
+                        
+                        <div class="challenge"> <img class="challenge_checkbox" src="img/icons/Toggle On.png" alt="">Design robust AI systems that work in an open-world as well as scripted encounters using behaviour trees.</div>
+                        
+                        <div class="challenge"> <img class="challenge_checkbox" src="img/icons/Toggle On.png" alt="">Collaborate with developers to design and implment a GTA Style Wanted System along with police character AI and vehicle AI.</div>
+                        
+                        <div class="challenge"> <img class="challenge_checkbox" src="img/icons/Toggle On.png" alt="">Work with developers and QA team to solve problems that surface during implementation of various features like AI and Vehicles.</div>
+                        
+                        <div class="challenge"> <img class="challenge_checkbox" src="img/icons/Toggle On.png" alt="">Tune vehicles in game to feel unique and fun to drive while also being similar to their real world references.</div>
+                        
+                        <div class="challenge"> <img class="challenge_checkbox" src="img/icons/Toggle On.png" alt="">Create custom tools in Unity to help other designers and artists to speed up their workflow.</div>
+                        
+                        <div class="challenge"> <img class="challenge_checkbox" src="img/icons/Toggle On.png" alt="">Write shaders that make a large and dense world look good on mobile while also being optimized.</div>
+                        
+                        <div class="challenge"> <img class="challenge_checkbox" src="img/icons/Toggle On.png" alt="">Manage marketing and playtesting events for the game and incorporate player feedback at various points in the development process.</div>
+                        
+                        <div class="challenge"> <img class="challenge_checkbox" src="img/icons/Toggle On.png" alt="">Gain experience of working with a team in an Agile workflow to manage tasks and milestones.</div>
+                        
+                      </div>
+                    </div>  
+                    
+
+                    
+                    <div class="vertical_line"></div>
+
+                    
+                      <div class="rewards">
+                        <div class="mission_info_heading text_accent_dark">Rewards</div>
+                        <table class="skill_points_table">
+                          
+                            <tr>
+                              <td><div class="skill_content">
+                                <div class="skill_icon">
+                                  <svg height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344V280H168c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H280v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg>
+                                </div>
+                              </div></td>
+                              <td><div class="skill_content">20,000 XP</div></td>
+                            </tr>
+                          
+                            <tr>
+                              <td><div class="skill_content">
+                                <div class="skill_icon">
+                                  <svg height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344V280H168c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H280v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg>
+                                </div>
+                              </div></td>
+                              <td><div class="skill_content">Unity XP</div></td>
+                            </tr>
+                          
+                            <tr>
+                              <td><div class="skill_content">
+                                <div class="skill_icon">
+                                  <svg height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344V280H168c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H280v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg>
+                                </div>
+                              </div></td>
+                              <td><div class="skill_content">Agile XP</div></td>
+                            </tr>
+                          
+                            <tr>
+                              <td><div class="skill_content">
+                                <div class="skill_icon">
+                                  <svg height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344V280H168c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H280v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg>
+                                </div>
+                              </div></td>
+                              <td><div class="skill_content">Professional Project</div></td>
+                            </tr>
+                          
+                        </table>
+                      </div>
+                    
+                  </div>
+                  
+                  <div class="play_section">
+                  
+                    <a class="glow_button" href="https://youtu.be/_Ofj-bAjJ8Y" target="_blank">
+                      <div class="button_prompt xbox_button" id="xbox_button_a">A</div>
+                      <span>Play</span>
+                    </a>
+                  
+                  </div>
+                </div>
+              </div>
+              
+              
+              <div class="mission_info option_info" id="main_mission_1" data-updates-mission-cache>
+                <div class="option_info_container">
+                  <div class="mission_header">
+                    <h2>Bump Pong</h2>
+                     <a href="https://www.monkhub.com/us" target="_blank">Monkhub Innovations</a> 
+                  </div>
+                  
+                  
+                  <div class="mission_images">
+                    <div class="nav_buttons">
+                      <button class="glow_button" id="nav_button_prev" onclick="sliderMoveToIndex(sliderTargetSelectionIndex - 1)">
+                        <img src="img/icons/arrow-big-right.svg" alt="">
+                      </button>
+                      
+                      <button class="glow_button" id="nav_button_next" onclick="sliderMoveToIndex(sliderTargetSelectionIndex + 1)">
+                        <img src="img/icons/arrow-big-right.svg" alt="">
+                      </button>
+                    </div>
+                    
+                    <div class="mission_images_content">
+                      <div class="slider_mask hide_scrollbar"  tabindex="-1">
+                        <div class="slider">
+                        
+                        <div class="slider_container image_container">
+                          
+                          <img class="disappear_on_video_load poster_image" src="img/projects/games/02-Bump Pong/demo_01.gif" loading="lazy" alt="">
+                          <div class="disappear_on_video_load buffer_holder">
+                            <img class="buffer_icon" src="img/icons/buffer.svg" alt="">
+                          </div>
+                          <video loop playsinline muted preload="none" tabindex="-1"><source src="https://drive.google.com/uc?id=1wtztcZyL25YQxWQLpRBDFdNHsAGIr-gO" type="video/mp4"></video>
+                          
+                          <button class="mute_toggle" onclick="toggleMute()">
+                            <svg class="unmute_icon" fill="white" viewBox="0 0 640 512" style="display: none"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M533.6 32.5C598.5 85.3 640 165.8 640 256s-41.5 170.8-106.4 223.5c-10.3 8.4-25.4 6.8-33.8-3.5s-6.8-25.4 3.5-33.8C557.5 398.2 592 331.2 592 256s-34.5-142.2-88.7-186.3c-10.3-8.4-11.8-23.5-3.5-33.8s23.5-11.8 33.8-3.5zM473.1 107c43.2 35.2 70.9 88.9 70.9 149s-27.7 113.8-70.9 149c-10.3 8.4-25.4 6.8-33.8-3.5s-6.8-25.4 3.5-33.8C475.3 341.3 496 301.1 496 256s-20.7-85.3-53.2-111.8c-10.3-8.4-11.8-23.5-3.5-33.8s23.5-11.8 33.8-3.5zm-60.5 74.5C434.1 199.1 448 225.9 448 256s-13.9 56.9-35.4 74.5c-10.3 8.4-25.4 6.8-33.8-3.5s-6.8-25.4 3.5-33.8C393.1 284.4 400 271 400 256s-6.9-28.4-17.7-37.3c-10.3-8.4-11.8-23.5-3.5-33.8s23.5-11.8 33.8-3.5zM301.1 34.8C312.6 40 320 51.4 320 64V448c0 12.6-7.4 24-18.9 29.2s-25 3.1-34.4-5.3L131.8 352H64c-35.3 0-64-28.7-64-64V224c0-35.3 28.7-64 64-64h67.8L266.7 40.1c9.4-8.4 22.9-10.4 34.4-5.3z"/></svg>
+                            <svg class="mute_icon" fill="white" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M301.1 34.8C312.6 40 320 51.4 320 64V448c0 12.6-7.4 24-18.9 29.2s-25 3.1-34.4-5.3L131.8 352H64c-35.3 0-64-28.7-64-64V224c0-35.3 28.7-64 64-64h67.8L266.7 40.1c9.4-8.4 22.9-10.4 34.4-5.3zM425 167l55 55 55-55c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-55 55 55 55c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-55-55-55 55c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l55-55-55-55c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"/></svg>
+                          </button>
+                          
+                          
+                          </div>
+                        
+                        <div class="slider_container image_container">
+                          
+                            <img src="img/projects/games/02-Bump Pong/thumbnail_01.jpg" loading="lazy" alt="">
+                          
+                          </div>
+                        
+                        <div class="slider_container image_container">
+                          
+                            <img src="img/projects/games/02-Bump Pong/thumbnail_02.jpg" loading="lazy" alt="">
+                          
+                          </div>
+                        
+                        <div class="slider_container image_container">
+                          
+                            <img src="img/projects/games/02-Bump Pong/thumbnail_03.jpg" loading="lazy" alt="">
+                          
+                          </div>
+                        
+                        </div>
+                      </div>
+                      
+                      <div class="image_lower_container">
+                        <span>19th Apr 2021</span>
+                        <span class="difficulty_text">Difficulty: Hard</span>
+                        <!-- Slider dots need to be in front so they can be interacted with -->
+                        <span class="slider_dots">
+                          
+                          <input type="radio" autocomplete="off" class="slider_dot_radio image_slider_dot" name="main_mission_1_image" onchange="sliderMoveToIndex(0)" checked>
+                          
+                          <input type="radio" autocomplete="off" class="slider_dot_radio image_slider_dot" name="main_mission_1_image" onchange="sliderMoveToIndex(1)" >
+                          
+                          <input type="radio" autocomplete="off" class="slider_dot_radio image_slider_dot" name="main_mission_1_image" onchange="sliderMoveToIndex(2)" >
+                          
+                          <input type="radio" autocomplete="off" class="slider_dot_radio image_slider_dot" name="main_mission_1_image" onchange="sliderMoveToIndex(3)" >
+                          
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  
+                  <div class="mission_tags">
+                  
+                  <div class="mission_tag">
+                    <div class="skill_icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M243.583 91.6027L323.695 138.384C326.575 140.026 326.68 144.583 323.695 146.225L228.503 201.854C225.623 203.55 222.22 203.444 219.549 201.854L124.357 146.225C121.425 144.636 121.373 139.973 124.357 138.384L204.417 91.6027V0L0 119.417V358.252L78.3843 312.477V218.914C78.3319 215.576 82.2066 213.192 85.0865 214.993L180.279 270.622C183.159 272.318 184.782 275.338 184.782 278.464V389.669C184.834 393.007 180.959 395.391 178.079 393.589L97.9673 346.808L19.583 392.583L224 512L428.417 392.583L350.033 346.808L269.921 393.589C267.093 395.338 263.114 393.06 263.218 389.669V278.464C263.218 275.126 265.051 272.159 267.721 270.622L362.914 214.993C365.741 213.245 369.72 215.47 369.616 218.914V312.477L448 358.252V119.417L243.583 0V91.6027Z"/></svg>
+                    </div>
+                    Unity
+                  </div>
+                  
+                  <div class="mission_tag">
+                    <div class="skill_icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M64 96c0-35.3 28.7-64 64-64H512c35.3 0 64 28.7 64 64V352H512V96H128V352H64V96zM0 403.2C0 392.6 8.6 384 19.2 384H620.8c10.6 0 19.2 8.6 19.2 19.2c0 42.4-34.4 76.8-76.8 76.8H76.8C34.4 480 0 445.6 0 403.2zM281 209l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-48-48c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zM393 175l48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"/></svg>
+                    </div>
+                    C#
+                  </div>
+                  
+                  <div class="mission_tag">
+                    <div class="skill_icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M420.55,301.93a24,24,0,1,1,24-24,24,24,0,0,1-24,24m-265.1,0a24,24,0,1,1,24-24,24,24,0,0,1-24,24m273.7-144.48,47.94-83a10,10,0,1,0-17.27-10h0l-48.54,84.07a301.25,301.25,0,0,0-246.56,0L116.18,64.45a10,10,0,1,0-17.27,10h0l47.94,83C64.53,202.22,8.24,285.55,0,384H576c-8.24-98.45-64.54-181.78-146.85-226.55"/></svg>
+                    </div>
+                    Android Development
+                  </div>
+                  
+                  <div class="mission_tag">
+                    <div class="skill_icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 64H384v64H256V64zM240 0c-26.5 0-48 21.5-48 48v96c0 26.5 21.5 48 48 48h48v32H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h96v32H80c-26.5 0-48 21.5-48 48v96c0 26.5 21.5 48 48 48H240c26.5 0 48-21.5 48-48V368c0-26.5-21.5-48-48-48H192V288H448v32H400c-26.5 0-48 21.5-48 48v96c0 26.5 21.5 48 48 48H560c26.5 0 48-21.5 48-48V368c0-26.5-21.5-48-48-48H512V288h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H352V192h48c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48H240zM96 448V384H224v64H96zm320-64H544v64H416V384z"/></svg>
+                    </div>
+                    Multiplayer Programming
+                  </div>
+                  
+                  <div class="mission_tag">
+                    <div class="skill_icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 64H384v64H256V64zM240 0c-26.5 0-48 21.5-48 48v96c0 26.5 21.5 48 48 48h48v32H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h96v32H80c-26.5 0-48 21.5-48 48v96c0 26.5 21.5 48 48 48H240c26.5 0 48-21.5 48-48V368c0-26.5-21.5-48-48-48H192V288H448v32H400c-26.5 0-48 21.5-48 48v96c0 26.5 21.5 48 48 48H560c26.5 0 48-21.5 48-48V368c0-26.5-21.5-48-48-48H512V288h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H352V192h48c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48H240zM96 448V384H224v64H96zm320-64H544v64H416V384z"/></svg>
+                    </div>
+                    Realtime Multiplayer
+                  </div>
+                  
+                  </div>
+                  
+                  <div class="mission_brief">
+                    <div class="mission_info_heading text_accent_dark">Mission Brief</div>
+                    <p>A digital version of an old game called Blip. He worked on this game as the main Unity developer during his internship at Monkhub Innovations Pvt. Ltd. <br><br> While this was his first professional project, he also helped out with many other projects in the company. </p>
+                  </div>
+                  
+                  <div class="other_info">
+                    
+                    <div class="challenges">
+                      <div class="mission_info_heading text_accent_dark">Challenges</div>
+                      <div class="challenge_list">
+                        
+                        <div class="challenge"> <img class="challenge_checkbox" src="img/icons/Toggle On.png" alt="">Learn and use Photon Engine in Unity for multiplayer gameplay.</div>
+                        
+                        <div class="challenge"> <img class="challenge_checkbox" src="img/icons/Toggle On.png" alt="">Interfacing with backend servers to store data about users of the app.</div>
+                        
+                        <div class="challenge"> <img class="challenge_checkbox" src="img/icons/Toggle On.png" alt="">Adapting the gameplay for online as well as offline single-player and couch co-op gameplay.</div>
+                        
+                        <div class="challenge"> <img class="challenge_checkbox" src="img/icons/Toggle On.png" alt="">Work with the QA team to fix bugs that come up during implementation.</div>
+                        
+                        <div class="challenge"> <img class="challenge_checkbox" src="img/icons/Toggle On.png" alt="">Gain experience of working with a team in an Agile workflow to manage tasks and milestones.</div>
+                        
+                      </div>
+                    </div>  
+                    
+
+                    
+                    <div class="vertical_line"></div>
+
+                    
+                      <div class="rewards">
+                        <div class="mission_info_heading text_accent_dark">Rewards</div>
+                        <table class="skill_points_table">
+                          
+                            <tr>
+                              <td><div class="skill_content">
+                                <div class="skill_icon">
+                                  <svg height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344V280H168c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H280v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg>
+                                </div>
+                              </div></td>
+                              <td><div class="skill_content">10,000 XP</div></td>
+                            </tr>
+                          
+                            <tr>
+                              <td><div class="skill_content">
+                                <div class="skill_icon">
+                                  <svg height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344V280H168c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H280v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg>
+                                </div>
+                              </div></td>
+                              <td><div class="skill_content">Unity Multiplayer XP</div></td>
+                            </tr>
+                          
+                            <tr>
+                              <td><div class="skill_content">
+                                <div class="skill_icon">
+                                  <svg height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344V280H168c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H280v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg>
+                                </div>
+                              </div></td>
+                              <td><div class="skill_content">Agile XP</div></td>
+                            </tr>
+                          
+                            <tr>
+                              <td><div class="skill_content">
+                                <div class="skill_icon">
+                                  <svg height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344V280H168c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H280v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg>
+                                </div>
+                              </div></td>
+                              <td><div class="skill_content">Professional Project</div></td>
+                            </tr>
+                          
+                        </table>
+                      </div>
+                    
+                  </div>
+                  
+                  <div class="play_section">
+                  
+                    <a class="glow_button" href="https://play.google.com/store/apps/details?id=com.sempervi.bump" target="_blank">
+                      <div class="button_prompt xbox_button" id="xbox_button_a">A</div>
+                      <span>Play</span>
+                    </a>
+                  
+                  </div>
+                </div>
+              </div>
+              
+              
+              
+
+              
+              
+              
+              
+              
+              
+              <div class="mission_info option_info" id="side_mission_0" data-updates-mission-cache>
+                <div class="option_info_container">
+                  <div class="mission_header">
+                    <h2>The Waiting Game</h2>
+                    
+                  </div>
+                  
+                  
+                  <div class="mission_images">
+                    <div class="nav_buttons">
+                      <button class="glow_button" id="nav_button_prev" onclick="sliderMoveToIndex(sliderTargetSelectionIndex - 1)">
+                        <img src="img/icons/arrow-big-right.svg" alt="">
+                      </button>
+                      
+                      <button class="glow_button" id="nav_button_next" onclick="sliderMoveToIndex(sliderTargetSelectionIndex + 1)">
+                        <img src="img/icons/arrow-big-right.svg" alt="">
+                      </button>
+                    </div>
+                    
+                    <div class="mission_images_content">
+                      <div class="slider_mask hide_scrollbar"  tabindex="-1">
+                        <div class="slider">
+                        
+                        <div class="slider_container image_container">
+                          
+                            <img src="img/projects/games/10-The Waiting Game/thumbnail_01.png" loading="lazy" alt="">
+                          
+                          </div>
+                        
+                        <div class="slider_container image_container">
+                          
+                            <img src="img/projects/games/10-The Waiting Game/thumbnail_02.png" loading="lazy" alt="">
+                          
+                          </div>
+                        
+                        <div class="slider_container image_container">
+                          
+                            <img src="img/projects/games/10-The Waiting Game/thumbnail_03.png" loading="lazy" alt="">
+                          
+                          </div>
+                        
+                        </div>
+                      </div>
+                      
+                      <div class="image_lower_container">
+                        <span>12th Feb 2023</span>
+                        <span class="difficulty_text">Difficulty: Easy</span>
+                        <!-- Slider dots need to be in front so they can be interacted with -->
+                        <span class="slider_dots">
+                          
+                          <input type="radio" autocomplete="off" class="slider_dot_radio image_slider_dot" name="side_mission_0_image" onchange="sliderMoveToIndex(0)" checked>
+                          
+                          <input type="radio" autocomplete="off" class="slider_dot_radio image_slider_dot" name="side_mission_0_image" onchange="sliderMoveToIndex(1)" >
+                          
+                          <input type="radio" autocomplete="off" class="slider_dot_radio image_slider_dot" name="side_mission_0_image" onchange="sliderMoveToIndex(2)" >
+                          
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  
+                  <div class="mission_tags">
+                  
+                  <div class="mission_tag">
+                    <div class="skill_icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M64 96c0-35.3 28.7-64 64-64H512c35.3 0 64 28.7 64 64V352H512V96H128V352H64V96zM0 403.2C0 392.6 8.6 384 19.2 384H620.8c10.6 0 19.2 8.6 19.2 19.2c0 42.4-34.4 76.8-76.8 76.8H76.8C34.4 480 0 445.6 0 403.2zM281 209l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-48-48c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zM393 175l48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"/></svg>
+                    </div>
+                    C++
+                  </div>
+                  
+                  <div class="mission_tag">
+                    <div class="skill_icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M176 24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64c-35.3 0-64 28.7-64 64H24c-13.3 0-24 10.7-24 24s10.7 24 24 24H64v56H24c-13.3 0-24 10.7-24 24s10.7 24 24 24H64v56H24c-13.3 0-24 10.7-24 24s10.7 24 24 24H64c0 35.3 28.7 64 64 64v40c0 13.3 10.7 24 24 24s24-10.7 24-24V448h56v40c0 13.3 10.7 24 24 24s24-10.7 24-24V448h56v40c0 13.3 10.7 24 24 24s24-10.7 24-24V448c35.3 0 64-28.7 64-64h40c13.3 0 24-10.7 24-24s-10.7-24-24-24H448V280h40c13.3 0 24-10.7 24-24s-10.7-24-24-24H448V176h40c13.3 0 24-10.7 24-24s-10.7-24-24-24H448c0-35.3-28.7-64-64-64V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H280V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H176V24zM160 128H352c17.7 0 32 14.3 32 32V352c0 17.7-14.3 32-32 32H160c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32zm192 32H160V352H352V160z"/></svg>
+                    </div>
+                    OpenGL
+                  </div>
+                  
+                  <div class="mission_tag">
+                    <div class="skill_icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M176 88v40H336V88c0-4.4-3.6-8-8-8H184c-4.4 0-8 3.6-8 8zm-48 40V88c0-30.9 25.1-56 56-56H328c30.9 0 56 25.1 56 56v40h28.1c12.7 0 24.9 5.1 33.9 14.1l51.9 51.9c9 9 14.1 21.2 14.1 33.9V304H384V288c0-17.7-14.3-32-32-32s-32 14.3-32 32v16H192V288c0-17.7-14.3-32-32-32s-32 14.3-32 32v16H0V227.9c0-12.7 5.1-24.9 14.1-33.9l51.9-51.9c9-9 21.2-14.1 33.9-14.1H128zM0 416V336H128v16c0 17.7 14.3 32 32 32s32-14.3 32-32V336H320v16c0 17.7 14.3 32 32 32s32-14.3 32-32V336H512v80c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64z"/></svg>
+                    </div>
+                    Custom Game Library
+                  </div>
+                  
+                  <div class="mission_tag">
+                    <div class="skill_icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V173.3c0-17-6.7-33.3-18.7-45.3L352 50.7C340 38.7 323.7 32 306.7 32H64zm0 96c0-17.7 14.3-32 32-32H288c17.7 0 32 14.3 32 32v64c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V128zM224 288a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
+                    </div>
+                    Serialization
+                  </div>
+                  
+                  <div class="mission_tag">
+                    <div class="skill_icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg>
+                    </div>
+                    Windows Development
+                  </div>
+                  
+                  </div>
+                  
+                  <div class="mission_brief">
+                    <div class="mission_info_heading text_accent_dark">Mission Brief</div>
+                    <p>A small game meant to replicate the frustration of working on a PC that's really slow along with more annoying pop ups. Load the project as fast as possible. <br><br> Like a true artist, he took his real life frustration with his office PC and made it into a game. </p>
+                  </div>
+                  
+                  <div class="other_info">
+                    
+                    <div class="challenges">
+                      <div class="mission_info_heading text_accent_dark">Challenges</div>
+                      <div class="challenge_list">
+                        
+                        <div class="challenge"> <img class="challenge_checkbox" src="img/icons/Toggle On.png" alt="">Design an experience that pulls inspiration from real life experiences.</div>
+                        
+                        <div class="challenge"> <img class="challenge_checkbox" src="img/icons/Toggle On.png" alt="">Create a believable windows environment complete with settings and wallpapers.</div>
+                        
+                        <div class="challenge"> <img class="challenge_checkbox" src="img/icons/Toggle On.png" alt="">Write an Imgui Library to create a completely UI based game.</div>
+                        
+                      </div>
+                    </div>  
+                    
+
+                    
+                    <div class="vertical_line"></div>
+
+                    
+                      <div class="rewards">
+                        <div class="mission_info_heading text_accent_dark">Rewards</div>
+                        <table class="skill_points_table">
+                          
+                            <tr>
+                              <td><div class="skill_content">
+                                <div class="skill_icon">
+                                  <svg height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344V280H168c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H280v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg>
+                                </div>
+                              </div></td>
+                              <td><div class="skill_content">5,000 XP</div></td>
+                            </tr>
+                          
+                            <tr>
+                              <td><div class="skill_content">
+                                <div class="skill_icon">
+                                  <svg height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344V280H168c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H280v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg>
+                                </div>
+                              </div></td>
+                              <td><div class="skill_content">Game Library XP</div></td>
+                            </tr>
+                          
+                            <tr>
+                              <td><div class="skill_content">
+                                <div class="skill_icon">
+                                  <svg height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344V280H168c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H280v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg>
+                                </div>
+                              </div></td>
+                              <td><div class="skill_content">Venting Out</div></td>
+                            </tr>
+                          
+                        </table>
+                      </div>
+                    
+                  </div>
+                  
+                  <div class="play_section">
+                  
+                    <a class="glow_button" href="https://hritikdutta.itch.io/the-waiting-game" target="_blank">
+                      <div class="button_prompt xbox_button" id="xbox_button_a">A</div>
+                      <span>Play</span>
+                    </a>
+                  
+                  </div>
+                </div>
+              </div>
+              
+              
+              <div class="mission_info option_info" id="side_mission_1" data-updates-mission-cache>
+                <div class="option_info_container">
+                  <div class="mission_header">
+                    <h2>Minecraft Clone</h2>
+                    
+                  </div>
+                  
+                  
+                  <div class="mission_images">
+                    <div class="nav_buttons">
+                      <button class="glow_button" id="nav_button_prev" onclick="sliderMoveToIndex(sliderTargetSelectionIndex - 1)">
+                        <img src="img/icons/arrow-big-right.svg" alt="">
+                      </button>
+                      
+                      <button class="glow_button" id="nav_button_next" onclick="sliderMoveToIndex(sliderTargetSelectionIndex + 1)">
+                        <img src="img/icons/arrow-big-right.svg" alt="">
+                      </button>
+                    </div>
+                    
+                    <div class="mission_images_content">
+                      <div class="slider_mask hide_scrollbar"  tabindex="-1">
+                        <div class="slider">
+                        
+                        <div class="slider_container image_container">
+                          
+                          <img class="disappear_on_video_load poster_image" src="img/projects/games/09-Minecraft Clone/demo_01.gif" loading="lazy" alt="">
+                          <div class="disappear_on_video_load buffer_holder">
+                            <img class="buffer_icon" src="img/icons/buffer.svg" alt="">
+                          </div>
+                          <video loop playsinline muted preload="none" tabindex="-1"><source src="https://drive.google.com/uc?id=1fT97GnbqwYjpO4xT--rbNq53qVNABiXp" type="video/mp4"></video>
+                          
+                          
+                          </div>
+                        
+                        <div class="slider_container image_container">
+                          
+                          <img class="disappear_on_video_load poster_image" src="img/projects/games/09-Minecraft Clone/demo_02.gif" loading="lazy" alt="">
+                          <div class="disappear_on_video_load buffer_holder">
+                            <img class="buffer_icon" src="img/icons/buffer.svg" alt="">
+                          </div>
+                          <video loop playsinline muted preload="none" tabindex="-1"><source src="https://drive.google.com/uc?id=1B3zjX0cV8O9rg689WVd2tHpnaRWyi5_X" type="video/mp4"></video>
+                          
+                          
+                          </div>
+                        
+                        <div class="slider_container image_container">
+                          
+                            <img src="img/projects/games/09-Minecraft Clone/thumbnail_01.jpg" loading="lazy" alt="">
+                          
+                          </div>
+                        
+                        <div class="slider_container image_container">
+                          
+                            <img src="img/projects/games/09-Minecraft Clone/thumbnail_02.jpg" loading="lazy" alt="">
+                          
+                          </div>
+                        
+                        <div class="slider_container image_container">
+                          
+                            <img src="img/projects/games/09-Minecraft Clone/thumbnail_03.jpg" loading="lazy" alt="">
+                          
+                          </div>
+                        
+                        <div class="slider_container image_container">
+                          
+                            <img src="img/projects/games/09-Minecraft Clone/thumbnail_04.jpg" loading="lazy" alt="">
+                          
+                          </div>
+                        
+                        </div>
+                      </div>
+                      
+                      <div class="image_lower_container">
+                        <span>30th Nov 2022</span>
+                        <span class="difficulty_text">Difficulty: Hard</span>
+                        <!-- Slider dots need to be in front so they can be interacted with -->
+                        <span class="slider_dots">
+                          
+                          <input type="radio" autocomplete="off" class="slider_dot_radio image_slider_dot" name="side_mission_1_image" onchange="sliderMoveToIndex(0)" checked>
+                          
+                          <input type="radio" autocomplete="off" class="slider_dot_radio image_slider_dot" name="side_mission_1_image" onchange="sliderMoveToIndex(1)" >
+                          
+                          <input type="radio" autocomplete="off" class="slider_dot_radio image_slider_dot" name="side_mission_1_image" onchange="sliderMoveToIndex(2)" >
+                          
+                          <input type="radio" autocomplete="off" class="slider_dot_radio image_slider_dot" name="side_mission_1_image" onchange="sliderMoveToIndex(3)" >
+                          
+                          <input type="radio" autocomplete="off" class="slider_dot_radio image_slider_dot" name="side_mission_1_image" onchange="sliderMoveToIndex(4)" >
+                          
+                          <input type="radio" autocomplete="off" class="slider_dot_radio image_slider_dot" name="side_mission_1_image" onchange="sliderMoveToIndex(5)" >
+                          
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  
+                  <div class="mission_tags">
+                  
+                  <div class="mission_tag">
+                    <div class="skill_icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M64 96c0-35.3 28.7-64 64-64H512c35.3 0 64 28.7 64 64V352H512V96H128V352H64V96zM0 403.2C0 392.6 8.6 384 19.2 384H620.8c10.6 0 19.2 8.6 19.2 19.2c0 42.4-34.4 76.8-76.8 76.8H76.8C34.4 480 0 445.6 0 403.2zM281 209l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-48-48c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zM393 175l48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"/></svg>
+                    </div>
+                    C++
+                  </div>
+                  
+                  <div class="mission_tag">
+                    <div class="skill_icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M176 24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64c-35.3 0-64 28.7-64 64H24c-13.3 0-24 10.7-24 24s10.7 24 24 24H64v56H24c-13.3 0-24 10.7-24 24s10.7 24 24 24H64v56H24c-13.3 0-24 10.7-24 24s10.7 24 24 24H64c0 35.3 28.7 64 64 64v40c0 13.3 10.7 24 24 24s24-10.7 24-24V448h56v40c0 13.3 10.7 24 24 24s24-10.7 24-24V448h56v40c0 13.3 10.7 24 24 24s24-10.7 24-24V448c35.3 0 64-28.7 64-64h40c13.3 0 24-10.7 24-24s-10.7-24-24-24H448V280h40c13.3 0 24-10.7 24-24s-10.7-24-24-24H448V176h40c13.3 0 24-10.7 24-24s-10.7-24-24-24H448c0-35.3-28.7-64-64-64V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H280V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H176V24zM160 128H352c17.7 0 32 14.3 32 32V352c0 17.7-14.3 32-32 32H160c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32zm192 32H160V352H352V160z"/></svg>
+                    </div>
+                    OpenGL
+                  </div>
+                  
+                  <div class="mission_tag">
+                    <div class="skill_icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M234.5 5.7c13.9-5 29.1-5 43.1 0l192 68.6C495 83.4 512 107.5 512 134.6V377.4c0 27-17 51.2-42.5 60.3l-192 68.6c-13.9 5-29.1 5-43.1 0l-192-68.6C17 428.6 0 404.5 0 377.4V134.6c0-27 17-51.2 42.5-60.3l192-68.6zM256 66L82.3 128 256 190l173.7-62L256 66zm32 368.6l160-57.1v-188L288 246.6v188z"/></svg>
+                    </div>
+                    3D Graphics
+                  </div>
+                  
+                  <div class="mission_tag">
+                    <div class="skill_icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M0 80C0 53.5 21.5 32 48 32h96c26.5 0 48 21.5 48 48V96H384V80c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48H432c-26.5 0-48-21.5-48-48V160H192v16c0 1.7-.1 3.4-.3 5L272 288h96c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48H272c-26.5 0-48-21.5-48-48V336c0-1.7 .1-3.4 .3-5L144 224H48c-26.5 0-48-21.5-48-48V80z"/></svg>
+                    </div>
+                    Data Structures
+                  </div>
+                  
+                  <div class="mission_tag">
+                    <div class="skill_icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M0 80C0 53.5 21.5 32 48 32h96c26.5 0 48 21.5 48 48V96H384V80c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48H432c-26.5 0-48-21.5-48-48V160H192v16c0 1.7-.1 3.4-.3 5L272 288h96c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48H272c-26.5 0-48-21.5-48-48V336c0-1.7 .1-3.4 .3-5L144 224H48c-26.5 0-48-21.5-48-48V80z"/></svg>
+                    </div>
+                    Algorithms
+                  </div>
+                  
+                  <div class="mission_tag">
+                    <div class="skill_icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M176 88v40H336V88c0-4.4-3.6-8-8-8H184c-4.4 0-8 3.6-8 8zm-48 40V88c0-30.9 25.1-56 56-56H328c30.9 0 56 25.1 56 56v40h28.1c12.7 0 24.9 5.1 33.9 14.1l51.9 51.9c9 9 14.1 21.2 14.1 33.9V304H384V288c0-17.7-14.3-32-32-32s-32 14.3-32 32v16H192V288c0-17.7-14.3-32-32-32s-32 14.3-32 32v16H0V227.9c0-12.7 5.1-24.9 14.1-33.9l51.9-51.9c9-9 21.2-14.1 33.9-14.1H128zM0 416V336H128v16c0 17.7 14.3 32 32 32s32-14.3 32-32V336H320v16c0 17.7 14.3 32 32 32s32-14.3 32-32V336H512v80c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64z"/></svg>
+                    </div>
+                    Custom Tools
+                  </div>
+                  
+                  </div>
+                  
+                  <div class="mission_brief">
+                    <div class="mission_info_heading text_accent_dark">Mission Brief</div>
+                    <p>A small experiment in making a Minecraft style game with procedurally generated voxel world. The player can place and remove blocks from the world. <br><br> He was learning 3D rendering and procedural generation using only C++ and OpenGL at the time. </p>
+                  </div>
+                  
+                  <div class="other_info">
+                    
+                    <div class="challenges">
+                      <div class="mission_info_heading text_accent_dark">Challenges</div>
+                      <div class="challenge_list">
+                        
+                        <div class="challenge"> <img class="challenge_checkbox" src="img/icons/Toggle On.png" alt="">Expand custom rendering library to support 3D rendering.</div>
+                        
+                        <div class="challenge"> <img class="challenge_checkbox" src="img/icons/Toggle On.png" alt="">Study the world generation in minecraft and make a simpler version of it.</div>
+                        
+                        <div class="challenge"> <img class="challenge_checkbox" src="img/icons/Toggle On.png" alt="">Optimize voxel rendering and world generation for better performance.</div>
+                        
+                      </div>
+                    </div>  
+                    
+
+                    
+                    <div class="vertical_line"></div>
+
+                    
+                      <div class="rewards">
+                        <div class="mission_info_heading text_accent_dark">Rewards</div>
+                        <table class="skill_points_table">
+                          
+                            <tr>
+                              <td><div class="skill_content">
+                                <div class="skill_icon">
+                                  <svg height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344V280H168c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H280v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg>
+                                </div>
+                              </div></td>
+                              <td><div class="skill_content">7,000 XP</div></td>
+                            </tr>
+                          
+                            <tr>
+                              <td><div class="skill_content">
+                                <div class="skill_icon">
+                                  <svg height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344V280H168c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H280v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg>
+                                </div>
+                              </div></td>
+                              <td><div class="skill_content">3D Rendering XP</div></td>
+                            </tr>
+                          
+                        </table>
+                      </div>
+                    
+                  </div>
+                  
+                  <div class="play_section">
+                  
+                    <a class="glow_button" href="https://github.com/HritikDutta/Minecraft-Clone" target="_blank">
+                      <div class="button_prompt xbox_button" id="xbox_button_a">A</div>
+                      <span>Play</span>
+                    </a>
+                  
+                  </div>
+                </div>
+              </div>
+              
+              
+              <div class="mission_info option_info" id="side_mission_2" data-updates-mission-cache>
+                <div class="option_info_container">
+                  <div class="mission_header">
+                    <h2>Shameless Wordle Clone</h2>
+                    
+                  </div>
+                  
+                  
+                  <div class="mission_images">
+                    <div class="nav_buttons">
+                      <button class="glow_button" id="nav_button_prev" onclick="sliderMoveToIndex(sliderTargetSelectionIndex - 1)">
+                        <img src="img/icons/arrow-big-right.svg" alt="">
+                      </button>
+                      
+                      <button class="glow_button" id="nav_button_next" onclick="sliderMoveToIndex(sliderTargetSelectionIndex + 1)">
+                        <img src="img/icons/arrow-big-right.svg" alt="">
+                      </button>
+                    </div>
+                    
+                    <div class="mission_images_content">
+                      <div class="slider_mask hide_scrollbar"  tabindex="-1">
+                        <div class="slider">
+                        
+                        <div class="slider_container image_container">
+                          
+                            <img src="img/projects/games/08-Shameless Wordle Clone/thumbnail_01.png" loading="lazy" alt="">
+                          
+                          </div>
+                        
+                        </div>
+                      </div>
+                      
+                      <div class="image_lower_container">
+                        <span>18th March 2022</span>
+                        <span class="difficulty_text">Difficulty: Easy</span>
+                        <!-- Slider dots need to be in front so they can be interacted with -->
+                        <span class="slider_dots">
+                          
+                          <input type="radio" autocomplete="off" class="slider_dot_radio image_slider_dot" name="side_mission_2_image" onchange="sliderMoveToIndex(0)" checked>
+                          
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  
+                  <div class="mission_tags">
+                  
+                  <div class="mission_tag">
+                    <div class="skill_icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M64 96c0-35.3 28.7-64 64-64H512c35.3 0 64 28.7 64 64V352H512V96H128V352H64V96zM0 403.2C0 392.6 8.6 384 19.2 384H620.8c10.6 0 19.2 8.6 19.2 19.2c0 42.4-34.4 76.8-76.8 76.8H76.8C34.4 480 0 445.6 0 403.2zM281 209l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-48-48c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zM393 175l48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"/></svg>
+                    </div>
+                    C++
+                  </div>
+                  
+                  <div class="mission_tag">
+                    <div class="skill_icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M176 24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64c-35.3 0-64 28.7-64 64H24c-13.3 0-24 10.7-24 24s10.7 24 24 24H64v56H24c-13.3 0-24 10.7-24 24s10.7 24 24 24H64v56H24c-13.3 0-24 10.7-24 24s10.7 24 24 24H64c0 35.3 28.7 64 64 64v40c0 13.3 10.7 24 24 24s24-10.7 24-24V448h56v40c0 13.3 10.7 24 24 24s24-10.7 24-24V448h56v40c0 13.3 10.7 24 24 24s24-10.7 24-24V448c35.3 0 64-28.7 64-64h40c13.3 0 24-10.7 24-24s-10.7-24-24-24H448V280h40c13.3 0 24-10.7 24-24s-10.7-24-24-24H448V176h40c13.3 0 24-10.7 24-24s-10.7-24-24-24H448c0-35.3-28.7-64-64-64V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H280V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H176V24zM160 128H352c17.7 0 32 14.3 32 32V352c0 17.7-14.3 32-32 32H160c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32zm192 32H160V352H352V160z"/></svg>
+                    </div>
+                    OpenGL
+                  </div>
+                  
+                  <div class="mission_tag">
+                    <div class="skill_icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M176 88v40H336V88c0-4.4-3.6-8-8-8H184c-4.4 0-8 3.6-8 8zm-48 40V88c0-30.9 25.1-56 56-56H328c30.9 0 56 25.1 56 56v40h28.1c12.7 0 24.9 5.1 33.9 14.1l51.9 51.9c9 9 14.1 21.2 14.1 33.9V304H384V288c0-17.7-14.3-32-32-32s-32 14.3-32 32v16H192V288c0-17.7-14.3-32-32-32s-32 14.3-32 32v16H0V227.9c0-12.7 5.1-24.9 14.1-33.9l51.9-51.9c9-9 21.2-14.1 33.9-14.1H128zM0 416V336H128v16c0 17.7 14.3 32 32 32s32-14.3 32-32V336H320v16c0 17.7 14.3 32 32 32s32-14.3 32-32V336H512v80c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64z"/></svg>
+                    </div>
+                    Custom Game Library
+                  </div>
+                  
+                  <div class="mission_tag">
+                    <div class="skill_icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg>
+                    </div>
+                    Windows Development
+                  </div>
+                  
+                  </div>
+                  
+                  <div class="mission_brief">
+                    <div class="mission_info_heading text_accent_dark">Mission Brief</div>
+                    <p>Exactly what the name suggests... <br><br> He found himself so addicted to wordle that he couldn't wait for a whole day for the next word. So he made a version that he can play as many times as he wants. </p>
+                  </div>
+                  
+                  <div class="other_info">
+                    
+                    <div class="challenges">
+                      <div class="mission_info_heading text_accent_dark">Challenges</div>
+                      <div class="challenge_list">
+                        
+                        <div class="challenge"> <img class="challenge_checkbox" src="img/icons/Toggle On.png" alt="">Replicate a popular game as faithfully as possible.</div>
+                        
+                        <div class="challenge"> <img class="challenge_checkbox" src="img/icons/Toggle On.png" alt="">Expand UI library for making such a game.</div>
+                        
+                      </div>
+                    </div>  
+                    
+
+                    
+                    <div class="vertical_line"></div>
+
+                    
+                      <div class="rewards">
+                        <div class="mission_info_heading text_accent_dark">Rewards</div>
+                        <table class="skill_points_table">
+                          
+                            <tr>
+                              <td><div class="skill_content">
+                                <div class="skill_icon">
+                                  <svg height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344V280H168c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H280v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg>
+                                </div>
+                              </div></td>
+                              <td><div class="skill_content">2,000 XP</div></td>
+                            </tr>
+                          
+                            <tr>
+                              <td><div class="skill_content">
+                                <div class="skill_icon">
+                                  <svg height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344V280H168c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H280v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg>
+                                </div>
+                              </div></td>
+                              <td><div class="skill_content">Game Library XP</div></td>
+                            </tr>
+                          
+                            <tr>
+                              <td><div class="skill_content">
+                                <div class="skill_icon">
+                                  <svg height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344V280H168c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H280v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg>
+                                </div>
+                              </div></td>
+                              <td><div class="skill_content">No More Waiting</div></td>
+                            </tr>
+                          
+                        </table>
+                      </div>
+                    
+                  </div>
+                  
+                  <div class="play_section">
+                  
+                    <a class="glow_button" href="https://hritikdutta.itch.io/wordle-clone" target="_blank">
+                      <div class="button_prompt xbox_button" id="xbox_button_a">A</div>
+                      <span>Play</span>
+                    </a>
+                  
+                  </div>
+                </div>
+              </div>
+              
+              
+              <div class="mission_info option_info" id="side_mission_3" data-updates-mission-cache>
+                <div class="option_info_container">
+                  <div class="mission_header">
+                    <h2>Saving Princess Sita</h2>
+                     <a href="https://itch.io/jam/historically-accurate-4" target="_blank">Historically Accurate Game Jam 4</a> 
+                  </div>
+                  
+                  
+                  <div class="mission_images">
+                    <div class="nav_buttons">
+                      <button class="glow_button" id="nav_button_prev" onclick="sliderMoveToIndex(sliderTargetSelectionIndex - 1)">
+                        <img src="img/icons/arrow-big-right.svg" alt="">
+                      </button>
+                      
+                      <button class="glow_button" id="nav_button_next" onclick="sliderMoveToIndex(sliderTargetSelectionIndex + 1)">
+                        <img src="img/icons/arrow-big-right.svg" alt="">
+                      </button>
+                    </div>
+                    
+                    <div class="mission_images_content">
+                      <div class="slider_mask hide_scrollbar"  tabindex="-1">
+                        <div class="slider">
+                        
+                        <div class="slider_container image_container">
+                          
+                            <img src="img/projects/games/07-Saving Princess Sita/thumbnail_01.png" loading="lazy" alt="">
+                          
+                          </div>
+                        
+                        <div class="slider_container image_container">
+                          
+                            <img src="img/projects/games/07-Saving Princess Sita/thumbnail_02.png" loading="lazy" alt="">
+                          
+                          </div>
+                        
+                        <div class="slider_container image_container">
+                          
+                            <img src="img/projects/games/07-Saving Princess Sita/thumbnail_03.png" loading="lazy" alt="">
+                          
+                          </div>
+                        
+                        <div class="slider_container image_container">
+                          
+                            <img src="img/projects/games/07-Saving Princess Sita/thumbnail_04.png" loading="lazy" alt="">
+                          
+                          </div>
+                        
+                        <div class="slider_container image_container">
+                          
+                            <img src="img/projects/games/07-Saving Princess Sita/thumbnail_05.png" loading="lazy" alt="">
+                          
+                          </div>
+                        
+                        <div class="slider_container image_container">
+                          
+                            <img src="img/projects/games/07-Saving Princess Sita/thumbnail_06.png" loading="lazy" alt="">
+                          
+                          </div>
+                        
+                        </div>
+                      </div>
+                      
+                      <div class="image_lower_container">
+                        <span>28th June 2021</span>
+                        <span class="difficulty_text">Difficulty: Medium</span>
+                        <!-- Slider dots need to be in front so they can be interacted with -->
+                        <span class="slider_dots">
+                          
+                          <input type="radio" autocomplete="off" class="slider_dot_radio image_slider_dot" name="side_mission_3_image" onchange="sliderMoveToIndex(0)" checked>
+                          
+                          <input type="radio" autocomplete="off" class="slider_dot_radio image_slider_dot" name="side_mission_3_image" onchange="sliderMoveToIndex(1)" >
+                          
+                          <input type="radio" autocomplete="off" class="slider_dot_radio image_slider_dot" name="side_mission_3_image" onchange="sliderMoveToIndex(2)" >
+                          
+                          <input type="radio" autocomplete="off" class="slider_dot_radio image_slider_dot" name="side_mission_3_image" onchange="sliderMoveToIndex(3)" >
+                          
+                          <input type="radio" autocomplete="off" class="slider_dot_radio image_slider_dot" name="side_mission_3_image" onchange="sliderMoveToIndex(4)" >
+                          
+                          <input type="radio" autocomplete="off" class="slider_dot_radio image_slider_dot" name="side_mission_3_image" onchange="sliderMoveToIndex(5)" >
+                          
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  
+                  <div class="mission_tags">
+                  
+                  <div class="mission_tag">
+                    <div class="skill_icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M243.583 91.6027L323.695 138.384C326.575 140.026 326.68 144.583 323.695 146.225L228.503 201.854C225.623 203.55 222.22 203.444 219.549 201.854L124.357 146.225C121.425 144.636 121.373 139.973 124.357 138.384L204.417 91.6027V0L0 119.417V358.252L78.3843 312.477V218.914C78.3319 215.576 82.2066 213.192 85.0865 214.993L180.279 270.622C183.159 272.318 184.782 275.338 184.782 278.464V389.669C184.834 393.007 180.959 395.391 178.079 393.589L97.9673 346.808L19.583 392.583L224 512L428.417 392.583L350.033 346.808L269.921 393.589C267.093 395.338 263.114 393.06 263.218 389.669V278.464C263.218 275.126 265.051 272.159 267.721 270.622L362.914 214.993C365.741 213.245 369.72 215.47 369.616 218.914V312.477L448 358.252V119.417L243.583 0V91.6027Z"/></svg>
+                    </div>
+                    Unity
+                  </div>
+                  
+                  <div class="mission_tag">
+                    <div class="skill_icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M64 96c0-35.3 28.7-64 64-64H512c35.3 0 64 28.7 64 64V352H512V96H128V352H64V96zM0 403.2C0 392.6 8.6 384 19.2 384H620.8c10.6 0 19.2 8.6 19.2 19.2c0 42.4-34.4 76.8-76.8 76.8H76.8C34.4 480 0 445.6 0 403.2zM281 209l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-48-48c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zM393 175l48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"/></svg>
+                    </div>
+                    C#
+                  </div>
+                  
+                  <div class="mission_tag">
+                    <div class="skill_icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg>
+                    </div>
+                    Windows Development
+                  </div>
+                  
+                  <div class="mission_tag">
+                    <div class="skill_icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M413.5 237.5c-28.2 4.8-58.2-3.6-80-25.4l-38.1-38.1C280.4 159 272 138.8 272 117.6V105.5L192.3 62c-5.3-2.9-8.6-8.6-8.3-14.7s3.9-11.5 9.5-14l47.2-21C259.1 4.2 279 0 299.2 0h18.1c36.7 0 72 14 98.7 39.1l44.6 42c24.2 22.8 33.2 55.7 26.6 86L503 183l8-8c9.4-9.4 24.6-9.4 33.9 0l24 24c9.4 9.4 9.4 24.6 0 33.9l-88 88c-9.4 9.4-24.6 9.4-33.9 0l-24-24c-9.4-9.4-9.4-24.6 0-33.9l8-8-17.5-17.5zM27.4 377.1L260.9 182.6c3.5 4.9 7.5 9.6 11.8 14l38.1 38.1c6 6 12.4 11.2 19.2 15.7L134.9 484.6c-14.5 17.4-36 27.4-58.6 27.4C34.1 512 0 477.8 0 435.7c0-22.6 10.1-44.1 27.4-58.6z"/></svg>
+                    </div>
+                    Level Design
+                  </div>
+                  
+                  <div class="mission_tag">
+                    <div class="skill_icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 80C149.9 80 62.4 159.4 49.6 262c9.4-3.8 19.6-6 30.4-6c26.5 0 48 21.5 48 48V432c0 26.5-21.5 48-48 48c-44.2 0-80-35.8-80-80V384 336 288C0 146.6 114.6 32 256 32s256 114.6 256 256v48 48 16c0 44.2-35.8 80-80 80c-26.5 0-48-21.5-48-48V304c0-26.5 21.5-48 48-48c10.8 0 21 2.1 30.4 6C449.6 159.4 362.1 80 256 80z"/></svg>
+                    </div>
+                    Sound Design
+                  </div>
+                  
+                  </div>
+                  
+                  <div class="mission_brief">
+                    <div class="mission_info_heading text_accent_dark">Mission Brief</div>
+                    <p>An Stealth Based RTS Dungeon Crawler set in Ramayana, where you command your monkey troops indirectly by placing bananas. It was made for the Historically Accurate Game Jam 2021. <br><br> Unity gave him so much trouble during this game, that he decided to never use it for his own projects from then. </p>
+                  </div>
+                  
+                  <div class="other_info">
+                    
+                    <div class="challenges">
+                      <div class="mission_info_heading text_accent_dark">Challenges</div>
+                      <div class="challenge_list">
+                        
+                        <div class="challenge"> <img class="challenge_checkbox" src="img/icons/Toggle On.png" alt="">Create a system to control a group of characters by placing a target.</div>
+                        
+                        <div class="challenge"> <img class="challenge_checkbox" src="img/icons/Toggle On.png" alt="">Implement enemy AI with patrolling paths and vision areas in a tile-based game.</div>
+                        
+                        <div class="challenge"> <img class="challenge_checkbox" src="img/icons/Toggle On.png" alt="">Design a tutorial that introduces the mechanics of the game in an organic way.</div>
+                        
+                        <div class="challenge"> <img class="challenge_checkbox" src="img/icons/Toggle On.png" alt="">Work with an artist to finish the game in a week.</div>
+                        
+                      </div>
+                    </div>  
+                    
+
+                    
+                    <div class="vertical_line"></div>
+
+                    
+                      <div class="rewards">
+                        <div class="mission_info_heading text_accent_dark">Rewards</div>
+                        <table class="skill_points_table">
+                          
+                            <tr>
+                              <td><div class="skill_content">
+                                <div class="skill_icon">
+                                  <svg height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344V280H168c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H280v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg>
+                                </div>
+                              </div></td>
+                              <td><div class="skill_content">8,000 XP</div></td>
+                            </tr>
+                          
+                            <tr>
+                              <td><div class="skill_content">
+                                <div class="skill_icon">
+                                  <svg height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344V280H168c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H280v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg>
+                                </div>
+                              </div></td>
+                              <td><div class="skill_content">Unity XP</div></td>
+                            </tr>
+                          
+                            <tr>
+                              <td><div class="skill_content">
+                                <div class="skill_icon">
+                                  <svg height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344V280H168c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H280v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg>
+                                </div>
+                              </div></td>
+                              <td><div class="skill_content">Game Jam Project</div></td>
+                            </tr>
+                          
+                        </table>
+                      </div>
+                    
+                  </div>
+                  
+                  <div class="play_section">
+                  
+                    <a class="glow_button" href="https://boytoyroy.itch.io/saving-princess-sita" target="_blank">
+                      <div class="button_prompt xbox_button" id="xbox_button_a">A</div>
+                      <span>Play</span>
+                    </a>
+                  
+                  </div>
+                </div>
+              </div>
+              
+              
+              <div class="mission_info option_info" id="side_mission_4" data-updates-mission-cache>
+                <div class="option_info_container">
+                  <div class="mission_header">
+                    <h2>Spedit</h2>
+                    
+                  </div>
+                  
+                  
+                  <div class="mission_images">
+                    <div class="nav_buttons">
+                      <button class="glow_button" id="nav_button_prev" onclick="sliderMoveToIndex(sliderTargetSelectionIndex - 1)">
+                        <img src="img/icons/arrow-big-right.svg" alt="">
+                      </button>
+                      
+                      <button class="glow_button" id="nav_button_next" onclick="sliderMoveToIndex(sliderTargetSelectionIndex + 1)">
+                        <img src="img/icons/arrow-big-right.svg" alt="">
+                      </button>
+                    </div>
+                    
+                    <div class="mission_images_content">
+                      <div class="slider_mask hide_scrollbar"  tabindex="-1">
+                        <div class="slider">
+                        
+                        <div class="slider_container image_container">
+                          
+                          <img class="disappear_on_video_load poster_image" src="img/projects/games/05-Spedit/demo_01.gif" loading="lazy" alt="">
+                          <div class="disappear_on_video_load buffer_holder">
+                            <img class="buffer_icon" src="img/icons/buffer.svg" alt="">
+                          </div>
+                          <video loop playsinline muted preload="none" tabindex="-1"><source src="https://drive.google.com/uc?id=1PKV5EakDPfKTBUenJkMzbemGoPYfSPCI" type="video/mp4"></video>
+                          
+                          
+                          </div>
+                        
+                        </div>
+                      </div>
+                      
+                      <div class="image_lower_container">
+                        <span>13th June 2021</span>
+                        <span class="difficulty_text">Difficulty: Medium</span>
+                        <!-- Slider dots need to be in front so they can be interacted with -->
+                        <span class="slider_dots">
+                          
+                          <input type="radio" autocomplete="off" class="slider_dot_radio image_slider_dot" name="side_mission_4_image" onchange="sliderMoveToIndex(0)" checked>
+                          
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  
+                  <div class="mission_tags">
+                  
+                  <div class="mission_tag">
+                    <div class="skill_icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M64 96c0-35.3 28.7-64 64-64H512c35.3 0 64 28.7 64 64V352H512V96H128V352H64V96zM0 403.2C0 392.6 8.6 384 19.2 384H620.8c10.6 0 19.2 8.6 19.2 19.2c0 42.4-34.4 76.8-76.8 76.8H76.8C34.4 480 0 445.6 0 403.2zM281 209l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-48-48c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zM393 175l48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"/></svg>
+                    </div>
+                    C++
+                  </div>
+                  
+                  <div class="mission_tag">
+                    <div class="skill_icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M176 24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64c-35.3 0-64 28.7-64 64H24c-13.3 0-24 10.7-24 24s10.7 24 24 24H64v56H24c-13.3 0-24 10.7-24 24s10.7 24 24 24H64v56H24c-13.3 0-24 10.7-24 24s10.7 24 24 24H64c0 35.3 28.7 64 64 64v40c0 13.3 10.7 24 24 24s24-10.7 24-24V448h56v40c0 13.3 10.7 24 24 24s24-10.7 24-24V448h56v40c0 13.3 10.7 24 24 24s24-10.7 24-24V448c35.3 0 64-28.7 64-64h40c13.3 0 24-10.7 24-24s-10.7-24-24-24H448V280h40c13.3 0 24-10.7 24-24s-10.7-24-24-24H448V176h40c13.3 0 24-10.7 24-24s-10.7-24-24-24H448c0-35.3-28.7-64-64-64V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H280V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H176V24zM160 128H352c17.7 0 32 14.3 32 32V352c0 17.7-14.3 32-32 32H160c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32zm192 32H160V352H352V160z"/></svg>
+                    </div>
+                    OpenGL
+                  </div>
+                  
+                  <div class="mission_tag">
+                    <div class="skill_icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M176 88v40H336V88c0-4.4-3.6-8-8-8H184c-4.4 0-8 3.6-8 8zm-48 40V88c0-30.9 25.1-56 56-56H328c30.9 0 56 25.1 56 56v40h28.1c12.7 0 24.9 5.1 33.9 14.1l51.9 51.9c9 9 14.1 21.2 14.1 33.9V304H384V288c0-17.7-14.3-32-32-32s-32 14.3-32 32v16H192V288c0-17.7-14.3-32-32-32s-32 14.3-32 32v16H0V227.9c0-12.7 5.1-24.9 14.1-33.9l51.9-51.9c9-9 21.2-14.1 33.9-14.1H128zM0 416V336H128v16c0 17.7 14.3 32 32 32s32-14.3 32-32V336H320v16c0 17.7 14.3 32 32 32s32-14.3 32-32V336H512v80c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64z"/></svg>
+                    </div>
+                    Custom Tools
+                  </div>
+                  
+                  </div>
+                  
+                  <div class="mission_brief">
+                    <div class="mission_info_heading text_accent_dark">Mission Brief</div>
+                    <p>A spritesheet editor made with a custom rendering library with C++ and OpenGL. <br><br> It was to help him make animated sprites for his 2D games. </p>
+                  </div>
+                  
+                  <div class="other_info">
+                    
+                    <div class="challenges">
+                      <div class="mission_info_heading text_accent_dark">Challenges</div>
+                      <div class="challenge_list">
+                        
+                        <div class="challenge"> <img class="challenge_checkbox" src="img/icons/Toggle On.png" alt="">Expand custom Immediate Mode UI library to create this application.</div>
+                        
+                        <div class="challenge"> <img class="challenge_checkbox" src="img/icons/Toggle On.png" alt="">Create a UI based application that can load spritesheets and create animations.</div>
+                        
+                        <div class="challenge"> <img class="challenge_checkbox" src="img/icons/Toggle On.png" alt="">Export sprite animations as json that can be used by custom libary games.</div>
+                        
+                      </div>
+                    </div>  
+                    
+
+                    
+                    <div class="vertical_line"></div>
+
+                    
+                      <div class="rewards">
+                        <div class="mission_info_heading text_accent_dark">Rewards</div>
+                        <table class="skill_points_table">
+                          
+                            <tr>
+                              <td><div class="skill_content">
+                                <div class="skill_icon">
+                                  <svg height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344V280H168c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H280v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg>
+                                </div>
+                              </div></td>
+                              <td><div class="skill_content">7,000 XP</div></td>
+                            </tr>
+                          
+                            <tr>
+                              <td><div class="skill_content">
+                                <div class="skill_icon">
+                                  <svg height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344V280H168c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H280v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg>
+                                </div>
+                              </div></td>
+                              <td><div class="skill_content">UI Library XP</div></td>
+                            </tr>
+                          
+                            <tr>
+                              <td><div class="skill_content">
+                                <div class="skill_icon">
+                                  <svg height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344V280H168c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H280v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg>
+                                </div>
+                              </div></td>
+                              <td><div class="skill_content">New Custom Tool</div></td>
+                            </tr>
+                          
+                        </table>
+                      </div>
+                    
+                  </div>
+                  
+                  <div class="play_section">
+                  
+                    <a class="glow_button" href="https://github.com/HritikDutta/spedit" target="_blank">
+                      <div class="button_prompt xbox_button" id="xbox_button_a">A</div>
+                      <span>Play</span>
+                    </a>
+                  
+                  </div>
+                </div>
+              </div>
+              
+              
+              <div class="mission_info option_info" id="side_mission_5" data-updates-mission-cache>
+                <div class="option_info_container">
+                  <div class="mission_header">
+                    <h2>Hurry! Flurry</h2>
+                    
+                  </div>
+                  
+                  
+                  <div class="mission_images">
+                    <div class="nav_buttons">
+                      <button class="glow_button" id="nav_button_prev" onclick="sliderMoveToIndex(sliderTargetSelectionIndex - 1)">
+                        <img src="img/icons/arrow-big-right.svg" alt="">
+                      </button>
+                      
+                      <button class="glow_button" id="nav_button_next" onclick="sliderMoveToIndex(sliderTargetSelectionIndex + 1)">
+                        <img src="img/icons/arrow-big-right.svg" alt="">
+                      </button>
+                    </div>
+                    
+                    <div class="mission_images_content">
+                      <div class="slider_mask hide_scrollbar"  tabindex="-1">
+                        <div class="slider">
+                        
+                        <div class="slider_container image_container">
+                          
+                            <img src="https://drive.google.com/uc?id=1rf8GKMtG7gxfeX-qSU0IOzhv6tJjaf4B" loading="lazy" alt="">
+                          
+                          </div>
+                        
+                        <div class="slider_container image_container">
+                          
+                            <img src="https://drive.google.com/uc?id=1gvPFFmZHuR3F9EZYEmtcyGD-K1Fcsvf5" loading="lazy" alt="">
+                          
+                          </div>
+                        
+                        <div class="slider_container image_container">
+                          
+                            <img src="img/projects/games/01-Hurry Flurry/thumbnail_01.jpg" loading="lazy" alt="">
+                          
+                          </div>
+                        
+                        <div class="slider_container image_container">
+                          
+                            <img src="img/projects/games/01-Hurry Flurry/thumbnail_02.jpg" loading="lazy" alt="">
+                          
+                          </div>
+                        
+                        <div class="slider_container image_container">
+                          
+                            <img src="img/projects/games/01-Hurry Flurry/thumbnail_03.jpg" loading="lazy" alt="">
+                          
+                          </div>
+                        
+                        <div class="slider_container image_container">
+                          
+                            <img src="img/projects/games/01-Hurry Flurry/thumbnail_04.jpg" loading="lazy" alt="">
+                          
+                          </div>
+                        
+                        <div class="slider_container image_container">
+                          
+                            <img src="img/projects/games/01-Hurry Flurry/thumbnail_05.jpg" loading="lazy" alt="">
+                          
+                          </div>
+                        
+                        </div>
+                      </div>
+                      
+                      <div class="image_lower_container">
+                        <span>10th Sept 2020</span>
+                        <span class="difficulty_text">Difficulty: Medium</span>
+                        <!-- Slider dots need to be in front so they can be interacted with -->
+                        <span class="slider_dots">
+                          
+                          <input type="radio" autocomplete="off" class="slider_dot_radio image_slider_dot" name="side_mission_5_image" onchange="sliderMoveToIndex(0)" checked>
+                          
+                          <input type="radio" autocomplete="off" class="slider_dot_radio image_slider_dot" name="side_mission_5_image" onchange="sliderMoveToIndex(1)" >
+                          
+                          <input type="radio" autocomplete="off" class="slider_dot_radio image_slider_dot" name="side_mission_5_image" onchange="sliderMoveToIndex(2)" >
+                          
+                          <input type="radio" autocomplete="off" class="slider_dot_radio image_slider_dot" name="side_mission_5_image" onchange="sliderMoveToIndex(3)" >
+                          
+                          <input type="radio" autocomplete="off" class="slider_dot_radio image_slider_dot" name="side_mission_5_image" onchange="sliderMoveToIndex(4)" >
+                          
+                          <input type="radio" autocomplete="off" class="slider_dot_radio image_slider_dot" name="side_mission_5_image" onchange="sliderMoveToIndex(5)" >
+                          
+                          <input type="radio" autocomplete="off" class="slider_dot_radio image_slider_dot" name="side_mission_5_image" onchange="sliderMoveToIndex(6)" >
+                          
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  
+                  <div class="mission_tags">
+                  
+                  <div class="mission_tag">
+                    <div class="skill_icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M243.583 91.6027L323.695 138.384C326.575 140.026 326.68 144.583 323.695 146.225L228.503 201.854C225.623 203.55 222.22 203.444 219.549 201.854L124.357 146.225C121.425 144.636 121.373 139.973 124.357 138.384L204.417 91.6027V0L0 119.417V358.252L78.3843 312.477V218.914C78.3319 215.576 82.2066 213.192 85.0865 214.993L180.279 270.622C183.159 272.318 184.782 275.338 184.782 278.464V389.669C184.834 393.007 180.959 395.391 178.079 393.589L97.9673 346.808L19.583 392.583L224 512L428.417 392.583L350.033 346.808L269.921 393.589C267.093 395.338 263.114 393.06 263.218 389.669V278.464C263.218 275.126 265.051 272.159 267.721 270.622L362.914 214.993C365.741 213.245 369.72 215.47 369.616 218.914V312.477L448 358.252V119.417L243.583 0V91.6027Z"/></svg>
+                    </div>
+                    Unity
+                  </div>
+                  
+                  <div class="mission_tag">
+                    <div class="skill_icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M64 96c0-35.3 28.7-64 64-64H512c35.3 0 64 28.7 64 64V352H512V96H128V352H64V96zM0 403.2C0 392.6 8.6 384 19.2 384H620.8c10.6 0 19.2 8.6 19.2 19.2c0 42.4-34.4 76.8-76.8 76.8H76.8C34.4 480 0 445.6 0 403.2zM281 209l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-48-48c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zM393 175l48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"/></svg>
+                    </div>
+                    C#
+                  </div>
+                  
+                  <div class="mission_tag">
+                    <div class="skill_icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M420.55,301.93a24,24,0,1,1,24-24,24,24,0,0,1-24,24m-265.1,0a24,24,0,1,1,24-24,24,24,0,0,1-24,24m273.7-144.48,47.94-83a10,10,0,1,0-17.27-10h0l-48.54,84.07a301.25,301.25,0,0,0-246.56,0L116.18,64.45a10,10,0,1,0-17.27,10h0l47.94,83C64.53,202.22,8.24,285.55,0,384H576c-8.24-98.45-64.54-181.78-146.85-226.55"/></svg>
+                    </div>
+                    Android Development
+                  </div>
+                  
+                  <div class="mission_tag">
+                    <div class="skill_icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M413.5 237.5c-28.2 4.8-58.2-3.6-80-25.4l-38.1-38.1C280.4 159 272 138.8 272 117.6V105.5L192.3 62c-5.3-2.9-8.6-8.6-8.3-14.7s3.9-11.5 9.5-14l47.2-21C259.1 4.2 279 0 299.2 0h18.1c36.7 0 72 14 98.7 39.1l44.6 42c24.2 22.8 33.2 55.7 26.6 86L503 183l8-8c9.4-9.4 24.6-9.4 33.9 0l24 24c9.4 9.4 9.4 24.6 0 33.9l-88 88c-9.4 9.4-24.6 9.4-33.9 0l-24-24c-9.4-9.4-9.4-24.6 0-33.9l8-8-17.5-17.5zM27.4 377.1L260.9 182.6c3.5 4.9 7.5 9.6 11.8 14l38.1 38.1c6 6 12.4 11.2 19.2 15.7L134.9 484.6c-14.5 17.4-36 27.4-58.6 27.4C34.1 512 0 477.8 0 435.7c0-22.6 10.1-44.1 27.4-58.6z"/></svg>
+                    </div>
+                    Level Design
+                  </div>
+                  
+                  <div class="mission_tag">
+                    <div class="skill_icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 80C149.9 80 62.4 159.4 49.6 262c9.4-3.8 19.6-6 30.4-6c26.5 0 48 21.5 48 48V432c0 26.5-21.5 48-48 48c-44.2 0-80-35.8-80-80V384 336 288C0 146.6 114.6 32 256 32s256 114.6 256 256v48 48 16c0 44.2-35.8 80-80 80c-26.5 0-48-21.5-48-48V304c0-26.5 21.5-48 48-48c10.8 0 21 2.1 30.4 6C449.6 159.4 362.1 80 256 80z"/></svg>
+                    </div>
+                    Sound Design
+                  </div>
+                  
+                  </div>
+                  
+                  <div class="mission_brief">
+                    <div class="mission_info_heading text_accent_dark">Mission Brief</div>
+                    <p>An infinite puzzle platformer where the player can switch between states of matter (solid, liquid, gas) to solve puzzles and get as far as possible. <br><br> Quite literally his first rodeo... </p>
+                  </div>
+                  
+                  <div class="other_info">
+                    
+                    <div class="challenges">
+                      <div class="mission_info_heading text_accent_dark">Challenges</div>
+                      <div class="challenge_list">
+                        
+                        <div class="challenge"> <img class="challenge_checkbox" src="img/icons/Toggle On.png" alt="">Program an infinite runner that cycles between multiple environments.</div>
+                        
+                        <div class="challenge"> <img class="challenge_checkbox" src="img/icons/Toggle On.png" alt="">Develop core mechanics of switching between Solid, Liquid, and Gas form with a simple control scheme.</div>
+                        
+                        <div class="challenge"> <img class="challenge_checkbox" src="img/icons/Toggle On.png" alt="">Design and implement with the help of an artist multiple infinitely replayable puzzles that take advantage of the core mechanics.</div>
+                        
+                        <div class="challenge"> <img class="challenge_checkbox" src="img/icons/Toggle On.png" alt="">Work in a small team of 3 people to finish and publish a mobile game on the Google Play Store.</div>
+                        
+                      </div>
+                    </div>  
+                    
+
+                    
+                    <div class="vertical_line"></div>
+
+                    
+                      <div class="rewards">
+                        <div class="mission_info_heading text_accent_dark">Rewards</div>
+                        <table class="skill_points_table">
+                          
+                            <tr>
+                              <td><div class="skill_content">
+                                <div class="skill_icon">
+                                  <svg height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344V280H168c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H280v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg>
+                                </div>
+                              </div></td>
+                              <td><div class="skill_content">5,000 XP</div></td>
+                            </tr>
+                          
+                            <tr>
+                              <td><div class="skill_content">
+                                <div class="skill_icon">
+                                  <svg height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344V280H168c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H280v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg>
+                                </div>
+                              </div></td>
+                              <td><div class="skill_content">Unity XP</div></td>
+                            </tr>
+                          
+                            <tr>
+                              <td><div class="skill_content">
+                                <div class="skill_icon">
+                                  <svg height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344V280H168c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H280v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg>
+                                </div>
+                              </div></td>
+                              <td><div class="skill_content">First Project</div></td>
+                            </tr>
+                          
+                        </table>
+                      </div>
+                    
+                  </div>
+                  
+                  <div class="play_section">
+                  
+                    <a class="glow_button" href="https://play.google.com/store/apps/details?id=com.AFKStudios.HurryFlurry" target="_blank">
+                      <div class="button_prompt xbox_button" id="xbox_button_a">A</div>
+                      <span>Play</span>
+                    </a>
+                  
+                  </div>
+                </div>
+              </div>
+              
+              
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <div class="footer">
+        <div class="portfolio_description">
+          Hritik Dutta<br>
+          Game Developer Portfolio
+          
+          <br>
+          
+          
+          
+          
+          <br>
+          <a style="color: var(--programmer-dark)" href="Programmer.html">Programmer Portfolio</a>
+          
+          
+          
+          <br>
+          <a style="color: var(--film-maker-dark)" href="Film Maker.html">Film Maker Portfolio</a>
+          
+          
+          
+          <br>
+          <a style="color: var(--photographer-dark)" href="Photographer.html">Photographer Portfolio</a>
+          
+          
+        </div>
+        
+        <div class="resume_link_container">
+          <a href="https://drive.google.com/uc?id=1ng7wkv0K8crkOrX5gGpRYcPiH17rAY1v" target="_blank">Download Game Developer Resume</a>
+        </div>
+        
+        <div class="links">
+          
+          <a href="mailto:dutta.hritik@gmail.com" target="_blank"><img src="img/icons/links/Gmail.svg" alt="Gmail"></a>
+          
+          <a href="https://www.linkedin.com/in/hritik-dutta-a2b498154/" target="_blank"><img src="img/icons/links/LinkedIn.svg" alt="LinkedIn"></a>
+          
+          <a href="https://github.com/HritikDutta" target="_blank"><img src="img/icons/links/GitHub.svg" alt="GitHub"></a>
+          
+          <a href="https://hritikdutta.itch.io/" target="_blank"><img src="img/icons/links/itch.io.svg" alt="itch.io"></a>
+          
+          <a href="https://www.instagram.com/isnt.a.gram/" target="_blank"><img src="img/icons/links/Instagram.svg" alt="Instagram"></a>
+          
+          <a href="https://medium.com/@threewaydude" target="_blank"><img src="img/icons/links/Medium.svg" alt="Medium"></a>
+          
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  
+    <script>
+      missionIDToSelectOnLoad = 'main_mission_0';
+    </script>
+  
+  <script src="index.js"></script>
 </body>
 </html>
