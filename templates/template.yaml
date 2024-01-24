@@ -137,7 +137,7 @@ characters:
                 <br><br>
                 While this was his first professional project, he also helped out with many other projects in the company.
         media:
-          - path: https://drive.google.com/uc?id=1wtztcZyL25YQxWQLpRBDFdNHsAGIr-gO
+          - path: img/projects/games/01-Bump Pong/demo_01.mp4
             poster: img/projects/games/01-Bump Pong/demo_01.gif
             is-video: true
             has-audio: true
@@ -180,7 +180,7 @@ characters:
                 <br><br>
                 He thought it was time to flex his skills as a designer in a self imposed game jam.
         media:
-          - path: https://drive.google.com/uc?id=1VuTWSJBtFjlpLNe8KSeRI3zHf2adFMj6
+          - path: img/projects/games/07-Invaders from Outer Space!/demo_01.mp4
             poster: img/projects/games/07-Invaders from Outer Space!/demo_01.gif
             is-video: true
             has-audio: true
@@ -259,11 +259,11 @@ characters:
                 <br><br>
                 He was learning 3D rendering and procedural generation using only C++ and OpenGL at the time.
         media:
-          - path: https://drive.google.com/uc?id=1fT97GnbqwYjpO4xT--rbNq53qVNABiXp
+          - path: img/projects/games/05-Minecraft Clone/demo_01.mp4
             poster: img/projects/games/05-Minecraft Clone/demo_01.gif
             is-video: true
             has-audio: false
-          - path: https://drive.google.com/uc?id=1B3zjX0cV8O9rg689WVd2tHpnaRWyi5_X
+          - path: img/projects/games/05-Minecraft Clone/demo_02.mp4
             poster: img/projects/games/05-Minecraft Clone/demo_02.gif
             is-video: true
             has-audio: false
@@ -381,7 +381,7 @@ characters:
                 <br><br>
                 It was to help him make animated sprites for his 2D games.
         media:
-          - path: https://drive.google.com/uc?id=1PKV5EakDPfKTBUenJkMzbemGoPYfSPCI
+          - path: img/projects/games/02-Spedit/demo_01.mp4
             poster: img/projects/games/02-Spedit/demo_01.gif
             is-video: true
             has-audio: false
@@ -411,9 +411,9 @@ characters:
                 <br><br>
                 Quite literally his first rodeo...
         media:
-          - path: https://drive.google.com/uc?id=1rf8GKMtG7gxfeX-qSU0IOzhv6tJjaf4B
+          - path: img/projects/games/01-Hurry Flurry/menu.gif
             is-video: false
-          - path: https://drive.google.com/uc?id=1gvPFFmZHuR3F9EZYEmtcyGD-K1Fcsvf5
+          - path: img/projects/games/01-Hurry Flurry/gameplay.gif
             is-video: false
           - path: img/projects/games/01-Hurry Flurry/thumbnail_01.jpg
             is-video: false
@@ -627,20 +627,20 @@ characters:
                 He was learning 3D rendering using only C++ and OpenGL at the time.
         media:
           - path: https://drive.google.com/uc?id=1fT97GnbqwYjpO4xT--rbNq53qVNABiXp
-            poster: img/projects/games/09-Minecraft Clone/demo_01.gif
+            poster: img/projects/games/05-Minecraft Clone/demo_01.gif
             is-video: true
             has-audio: false
           - path: https://drive.google.com/uc?id=1B3zjX0cV8O9rg689WVd2tHpnaRWyi5_X
-            poster: img/projects/games/09-Minecraft Clone/demo_02.gif
+            poster: img/projects/games/05-Minecraft Clone/demo_02.gif
             is-video: true
             has-audio: false
-          - path: img/projects/games/09-Minecraft Clone/thumbnail_01.jpg
+          - path: img/projects/games/05-Minecraft Clone/thumbnail_01.jpg
             is-video: false
-          - path: img/projects/games/09-Minecraft Clone/thumbnail_02.jpg
+          - path: img/projects/games/05-Minecraft Clone/thumbnail_02.jpg
             is-video: false
-          - path: img/projects/games/09-Minecraft Clone/thumbnail_03.jpg
+          - path: img/projects/games/05-Minecraft Clone/thumbnail_03.jpg
             is-video: false
-          - path: img/projects/games/09-Minecraft Clone/thumbnail_04.jpg
+          - path: img/projects/games/05-Minecraft Clone/thumbnail_04.jpg
             is-video: false
         tags:
           - label: C++
@@ -673,8 +673,8 @@ characters:
                 <br><br>
                 It was to help Game Developer make animated sprites for his 2D games.
         media:
-          - path: https://drive.google.com/uc?id=1PKV5EakDPfKTBUenJkMzbemGoPYfSPCI
-            poster: img/projects/games/05-Spedit/demo_01.gif
+          - path: img/projects/games/02-Spedit/demo_01.mp4
+            poster: img/projects/games/02-Spedit/demo_01.gif
             is-video: true
             has-audio: false
         tags:
