@@ -1,3 +1,5 @@
+# Compressed videos using FreeConvert: https://www.freeconvert.com/video-compressor
+
 templates:
   - template: <$ file "index.template" $>
     output: ../index.html
