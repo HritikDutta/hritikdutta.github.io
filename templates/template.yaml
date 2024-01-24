@@ -80,7 +80,7 @@ characters:
                 <br><br>
                 His first professional gig of this scale as a game designer and technical artist.
         media:
-          - path: https://drive.google.com/uc?id=1Q8o1PsHXSx36JVqrQD4yPF_qKBZCRLhW
+          - path: img/projects/games/02-Mayanagari/wallpaper_01.mp4
             poster: img/projects/games/02-Mayanagari/wallpaper_01.gif
             is-video: true
             has-audio: true
