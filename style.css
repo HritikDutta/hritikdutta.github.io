@@ -871,7 +871,19 @@ main {
   width: 100%;
 
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.mission_summary_link {
+  color: var(--light-grey);
+  text-decoration: none;
+}
+
+.mission_summary_link:hover {
+  color: var(--light-grey);
+  text-decoration: underline;
 }
 
 .colour_transition_box {
@@ -1379,6 +1391,8 @@ main {
 
   .play_section {
     justify-content: center;
+    flex-direction: column;
+    gap: 1.5rem;
   }
 
   .play_section > .glow_button {

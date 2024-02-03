@@ -77,6 +77,7 @@ characters:
     main-missions:
       - name: Mayanagari
         href: https://youtu.be/_Ofj-bAjJ8Y
+        summary: https://medium.com/@threewaydude/mayanagari-design-breakdown-d27bf782c557
         context:
           name: Hypernova Interactive
           href: https://www.hypernovainteractive.com/
