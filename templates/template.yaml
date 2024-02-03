@@ -92,6 +92,10 @@ characters:
             poster: img/projects/games/02-Mayanagari/wallpaper_01.gif
             is-video: true
             has-audio: true
+          - path: img/projects/games/02-Mayanagari/demo_reel.mp4
+            poster: img/projects/games/02-Mayanagari/demo_reel.gif
+            is-video: true
+            has-audio: true
           - path: img/projects/games/02-Mayanagari/thumbnail_01.webp
             is-video: false
           - path: img/projects/games/02-Mayanagari/thumbnail_02.webp
