@@ -284,7 +284,7 @@
                   
                   <$ if mission.summary {
                     <a class="mission_summary_link" href="<$ mission.summary $>" target="_blank">
-                      <span>Go to Mission Summary</span>
+                      <span>View Mission Summary</span>
                     </a>
                   } $>
                   </div>
