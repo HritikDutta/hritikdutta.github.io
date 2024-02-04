@@ -97,13 +97,13 @@ characters:
             poster: img/projects/games/02-Mayanagari/demo_reel.gif
             is-video: true
             has-audio: true
-          - path: img/projects/games/02-Mayanagari/thumbnail_01.webp
+          - path: img/projects/games/02-Mayanagari/thumbnail_01.png
             is-video: false
-          - path: img/projects/games/02-Mayanagari/thumbnail_02.webp
+          - path: img/projects/games/02-Mayanagari/thumbnail_02.png
             is-video: false
-          - path: img/projects/games/02-Mayanagari/thumbnail_03.webp
+          - path: img/projects/games/02-Mayanagari/thumbnail_03.png
             is-video: false
-          - path: img/projects/games/02-Mayanagari/thumbnail_04.webp
+          - path: img/projects/games/02-Mayanagari/thumbnail_04.png
             is-video: false
         tags:
           - label: Unity
