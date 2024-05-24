@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HHH Link Generator</title>
+</head>
+<body onload="onLoad()">
+  <div class="link">
+    <label>Link:</label>
+    <input type="text" id="link_text" value="https://store.steampowered.com/app/2964000" readonly>
+    <button id="link_text_lock" onclick="toggleLinkLock()">Unlock</button>
+  </div>
+  
+  <div class="options">
+    <label>Source:</label>
+    <select name="Source" id="source">
+      <option value="...">...</option>
+      <option value="Instagram">Instagram</option>
+      <option value="LinkedIn">LinkedIn</option>
+      <option value="Reddit">Reddit</option>
+      <option value="Threads">Threads</option>
+      <option value="Twitter">Twitter</option>
+      <option value="Youtube">Youtube</option>
+    </select>
+    
+    <label>Campaign:</label>
+    <select name="Campaign" id="campaign">
+      <option value="...">...</option>
+    </select>
+  </div>
+  
+  <div class="generate">
+    <button id="generate_button" onclick="generateLink()">Generate</button>
+  </div>
+  
+  <div class="output">
+    <label id="generated_link">Link will come here...</label>
+  </div>
+    
+  <script src="index.js"></script>
+  </body>
+</html>
