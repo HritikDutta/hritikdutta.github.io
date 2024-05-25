@@ -1,0 +1,9 @@
+[source]
+Instagram
+LinkedIn
+Reddit
+Threads
+Twitter
+Youtube
+
+[campaign]
