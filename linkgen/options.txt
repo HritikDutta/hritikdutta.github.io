@@ -7,3 +7,4 @@ Twitter
 Youtube
 
 [campaign]
+Summer Sale
