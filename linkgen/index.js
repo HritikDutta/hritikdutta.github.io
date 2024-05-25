@@ -20,7 +20,7 @@ function onLoad() {
   { // Load and setup options
     // const filepath = "https://hritikdutta.github.io/linkgen/options.txt"; // Only for testing offline!
     
-    const filepath = document.URL.slice(0, -("index.html").length) + "options.txt";
+    const filepath = document.URL + "options.txt";
     loadFileAsText(filepath, contents => {
       fillOptions(contents);
       campaignSelector.readOnly = sourceSelector.readOnly = generateButton.readOnly = false;
