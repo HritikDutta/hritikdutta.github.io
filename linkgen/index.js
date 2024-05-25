@@ -61,7 +61,7 @@ function appendUtmCode(generatedLink, isFirst, selector) {
     generatedLink = generatedLink.concat('&');
   }
   
-  return generatedLink.concat('utm_', selector.id, '=', encodeURIComponent(selector.value));
+  return generatedLink.concat('utm_', selector.id, '=', selector.value);
 }
 
 function toggleLinkLock() {
@@ -123,7 +123,7 @@ function fillOptions(contents) {
     }
 
     currentSelector.innerHTML = currentSelector.innerHTML.concat(
-      `      <option value="${line}">${line}</option>`
+      `      <option value="${encodeURIComponent(line)}">${line}</option>`
     );
   }
 }
