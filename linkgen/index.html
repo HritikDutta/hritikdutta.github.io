@@ -4,27 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HHH Link Generator</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body onload="onLoad()">
   <div class="link">
-    <label>Link:</label>
+    <label for="link_text">Link:</label>
     <input type="text" id="link_text" value="https://store.steampowered.com/app/2964000" readonly>
     <button id="link_text_lock" onclick="toggleLinkLock()">Unlock</button>
   </div>
   
   <div class="options">
-    <label>Source:</label>
+    <label for="source">Source:</label>
     <select name="Source" id="source">
       <option value="...">...</option>
-      <option value="Instagram">Instagram</option>
-      <option value="LinkedIn">LinkedIn</option>
-      <option value="Reddit">Reddit</option>
-      <option value="Threads">Threads</option>
-      <option value="Twitter">Twitter</option>
-      <option value="Youtube">Youtube</option>
     </select>
     
-    <label>Campaign:</label>
+    <label for="campaign">Campaign:</label>
     <select name="Campaign" id="campaign">
       <option value="...">...</option>
     </select>
@@ -37,7 +37,11 @@
   <div class="output">
     <label id="generated_link">Link will come here...</label>
   </div>
-    
+
+  <div class="notification">
+    <label id="notification_label">Copied link!</label>
+  </div>
+
   <script src="index.js"></script>
   </body>
 </html>
