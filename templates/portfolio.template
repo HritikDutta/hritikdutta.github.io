@@ -1,5 +1,7 @@
 <$ character: characters[params.selected-index] $>
 <!DOCTYPE html>
+<!-- What are you doing here?! -->
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">

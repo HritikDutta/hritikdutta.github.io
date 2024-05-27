@@ -1,5 +1,7 @@
 
 <!DOCTYPE html>
+<!-- What are you doing here?! -->
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -250,7 +252,7 @@
         <div class="window_body">
           <div class="window_content">
             <button class="options_list_toggle" id="mission_toggle" value="mission_options">
-              <h2>Mayanagari</h2>
+              <h2>Hush Hush High</h2>
               <img class="option_toggle_arrow" src="img/icons/arrow-small-back.svg" alt="">
             </button>
             <div class="options_list" id="mission_options">
@@ -268,7 +270,7 @@
               <div class="option">
                 <input type="radio" autocomplete="off" class="option_radio_button" id="main_mission_0_radio" name="selected_mission" value="main_mission_0" checked>
                 <label for="main_mission_0_radio" class="option_button">
-                  <span>Mayanagari</span>
+                  <span>Hush Hush High</span>
                   <img class="option_select_arrow" src="img/icons/arrow-small-back.svg" alt="">
                 </label>
               </div>
@@ -277,6 +279,15 @@
               <div class="option">
                 <input type="radio" autocomplete="off" class="option_radio_button" id="main_mission_1_radio" name="selected_mission" value="main_mission_1" >
                 <label for="main_mission_1_radio" class="option_button">
+                  <span>Mayanagari</span>
+                  <img class="option_select_arrow" src="img/icons/arrow-small-back.svg" alt="">
+                </label>
+              </div>
+              
+              
+              <div class="option">
+                <input type="radio" autocomplete="off" class="option_radio_button" id="main_mission_2_radio" name="selected_mission" value="main_mission_2" >
+                <label for="main_mission_2_radio" class="option_button">
                   <span>Bump Pong</span>
                   <img class="option_select_arrow" src="img/icons/arrow-small-back.svg" alt="">
                 </label>
@@ -395,6 +406,254 @@
               <div class="mission_info option_info" id="main_mission_0" data-updates-mission-cache>
                 <div class="option_info_container">
                   <div class="mission_header">
+                    <h2>Hush Hush High</h2>
+                    
+                  </div>
+                  
+                  
+                  <div class="mission_images">
+                    <div class="nav_buttons">
+                      <button class="glow_button" id="nav_button_prev" onclick="sliderMoveToIndex(sliderTargetSelectionIndex - 1)">
+                        <img src="img/icons/arrow-big-right.svg" alt="">
+                      </button>
+                      
+                      <button class="glow_button" id="nav_button_next" onclick="sliderMoveToIndex(sliderTargetSelectionIndex + 1)">
+                        <img src="img/icons/arrow-big-right.svg" alt="">
+                      </button>
+                    </div>
+                    
+                    <div class="mission_images_content">
+                      <div class="slider_mask hide_scrollbar" tabindex="-1">
+                        <div class="slider">
+                        
+                        <div class="slider_container image_container">
+                          
+                          <img class="disappear_on_video_load poster_image" src="img/projects/games/03-Hush Hush High/trailer.gif" loading="lazy" alt="">
+                          <div class="disappear_on_video_load buffer_holder">
+                            <img class="buffer_icon" src="img/icons/buffer.svg" alt="">
+                          </div>
+                          <video loop playsinline muted preload="none" tabindex="-1"><source src="img/projects/games/03-Hush Hush High/trailer.mp4" type="video/mp4"></video>
+                          
+                          <button class="mute_toggle" onclick="toggleMute()">
+                            <svg class="unmute_icon" fill="white" viewBox="0 0 640 512" style="display: none"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M533.6 32.5C598.5 85.3 640 165.8 640 256s-41.5 170.8-106.4 223.5c-10.3 8.4-25.4 6.8-33.8-3.5s-6.8-25.4 3.5-33.8C557.5 398.2 592 331.2 592 256s-34.5-142.2-88.7-186.3c-10.3-8.4-11.8-23.5-3.5-33.8s23.5-11.8 33.8-3.5zM473.1 107c43.2 35.2 70.9 88.9 70.9 149s-27.7 113.8-70.9 149c-10.3 8.4-25.4 6.8-33.8-3.5s-6.8-25.4 3.5-33.8C475.3 341.3 496 301.1 496 256s-20.7-85.3-53.2-111.8c-10.3-8.4-11.8-23.5-3.5-33.8s23.5-11.8 33.8-3.5zm-60.5 74.5C434.1 199.1 448 225.9 448 256s-13.9 56.9-35.4 74.5c-10.3 8.4-25.4 6.8-33.8-3.5s-6.8-25.4 3.5-33.8C393.1 284.4 400 271 400 256s-6.9-28.4-17.7-37.3c-10.3-8.4-11.8-23.5-3.5-33.8s23.5-11.8 33.8-3.5zM301.1 34.8C312.6 40 320 51.4 320 64V448c0 12.6-7.4 24-18.9 29.2s-25 3.1-34.4-5.3L131.8 352H64c-35.3 0-64-28.7-64-64V224c0-35.3 28.7-64 64-64h67.8L266.7 40.1c9.4-8.4 22.9-10.4 34.4-5.3z"/></svg>
+                            <svg class="mute_icon" fill="white" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M301.1 34.8C312.6 40 320 51.4 320 64V448c0 12.6-7.4 24-18.9 29.2s-25 3.1-34.4-5.3L131.8 352H64c-35.3 0-64-28.7-64-64V224c0-35.3 28.7-64 64-64h67.8L266.7 40.1c9.4-8.4 22.9-10.4 34.4-5.3zM425 167l55 55 55-55c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-55 55 55 55c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-55-55-55 55c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l55-55-55-55c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"/></svg>
+                          </button>
+                          
+                          
+                          </div>
+                        
+                        <div class="slider_container image_container">
+                          
+                            <img src="img/projects/games/03-Hush Hush High/thumbnail_01.jpg" loading="lazy" alt="">
+                          
+                          </div>
+                        
+                        <div class="slider_container image_container">
+                          
+                            <img src="img/projects/games/03-Hush Hush High/thumbnail_02.jpg" loading="lazy" alt="">
+                          
+                          </div>
+                        
+                        <div class="slider_container image_container">
+                          
+                            <img src="img/projects/games/03-Hush Hush High/thumbnail_03.jpg" loading="lazy" alt="">
+                          
+                          </div>
+                        
+                        <div class="slider_container image_container">
+                          
+                            <img src="img/projects/games/03-Hush Hush High/thumbnail_04.jpg" loading="lazy" alt="">
+                          
+                          </div>
+                        
+                        <div class="slider_container image_container">
+                          
+                            <img src="img/projects/games/03-Hush Hush High/thumbnail_05.jpg" loading="lazy" alt="">
+                          
+                          </div>
+                        
+                        <div class="slider_container image_container">
+                          
+                            <img src="img/projects/games/03-Hush Hush High/thumbnail_06.jpg" loading="lazy" alt="">
+                          
+                          </div>
+                        
+                        <div class="slider_container image_container">
+                          
+                            <img src="img/projects/games/03-Hush Hush High/thumbnail_07.jpg" loading="lazy" alt="">
+                          
+                          </div>
+                        
+                        </div>
+                      </div>
+                      
+                      <div class="image_lower_container">
+                        <span>Ongoing</span>
+                        <span class="difficulty_text">Difficulty: Medium</span>
+                        <!-- Slider dots need to be in front so they can be interacted with -->
+                        <span class="slider_dots">
+                          
+                          <input type="radio" autocomplete="off" class="slider_dot_radio image_slider_dot" name="main_mission_0_image" onchange="sliderMoveToIndex(0)" checked>
+                          
+                          <input type="radio" autocomplete="off" class="slider_dot_radio image_slider_dot" name="main_mission_0_image" onchange="sliderMoveToIndex(1)" >
+                          
+                          <input type="radio" autocomplete="off" class="slider_dot_radio image_slider_dot" name="main_mission_0_image" onchange="sliderMoveToIndex(2)" >
+                          
+                          <input type="radio" autocomplete="off" class="slider_dot_radio image_slider_dot" name="main_mission_0_image" onchange="sliderMoveToIndex(3)" >
+                          
+                          <input type="radio" autocomplete="off" class="slider_dot_radio image_slider_dot" name="main_mission_0_image" onchange="sliderMoveToIndex(4)" >
+                          
+                          <input type="radio" autocomplete="off" class="slider_dot_radio image_slider_dot" name="main_mission_0_image" onchange="sliderMoveToIndex(5)" >
+                          
+                          <input type="radio" autocomplete="off" class="slider_dot_radio image_slider_dot" name="main_mission_0_image" onchange="sliderMoveToIndex(6)" >
+                          
+                          <input type="radio" autocomplete="off" class="slider_dot_radio image_slider_dot" name="main_mission_0_image" onchange="sliderMoveToIndex(7)" >
+                          
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  
+                  <div class="mission_tags">
+                  
+                  <div class="mission_tag">
+                    <div class="skill_icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 687 648"><path d="M544.914 475.267L541.46 524.777C541.044 530.744 536.298 535.494 530.332 535.923L411.522 544.402C411.232 544.424 410.942 544.433 410.656 544.433C404.751 544.433 399.658 540.099 398.785 534.169L391.972 487.953H295.028L288.215 534.169C287.3 540.389 281.741 544.861 275.479 544.402L156.668 535.922C150.702 535.494 145.957 530.744 145.541 524.777L142.086 475.267L41.7898 465.594C41.8361 476.376 41.9747 488.187 41.9747 490.539C41.9747 596.489 176.347 647.414 343.295 648H343.705C510.653 647.414 644.979 596.489 644.979 490.539C644.979 488.144 645.124 476.382 645.174 465.594L544.914 475.267Z"/><path d="M236.429 337.402C236.429 362.041 216.463 382.011 191.811 382.011C167.17 382.011 147.192 362.041 147.192 337.402C147.192 312.762 167.17 292.773 191.811 292.773C216.463 292.773 236.429 312.762 236.429 337.402Z"/><path d="M450.577 337.402C450.577 362.041 470.536 382.011 495.17 382.011C519.829 382.011 539.789 362.041 539.789 337.402C539.789 312.762 519.829 292.773 495.17 292.773C470.536 292.773 450.577 312.762 450.577 337.402Z"/><path d="M273.627 0C242.245 6.97826 211.199 16.6952 182.094 31.3483C182.759 57.0545 184.421 81.6845 187.789 106.703C176.486 113.947 164.606 120.163 154.049 128.643C143.322 136.897 132.365 144.793 122.652 154.446C103.247 141.609 82.7115 129.544 61.5533 118.895C38.7465 143.445 17.4202 169.943 0 199.595C13.6904 221.089 28.3743 242.693 41.9734 259.541V441.523C42.3062 441.525 42.6414 441.536 42.9712 441.567L154.512 452.325C160.355 452.889 164.933 457.594 165.339 463.451L168.78 512.699L266.076 519.645L272.777 474.189C273.646 468.296 278.703 463.926 284.663 463.926H402.341C408.298 463.926 413.354 468.296 414.223 474.189L420.924 519.645L518.224 512.699L521.661 463.451C522.07 457.594 526.646 452.892 532.488 452.325L643.985 441.567C644.315 441.536 644.646 441.526 644.979 441.523V427.001L645.027 426.989V259.541C660.733 239.764 675.605 217.949 687 199.595C669.586 169.943 648.25 143.445 625.443 118.895C604.291 129.544 583.745 141.609 564.34 154.446C554.63 144.793 543.694 136.897 532.951 128.643C522.397 120.163 510.501 113.947 499.219 106.703C502.578 81.6845 504.242 57.0545 504.91 31.3483C475.802 16.6952 444.759 6.97826 413.361 0C400.825 21.0735 389.361 43.8961 379.377 66.2055C367.538 64.2267 355.644 63.4931 343.733 63.3513V63.3314C343.65 63.3314 343.573 63.3513 343.502 63.3513C343.428 63.3513 343.348 63.3314 343.275 63.3314V63.3513C331.343 63.4931 319.457 64.2267 307.615 66.2055C297.637 43.8961 286.182 21.0735 273.627 0ZM185.382 266.215C222.509 266.215 252.603 296.292 252.603 333.415C252.603 370.562 222.509 400.654 185.382 400.654C148.274 400.654 118.174 370.562 118.174 333.415C118.174 296.292 148.274 266.215 185.382 266.215ZM501.626 266.215C538.731 266.215 568.826 296.292 568.826 333.415C568.826 370.562 538.731 400.654 501.626 400.654C464.493 400.654 434.401 370.562 434.401 333.415C434.401 296.292 464.493 266.215 501.626 266.215ZM343.494 305.539C355.444 305.539 365.153 314.358 365.153 325.208V387.102C365.153 397.961 355.444 406.77 343.494 406.77C331.544 406.77 321.859 397.961 321.859 387.102V325.208C321.859 314.358 331.544 305.539 343.494 305.539Z"/></svg>
+                    </div>
+                    Godot
+                  </div>
+                  
+                  <div class="mission_tag">
+                    <div class="skill_icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M64 96c0-35.3 28.7-64 64-64H512c35.3 0 64 28.7 64 64V352H512V96H128V352H64V96zM0 403.2C0 392.6 8.6 384 19.2 384H620.8c10.6 0 19.2 8.6 19.2 19.2c0 42.4-34.4 76.8-76.8 76.8H76.8C34.4 480 0 445.6 0 403.2zM281 209l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-48-48c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zM393 175l48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"/></svg>
+                    </div>
+                    C#
+                  </div>
+                  
+                  <div class="mission_tag">
+                    <div class="skill_icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M176 24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64c-35.3 0-64 28.7-64 64H24c-13.3 0-24 10.7-24 24s10.7 24 24 24H64v56H24c-13.3 0-24 10.7-24 24s10.7 24 24 24H64v56H24c-13.3 0-24 10.7-24 24s10.7 24 24 24H64c0 35.3 28.7 64 64 64v40c0 13.3 10.7 24 24 24s24-10.7 24-24V448h56v40c0 13.3 10.7 24 24 24s24-10.7 24-24V448h56v40c0 13.3 10.7 24 24 24s24-10.7 24-24V448c35.3 0 64-28.7 64-64h40c13.3 0 24-10.7 24-24s-10.7-24-24-24H448V280h40c13.3 0 24-10.7 24-24s-10.7-24-24-24H448V176h40c13.3 0 24-10.7 24-24s-10.7-24-24-24H448c0-35.3-28.7-64-64-64V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H280V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H176V24zM160 128H352c17.7 0 32 14.3 32 32V352c0 17.7-14.3 32-32 32H160c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32zm192 32H160V352H352V160z"/></svg>
+                    </div>
+                    Systems Design
+                  </div>
+                  
+                  <div class="mission_tag">
+                    <div class="skill_icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M184 0c30.9 0 56 25.1 56 56V456c0 30.9-25.1 56-56 56c-28.9 0-52.7-21.9-55.7-50.1c-5.2 1.4-10.7 2.1-16.3 2.1c-35.3 0-64-28.7-64-64c0-7.4 1.3-14.6 3.6-21.2C21.4 367.4 0 338.2 0 304c0-31.9 18.7-59.5 45.8-72.3C37.1 220.8 32 207 32 192c0-30.7 21.6-56.3 50.4-62.6C80.8 123.9 80 118 80 112c0-29.9 20.6-55.1 48.3-62.1C131.3 21.9 155.1 0 184 0zM328 0c28.9 0 52.6 21.9 55.7 49.9c27.8 7 48.3 32.1 48.3 62.1c0 6-.8 11.9-2.4 17.4c28.8 6.2 50.4 31.9 50.4 62.6c0 15-5.1 28.8-13.8 39.7C493.3 244.5 512 272.1 512 304c0 34.2-21.4 63.4-51.6 74.8c2.3 6.6 3.6 13.8 3.6 21.2c0 35.3-28.7 64-64 64c-5.6 0-11.1-.7-16.3-2.1c-3 28.2-26.8 50.1-55.7 50.1c-30.9 0-56-25.1-56-56V56c0-30.9 25.1-56 56-56z"/></svg>
+                    </div>
+                    Video Game AI
+                  </div>
+                  
+                  <div class="mission_tag">
+                    <div class="skill_icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 80C149.9 80 62.4 159.4 49.6 262c9.4-3.8 19.6-6 30.4-6c26.5 0 48 21.5 48 48V432c0 26.5-21.5 48-48 48c-44.2 0-80-35.8-80-80V384 336 288C0 146.6 114.6 32 256 32s256 114.6 256 256v48 48 16c0 44.2-35.8 80-80 80c-26.5 0-48-21.5-48-48V304c0-26.5 21.5-48 48-48c10.8 0 21 2.1 30.4 6C449.6 159.4 362.1 80 256 80z"/></svg>
+                    </div>
+                    Sound Design
+                  </div>
+                  
+                  <div class="mission_tag">
+                    <div class="skill_icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M339.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L568.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S517.7-4.4 499.1 9.6L262.4 187.2c-24 18-38.2 46.1-38.4 76.1L339.3 367.1zm-19.6 25.4l-116-104.4C143.9 290.3 96 339.6 96 400c0 3.9 .2 7.8 .6 11.6C98.4 429.1 86.4 448 68.8 448H64c-17.7 0-32 14.3-32 32s14.3 32 32 32H208c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg>
+                    </div>
+                    Pixel Art
+                  </div>
+                  
+                  </div>
+                  
+                  <div class="mission_brief">
+                    <div class="mission_info_heading text_accent_dark">Mission Brief</div>
+                    <p>Step into the mind of Mochi, a gossip monger, and stop her from spreading the gossip to everyone in her high school in this weird stealth game. <br><br> Not being satisfied with his professional work, he decided to self publish a game on Steam. He had 2 accomplises for this one. </p>
+                  </div>
+                  
+                  <div class="other_info">
+                    
+                    <div class="challenges">
+                      <div class="mission_info_heading text_accent_dark">Challenges</div>
+                      <div class="challenge_list">
+                        
+                        <div class="challenge"> <img class="challenge_checkbox" src="img/icons/Toggle On.png" alt="">Design multiple minigames that all use the WASD keys in creative ways.</div>
+                        
+                        <div class="challenge"> <img class="challenge_checkbox" src="img/icons/Toggle On.png" alt="">Tell the narrative of the game through game mechanics.</div>
+                        
+                        <div class="challenge"> <img class="challenge_checkbox" src="img/icons/Toggle On.png" alt="">Learn a new engine and program the entire game in it.</div>
+                        
+                        <div class="challenge"> <img class="challenge_checkbox" src="img/icons/Toggle On.png" alt="">Set up a store page on Steam for the game.</div>
+                        
+                      </div>
+                    </div>  
+                    
+
+                    
+                    <div class="vertical_line"></div>
+
+                    
+                      <div class="rewards">
+                        <div class="mission_info_heading text_accent_dark">Rewards</div>
+                        <table class="skill_points_table">
+                          
+                            <tr>
+                              <td><div class="skill_content">
+                                <div class="skill_icon">
+                                  <svg height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344V280H168c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H280v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg>
+                                </div>
+                              </div></td>
+                              <td><div class="skill_content">20,000 XP</div></td>
+                            </tr>
+                          
+                            <tr>
+                              <td><div class="skill_content">
+                                <div class="skill_icon">
+                                  <svg height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344V280H168c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H280v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg>
+                                </div>
+                              </div></td>
+                              <td><div class="skill_content">Godot XP</div></td>
+                            </tr>
+                          
+                            <tr>
+                              <td><div class="skill_content">
+                                <div class="skill_icon">
+                                  <svg height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344V280H168c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H280v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg>
+                                </div>
+                              </div></td>
+                              <td><div class="skill_content">Steam Game XP</div></td>
+                            </tr>
+                          
+                            <tr>
+                              <td><div class="skill_content">
+                                <div class="skill_icon">
+                                  <svg height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344V280H168c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H280v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg>
+                                </div>
+                              </div></td>
+                              <td><div class="skill_content">Professional Project</div></td>
+                            </tr>
+                          
+                        </table>
+                      </div>
+                    
+                  </div>
+                  
+                  <div class="play_section">
+                  
+                    <a class="glow_button" href="https://store.steampowered.com/app/2964000?utm_source=Resume" target="_blank">
+                      <div class="button_prompt xbox_button" id="xbox_button_a">A</div>
+                      <span>Play</span>
+                    </a>
+                  
+                  
+                  
+                    <a class="mission_summary_link" href="https://hritikdutta.itch.io/hush-hush-high" target="_blank">
+                      <span>View Mission Summary</span>
+                    </a>
+                  
+                  </div>
+                </div>
+              </div>
+              
+              
+              <div class="mission_info option_info" id="main_mission_1" data-updates-mission-cache>
+                <div class="option_info_container">
+                  <div class="mission_header">
                     <h2>Mayanagari</h2>
                      <a href="https://www.hypernovainteractive.com/" target="_blank">Hypernova Interactive</a> 
                   </div>
@@ -480,17 +739,17 @@
                         <!-- Slider dots need to be in front so they can be interacted with -->
                         <span class="slider_dots">
                           
-                          <input type="radio" autocomplete="off" class="slider_dot_radio image_slider_dot" name="main_mission_0_image" onchange="sliderMoveToIndex(0)" checked>
+                          <input type="radio" autocomplete="off" class="slider_dot_radio image_slider_dot" name="main_mission_1_image" onchange="sliderMoveToIndex(0)" checked>
                           
-                          <input type="radio" autocomplete="off" class="slider_dot_radio image_slider_dot" name="main_mission_0_image" onchange="sliderMoveToIndex(1)" >
+                          <input type="radio" autocomplete="off" class="slider_dot_radio image_slider_dot" name="main_mission_1_image" onchange="sliderMoveToIndex(1)" >
                           
-                          <input type="radio" autocomplete="off" class="slider_dot_radio image_slider_dot" name="main_mission_0_image" onchange="sliderMoveToIndex(2)" >
+                          <input type="radio" autocomplete="off" class="slider_dot_radio image_slider_dot" name="main_mission_1_image" onchange="sliderMoveToIndex(2)" >
                           
-                          <input type="radio" autocomplete="off" class="slider_dot_radio image_slider_dot" name="main_mission_0_image" onchange="sliderMoveToIndex(3)" >
+                          <input type="radio" autocomplete="off" class="slider_dot_radio image_slider_dot" name="main_mission_1_image" onchange="sliderMoveToIndex(3)" >
                           
-                          <input type="radio" autocomplete="off" class="slider_dot_radio image_slider_dot" name="main_mission_0_image" onchange="sliderMoveToIndex(4)" >
+                          <input type="radio" autocomplete="off" class="slider_dot_radio image_slider_dot" name="main_mission_1_image" onchange="sliderMoveToIndex(4)" >
                           
-                          <input type="radio" autocomplete="off" class="slider_dot_radio image_slider_dot" name="main_mission_0_image" onchange="sliderMoveToIndex(5)" >
+                          <input type="radio" autocomplete="off" class="slider_dot_radio image_slider_dot" name="main_mission_1_image" onchange="sliderMoveToIndex(5)" >
                           
                         </span>
                       </div>
@@ -656,7 +915,7 @@
               </div>
               
               
-              <div class="mission_info option_info" id="main_mission_1" data-updates-mission-cache>
+              <div class="mission_info option_info" id="main_mission_2" data-updates-mission-cache>
                 <div class="option_info_container">
                   <div class="mission_header">
                     <h2>Bump Pong</h2>
@@ -722,13 +981,13 @@
                         <!-- Slider dots need to be in front so they can be interacted with -->
                         <span class="slider_dots">
                           
-                          <input type="radio" autocomplete="off" class="slider_dot_radio image_slider_dot" name="main_mission_1_image" onchange="sliderMoveToIndex(0)" checked>
+                          <input type="radio" autocomplete="off" class="slider_dot_radio image_slider_dot" name="main_mission_2_image" onchange="sliderMoveToIndex(0)" checked>
                           
-                          <input type="radio" autocomplete="off" class="slider_dot_radio image_slider_dot" name="main_mission_1_image" onchange="sliderMoveToIndex(1)" >
+                          <input type="radio" autocomplete="off" class="slider_dot_radio image_slider_dot" name="main_mission_2_image" onchange="sliderMoveToIndex(1)" >
                           
-                          <input type="radio" autocomplete="off" class="slider_dot_radio image_slider_dot" name="main_mission_1_image" onchange="sliderMoveToIndex(2)" >
+                          <input type="radio" autocomplete="off" class="slider_dot_radio image_slider_dot" name="main_mission_2_image" onchange="sliderMoveToIndex(2)" >
                           
-                          <input type="radio" autocomplete="off" class="slider_dot_radio image_slider_dot" name="main_mission_1_image" onchange="sliderMoveToIndex(3)" >
+                          <input type="radio" autocomplete="off" class="slider_dot_radio image_slider_dot" name="main_mission_2_image" onchange="sliderMoveToIndex(3)" >
                           
                         </span>
                       </div>
