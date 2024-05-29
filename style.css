@@ -935,8 +935,17 @@ main {
 .footer {
   width: 100%;
   color: var(--light-grey);
-
   position: relative;
+}
+
+.copyright {
+  font-size: min(0.8rem, 16px);
+  color: var(--light-grey);
+}
+
+.character_select_content .copyright {
+  margin: 2rem auto;
+  text-align: center;
 }
 
 .resume_link_container {
@@ -983,7 +992,6 @@ main {
 .character_select_content {
   width: min(76rem, 100svw);
   margin: 1rem auto;
-  gap: 1rem;
 }
 
 .character_select_header {
@@ -1368,8 +1376,12 @@ main {
     flex-direction: column-reverse;
     align-items: center;
     gap: 1.5rem;
+  }
 
+  .copyright {
     margin-bottom: 2rem;
+    
+    font-size: 0.8rem;
   }
 
   .resume_link_container,
