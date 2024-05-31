@@ -143,7 +143,7 @@ characters:
         date: Ongoing
         difficulty: Hard
         brief: >
-                A large scale open world mobile game based on the city of Mumbai, India. An enormous game being worked on by a very short but highly skilled team.
+                A large scale open world third person action game on mobile based on the city of Mumbai, India. An enormous game being worked on by a very short but highly skilled team.
                 <br><br>
                 His first professional gig of this scale as a game designer and technical artist.
         media:
@@ -185,7 +185,7 @@ characters:
           - Collaborate with developers to design and implment a GTA Style Wanted System along with police character AI and vehicle AI.
           - Work with developers and QA team to solve problems that surface during implementation of various features like AI and Vehicles.
           - Tune vehicles in game to feel unique and fun to drive while also being similar to their real world references.
-          - Create custom tools in Unity to help other designers and artists to speed up their workflow.
+          - Create custom tools in Unity to speed up workflows of Art, Animation, and Level Design.
           - Write shaders that make a large and dense world look good on mobile while also being optimized.
           - Manage marketing and playtesting events for the game and incorporate player feedback at various points in the development process.
           - Gain experience of working with a team in an Agile workflow to manage tasks and milestones.
