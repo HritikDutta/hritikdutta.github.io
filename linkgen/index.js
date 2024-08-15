@@ -24,7 +24,7 @@ function onLoad() {
     loadFileAsText(filepath, contents => {
       fillOptions(contents);
       campaignSelector.readOnly = sourceSelector.readOnly = generateButton.readOnly = false;
-});
+    });
   }
 }
 
