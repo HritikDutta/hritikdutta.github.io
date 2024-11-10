@@ -387,17 +387,14 @@ function onLoadLinks() {
   gradientBackground = document.querySelector('.gradient_background');
 
   const changeInterval = 5000
-  let totalDuration = accentColorNames.length * changeInterval
 
-  for (let i = 0; i < accentColorNames.length; i++) {
-      setTimeout(() => {
-        
-        setInterval(() => {
-          changeBackgroundGradientColor(i);
-        }, totalDuration);
+  let index = 0;
+  changeBackgroundGradientColor(index);
 
-      }, i * changeInterval);
-  }
+  setInterval(() => {
+    index = (index + 1) % accentColorNames.length;
+    changeBackgroundGradientColor(index);
+  }, changeInterval);
 
   onLoadPlayTransitions();
 }
