@@ -1171,7 +1171,7 @@ main {
 }
 
 .links_content {
-  margin-top: 20%;
+  margin-top: 5%;
 }
 
 .link_container {
@@ -1274,6 +1274,10 @@ main {
 }
 
 @media screen and (max-width: 1005px) {
+  .links_content {
+    margin-top: 20%;
+  }
+  
   .content {
     margin: 0;
   }
