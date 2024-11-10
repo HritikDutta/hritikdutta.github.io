@@ -386,7 +386,7 @@ function onLoadPlayTransitions() {
 function onLoadLinks() {
   gradientBackground = document.querySelector('.gradient_background');
 
-  const changeInterval = 1000
+  const changeInterval = 5000
   let totalDuration = accentColorNames.length * changeInterval
 
   for (let i = 0; i < accentColorNames.length; i++) {
