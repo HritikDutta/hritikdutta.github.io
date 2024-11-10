@@ -290,6 +290,21 @@ function onLoadMissionSelect() {
   onLoadPlayTransitions();
 }
 
+function changeBackgroundGradientColor(index) {
+  if (gradientBackground.style.opacity >= 1)
+    gradientBackground.style.opacity = 0;
+  
+  setTimeout(() => {
+    let root = document.querySelector(':root');
+    root.style.setProperty('--accent-light', 'var(--' + accentColorNames[index] + '-light)');
+    root.style.setProperty('--accent-dark', 'var(--' + accentColorNames[index] + '-dark)');
+    root.style.setProperty('--accent-light-half-opacity', 'var(--' + accentColorNames[index] + '-light-half-opacity)');
+    root.style.setProperty('--accent-dark-half-opacity', 'var(--' + accentColorNames[index] + '-dark-half-opacity)');
+    
+    gradientBackground.style.opacity = 1;
+  }, 200);
+}
+
 function sliderAdjustDuringScrollWithAccentColor() {
   forcedScrolling = true;
 
@@ -297,19 +312,7 @@ function sliderAdjustDuringScrollWithAccentColor() {
   let index = Math.floor((sliderMask.scrollLeft / width) + 0.5);
   
   if (index != sliderCurrentSelectionIndex) {
-    if (gradientBackground.style.opacity >= 1)
-      gradientBackground.style.opacity = 0;
-    
-    setTimeout(() => {
-      let root = document.querySelector(':root');
-      root.style.setProperty('--accent-light', 'var(--' + accentColorNames[index] + '-light)');
-      root.style.setProperty('--accent-dark', 'var(--' + accentColorNames[index] + '-dark)');
-      root.style.setProperty('--accent-light-half-opacity', 'var(--' + accentColorNames[index] + '-light-half-opacity)');
-      root.style.setProperty('--accent-dark-half-opacity', 'var(--' + accentColorNames[index] + '-dark-half-opacity)');
-      
-      gradientBackground.style.opacity = 1;
-    }, 200);
-    
+    changeBackgroundGradientColor(index);
     sliderUpdateUI(index);
   }
 }
@@ -378,4 +381,23 @@ function onLoadPlayTransitions() {
       allVertical[i].style.transitionDelay = (i * delayMultiplier + baseDelay).toString() + "s";
     }
   }
+}
+
+function onLoadLinks() {
+  gradientBackground = document.querySelector('.gradient_background');
+
+  const changeInterval = 1000
+  let totalDuration = accentColorNames.length * changeInterval
+
+  for (let i = 0; i < accentColorNames.length; i++) {
+      setTimeout(() => {
+        
+        setInterval(() => {
+          changeBackgroundGradientColor(i);
+        }, totalDuration);
+
+      }, i * changeInterval);
+  }
+
+  onLoadPlayTransitions();
 }

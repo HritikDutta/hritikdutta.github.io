@@ -17,55 +17,73 @@
   
   <style>
     :root {
-      --accent-light: var(--game-developer-light);
-      --accent-dark: var(--game-developer-dark);
+      --accent-light: var(--programmer-light);
+      --accent-dark: var(--programmer-dark);
       
-      --accent-light-half-opacity: var(--game-developer-light-half-opacity);
-      --accent-dark-half-opacity: var(--game-developer-dark-half-opacity);
+      --accent-light-half-opacity: var(--programmer-light-half-opacity);
+      --accent-dark-half-opacity: var(--programmer-dark-half-opacity);
     }
   </style>
   
   <script data-goatcounter="https://hritikdutta.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
-<body>
+<body onload="onLoadLinks()">
   <div class="gradient_background"></div>
-  <main>
-    <div class="content">
-      <div class="window">
-        <div class="window_body">
-          <center>
-            <h1>Hritik Dutta</h1>
-            <p>Game Designer | Game Developer | And more...</p>
-            <br>
-            <img src="img/icons/Character Select Icon Big.png" />
+  <main class="links_content">
+    <div class="window">
+      <div class="window_body">
+        <div class="window_content">
+          <div class="link_container">
+            <div class="transition_on_load_vertical links_hero">
+              <h1 class="with_stroke text_accent_light" value="Hritik Dutta">Hritik Dutta</h1>
+              <span>Game Designer | Game Developer | And more...</span>
+              <img src="img/icons/Character Select Icon Big.png" />
+            </div>
             
-            
-            <br><br><br><br>
-            
-            <!-- <a class="glow_button" href="index.html" target="_blank">
-              <img src="img/icons/favicons/Icon Character Select.png" />
-              <span>Portfolio</span>
-            </a> -->
-            <br>
-            
-            <a class="glow_button" href="https://www.linkedin.com/in/hritik-dutta-a2b498154/" target="_blank">
-              <img src="img/icons/links/LinkedIn.svg" />
-              <span>LinkedIn</span>
-            </a>
-            <br>
-            <a class="glow_button" href="https://github.com/HritikDutta" target="_blank">
-              <img src="img/icons/links/GitHub.svg" />
-              <span>GitHub</span>
-            </a>
-            <br>
-            <a class="glow_button" href="mailto:dutta.hritik@gmail.com" target="_blank">
-              <img src="img/icons/links/Gmail.svg" />
-              <span>Email</span>
-            </a>
-          </center>
+            <div class="transition_on_load_vertical">
+              <a class="glow_button" href="index.html" target="_blank">
+                <div class="link_img"><img src="img/icons/Character Select Link Icon.png" /></div>
+                <span>Portfolio</span>
+              </a>
+            </div>
+            <div class="transition_on_load_vertical">
+              <a class="glow_button" href="https://www.linkedin.com/in/hritik-dutta-a2b498154/" target="_blank">
+                <div class="link_img"><img src="img/icons/links/LinkedIn.svg" /></div>
+                <span>LinkedIn</span>
+              </a>
+            </div>
+            <div class="transition_on_load_vertical">
+              <a class="glow_button" href="https://github.com/HritikDutta" target="_blank">
+                <div class="link_img"><img src="img/icons/links/GitHub.svg" /></div>
+                <span>GitHub</span>
+              </a>
+            </div>
+            <div class="transition_on_load_vertical">
+              <a class="glow_button" href="mailto:dutta.hritik@gmail.com" target="_blank">
+                <div class="link_img"><img src="img/icons/links/Gmail.svg" /></div>
+                <span>Email</span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </main>
+  
+  <script>
+    const accentColorNames = [
+    
+    'game-developer',
+    
+    'programmer',
+    
+    'film-maker',
+    
+    'photographer',
+    
+    ];
+  </script>
+  
+  <script src="index.js"></script>
 </body>
 </html>

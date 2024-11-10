@@ -1170,6 +1170,67 @@ main {
   backdrop-filter: blur(var(--_blur-amount));
 }
 
+.links_content {
+  margin-top: 20%;
+}
+
+.link_container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.links_hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.links_hero img {
+  margin-top: 2rem;
+  width: calc(min(15em, 100%));
+}
+
+.link_container .glow_button {
+  width: 100%;
+  height: 3rem;
+
+  justify-content: left;
+
+  position: relative;
+}
+
+.link_img {
+  height: 100%;
+  aspect-ratio: 1;
+  position: relative;
+}
+
+.link_img img {
+  position: absolute;
+
+  width: 100%;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.link_container .glow_button {
+  padding: 0.8rem 1rem;
+}
+
+.link_container .glow_button span {
+  text-transform: none;
+
+  text-align: center;
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 @keyframes gradient-animation {
   0% {
     --gradient-angle: 45deg;
@@ -1426,6 +1487,10 @@ main {
 }
 
 @media screen and (max-width: 406px) {
+  .links_content {
+    margin-top: 10%;
+  }
+
   .nav_buttons {
     display: none;
   }
