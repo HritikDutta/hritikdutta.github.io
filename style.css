@@ -948,6 +948,11 @@ main {
   text-align: center;
 }
 
+.links_content .copyright {
+  margin: 5rem auto;
+  text-align: center;
+}
+
 .resume_link_container {
   position: absolute;
 
