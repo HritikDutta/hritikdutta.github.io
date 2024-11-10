@@ -1193,6 +1193,10 @@ main {
   align-items: center;
 }
 
+.links_hero span {
+  text-align: center;
+}
+
 #link_portraits {
   width: 80%;
   margin-top: 2rem;
@@ -1504,6 +1508,10 @@ main {
 }
 
 @media screen and (max-width: 700px) {
+  .links_content {
+    margin-top: 10%;
+  }
+  
   .footer {
     display: flex;
     flex-direction: column-reverse;
@@ -1559,10 +1567,6 @@ main {
 }
 
 @media screen and (max-width: 406px) {
-  .links_content {
-    margin-top: 10%;
-  }
-
   .nav_buttons {
     display: none;
   }
