@@ -112,12 +112,12 @@ function sliderUpdateUI(index) {
     navButtonPrev.style.opacity = 0;
     navButtonPrev.style.cursor = 'auto';
     navButtonPrev.style.pointerEvents = 'none';
-    navButtonPrev.tabIndex = "-1";
+    navButtonPrev.tabIndex = '-1';
   } else {
     navButtonPrev.style.opacity = 1;
     navButtonPrev.style.cursor = 'pointer';
     navButtonPrev.style.pointerEvents = 'auto';
-    navButtonPrev.tabIndex = "0";
+    navButtonPrev.tabIndex = '0';
   }
   
   if (index >= sliderElements.length - 1) {
@@ -125,12 +125,12 @@ function sliderUpdateUI(index) {
     navButtonNext.style.opacity = 0;
     navButtonNext.style.cursor = 'auto';
     navButtonNext.style.pointerEvents = 'none';
-    navButtonNext.tabIndex = "-1";
+    navButtonNext.tabIndex = '-1';
   } else {
     navButtonNext.style.opacity = 1;
     navButtonNext.style.cursor = 'pointer';
     navButtonNext.style.pointerEvents = 'auto';
-    navButtonNext.tabIndex = "0";
+    navButtonNext.tabIndex = '0';
   }
   
   sliderDots[index].checked = true; // Rest are unchecked automatically
@@ -212,15 +212,15 @@ function onLoadMissionSelect() {
     const linkedPanelContainer = linkedPanel.querySelector('.option_info_container');
     
     if (allOptions[i].checked) {
-      linkedPanel.style.transform = "translate(0px)";
+      linkedPanel.style.transform = 'translate(0px)';
       linkedPanel.style.opacity = 1;
       linkedPanelContainer.style.position = 'relative';
-      linkedPanel.tabIndex = "0";
+      linkedPanel.tabIndex = '0';
     } else {
-      linkedPanel.style.transform = "translateX(1000px)";
+      linkedPanel.style.transform = 'translateX(1000px)';
       linkedPanel.style.opacity = 0;
       linkedPanelContainer.style.position = 'absolute';
-      linkedPanel.tabIndex = "-1";
+      linkedPanel.tabIndex = '-1';
     }
     
     allOptions[i].addEventListener('click', function() {
@@ -236,16 +236,16 @@ function onLoadMissionSelect() {
       let currentOptionInfoContainer = currentOption.querySelector('.option_info_container');
       
       // Hide previous info
-      currentOption.style.transform = "translateX(1000px)";
+      currentOption.style.transform = 'translateX(1000px)';
       currentOption.style.opacity = 0;
       currentOptionInfoContainer.style.position = 'absolute';
-      currentOption.tabIndex = "-1";
+      currentOption.tabIndex = '-1';
       
       // Show new info
       currentOption = document.getElementById(this.value);
-      currentOption.style.transform = "translate(0px)";
+      currentOption.style.transform = 'translate(0px)';
       currentOption.style.opacity = 1;
-      currentOption.tabIndex = "0";
+      currentOption.tabIndex = '0';
       
       // Update mission cache if option has correct tag
       if (currentOption.hasAttribute('data-updates-mission-cache')) {
@@ -318,9 +318,6 @@ function sliderAdjustDuringScrollWithAccentColor() {
 }
 
 function onLoadCharacterSelect() {
-  // TODO: When the character panel goes outside the view, it should not be
-  // accessible by tabs.
-
   // TODO: Try using intersection observer to add interesting effects to slider
 
   // Un-register previous scroll callback
@@ -364,9 +361,9 @@ function onLoadPlayTransitions() {
     const baseDelay = 0;
     
     for (let i = 0; i < allHorizontal.length; i++) {
-      allHorizontal[i].style.transform = "translateX(0)";
+      allHorizontal[i].style.transform = 'translateX(0)';
       allHorizontal[i].style.opacity = 1;
-      allHorizontal[i].style.transitionDelay = (i * delayMultiplier + baseDelay).toString() + "s";
+      allHorizontal[i].style.transitionDelay = (i * delayMultiplier + baseDelay).toString() + 's';
     }
   }
   
@@ -376,9 +373,9 @@ function onLoadPlayTransitions() {
     const baseDelay = 0;
     
     for (let i = 0; i < allVertical.length; i++) {
-      allVertical[i].style.transform = "translateY(0)";
+      allVertical[i].style.transform = 'translateY(0)';
       allVertical[i].style.opacity = 1;
-      allVertical[i].style.transitionDelay = (i * delayMultiplier + baseDelay).toString() + "s";
+      allVertical[i].style.transitionDelay = (i * delayMultiplier + baseDelay).toString() + 's';
     }
   }
 }
@@ -386,14 +383,24 @@ function onLoadPlayTransitions() {
 function onLoadLinks() {
   gradientBackground = document.querySelector('.gradient_background');
 
+  let rotatingImages = document.getElementById('link_portraits').getElementsByClassName('rotating_img')
+
   const changeInterval = 5000
+  const positionClasses = [ 'bottom', 'left', 'top', 'right' ]
 
   let index = 0;
   changeBackgroundGradientColor(index);
 
   setInterval(() => {
     index = (index + 1) % accentColorNames.length;
+
     changeBackgroundGradientColor(index);
+
+    for (let i = 0; i < rotatingImages.length; i++) {
+      let imageIndex = (index + i) % rotatingImages.length
+      rotatingImages[imageIndex].id = positionClasses[i]
+    }
+
   }, changeInterval);
 
   onLoadPlayTransitions();

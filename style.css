@@ -1178,6 +1178,8 @@ main {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+
+  margin: 0 1.5rem 1rem 1.5rem;
 }
 
 .links_hero {
@@ -1186,9 +1188,70 @@ main {
   align-items: center;
 }
 
-.links_hero img {
+#link_portraits {
+  width: 80%;
   margin-top: 2rem;
-  width: calc(min(15em, 100%));
+  aspect-ratio: 1;
+  
+  position: relative;
+}
+
+#link_portraits .rotating_img {
+  position: absolute;
+  width: 35%;
+  aspect-ratio: 1;
+  
+  transition: 400ms ease-in-out;
+}
+
+#portrait_highlight {
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+
+  position: absolute;
+  width: 35%;
+  aspect-ratio: 1;
+}
+
+#portrait_highlight::after {
+  content: '';
+  width: 115%;
+  height: 115%;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  border: solid 0.2rem var(--accent-light);
+  border-radius: 50%;
+  
+  transition: 400ms ease-in-out;
+}
+
+#top {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+#left {
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+}
+
+#right {
+  top: 50%;
+  left: 100%;
+  transform: translate(-100%, -50%);
+}
+
+#bottom {
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -100%);
 }
 
 .link_container .glow_button {
