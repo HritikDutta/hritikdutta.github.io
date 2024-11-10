@@ -13,6 +13,8 @@ let sliderDots;
 let sliderCurrentSelectionIndex = -1;
 let sliderTargetSelectionIndex  = 0;
 
+let rotatingImages;
+
 let forcedScrolling = false;
 
 function togglePlayStateOfVideo(video, shouldPlay) {
@@ -380,27 +382,29 @@ function onLoadPlayTransitions() {
   }
 }
 
+function linksPageSetColorAndPositions(index) {
+  changeBackgroundGradientColor(index);
+  
+  const positionClasses = [ 'bottom', 'left', 'top', 'right' ]
+  for (let i = 0; i < rotatingImages.length; i++) {
+    let imageIndex = (index + i) % rotatingImages.length
+    rotatingImages[imageIndex].id = positionClasses[i]
+  }
+}
+
 function onLoadLinks() {
   gradientBackground = document.querySelector('.gradient_background');
-
-  let rotatingImages = document.getElementById('link_portraits').getElementsByClassName('rotating_img')
+  
+  rotatingImages = document.getElementById('link_portraits').getElementsByClassName('rotating_img')
 
   const changeInterval = 5000
-  const positionClasses = [ 'bottom', 'left', 'top', 'right' ]
 
   let index = 0;
-  changeBackgroundGradientColor(index);
+  linksPageSetColorAndPositions(index);
 
   setInterval(() => {
     index = (index + 1) % accentColorNames.length;
-
-    changeBackgroundGradientColor(index);
-
-    for (let i = 0; i < rotatingImages.length; i++) {
-      let imageIndex = (index + i) % rotatingImages.length
-      rotatingImages[imageIndex].id = positionClasses[i]
-    }
-
+    linksPageSetColorAndPositions(index)
   }, changeInterval);
 
   onLoadPlayTransitions();
