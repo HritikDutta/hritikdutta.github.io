@@ -4,6 +4,7 @@ Discord
 Instagram
 Itch.io
 LinkedIn
+QR Code
 Reddit
 Resume
 Threads
@@ -12,4 +13,7 @@ Website
 Youtube
 
 [campaign]
-Summer Sale
+IGDC 2024
+Autumn Sale
+Winter Sale
+Spring Sale
