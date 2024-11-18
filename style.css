@@ -20,6 +20,7 @@ h1 {
   font-style: italic;
   font-weight: 900;
   text-transform: uppercase;
+  text-wrap: nowrap;
   margin: 0;
 }
 
